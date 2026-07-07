@@ -251,192 +251,63 @@
     <p data-reveal="" data-delay="120" style="margin:40px 0 0;max-width:60ch;font-size:19px;line-height:1.65;color:#4b4b4b;opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1)">In a single conversation it can check the weather, conditionally trigger a product search, send a payment, apply for a loan, style a complete outfit, take notes you can recall later, and remember all of it next time — learning your preferences along the way. It's not a chatbot. It's the operating system for your users' daily lives.</p>
   </section>
 
-  <!-- FEATURE 1: Context -->
-  <section id="context" style="max-width:1160px;margin:0 auto;padding:80px 32px;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center">
-    <div data-reveal="" style="opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1)">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#8a8a8a;margin-bottom:18px">01 · Architecture</div>
-      <h3 style="margin:0;font-size:clamp(28px,3.6vw,46px);font-weight:600;letter-spacing:-0.02em;line-height:1.05">Context-smart, not context-bloated.</h3>
-      <p style="margin:22px 0 0;font-size:17px;line-height:1.65;color:#4b4b4b">Codexta splits work into subtasks, each running in its own isolated window with only what that step needs. Ask it to <em>find a dress and send £200 to your mother</em> and it recognizes two separate domains — running them in parallel, loading only the tools each needs.</p>
-      <p style="margin:16px 0 0;font-size:17px;line-height:1.65;color:#4b4b4b">It never mixes banking tools into a shopping context, or vice versa. Invisible orchestration under a single conversation.</p>
-    </div>
-    <div data-reveal="" data-delay="120" style="position:relative;opacity:0;transform:translateY(30px);transition:opacity 1s cubic-bezier(.22,1,.36,1),transform 1s cubic-bezier(.22,1,.36,1)">
-      <div style="position:absolute;inset:-6%;border-radius:34px;background:linear-gradient(135deg,#4285F4,#A142F4,#EA4335,#FBBC04);filter:blur(48px);opacity:.34;z-index:-1;animation:glowPulse 9s ease-in-out infinite"></div>
-      <div style="border-radius:24px;background:#f6f6f7;border:1px solid rgba(0,0,0,0.06);padding:26px;box-shadow:0 34px 90px -34px rgba(0,0,0,0.32)">
-        <div style="display:flex;justify-content:flex-end;margin-bottom:18px"><div style="background:#0a0a0a;color:#fff;padding:11px 16px;border-radius:16px 16px 4px 16px;font-size:14px;max-width:82%">Find me a dress and send £200 to mum</div></div>
-        <div style="display:flex;align-items:center;gap:10px;font-family:'JetBrains Mono',monospace;font-size:11px;color:#9a9a9a;margin:6px 0 18px"><div style="flex:1;height:1px;background:rgba(0,0,0,0.08)"></div>SPLIT INTO SUBTASKS<div style="flex:1;height:1px;background:rgba(0,0,0,0.08)"></div></div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
-          <div style="background:#fff;border:1px solid rgba(0,0,0,0.06);border-radius:14px;padding:14px">
-            <div style="display:flex;align-items:center;gap:7px;font-weight:600;font-size:13px;margin-bottom:12px"><span style="width:8px;height:8px;border-radius:50%;background:#A142F4"></span>Shopping</div>
-            <div style="display:flex;align-items:center;gap:8px;font-size:12.5px;color:#3d3d3d;margin-bottom:9px"><span style="color:#34A853">✓</span>Search dresses</div>
-            <div style="display:flex;align-items:center;gap:8px;font-size:12.5px;color:#3d3d3d;margin-bottom:9px"><span style="color:#34A853">✓</span>Match your style</div>
-            <div style="display:flex;align-items:center;gap:8px;font-size:12.5px;color:#8a8a8a"><span style="width:11px;height:11px;border:2px solid #c9c9c9;border-radius:50%;display:inline-block"></span>Add to cart</div>
-          </div>
-          <div style="background:#fff;border:1px solid rgba(0,0,0,0.06);border-radius:14px;padding:14px">
-            <div style="display:flex;align-items:center;gap:7px;font-weight:600;font-size:13px;margin-bottom:12px"><span style="width:8px;height:8px;border-radius:50%;background:#4285F4"></span>Banking</div>
-            <div style="display:flex;align-items:center;gap:8px;font-size:12.5px;color:#3d3d3d;margin-bottom:9px"><span style="color:#34A853">✓</span>Verify payee</div>
-            <div style="display:flex;align-items:center;gap:8px;font-size:12.5px;color:#3d3d3d;margin-bottom:9px"><span style="width:11px;height:11px;border:2px solid #4285F4;border-radius:50%;display:inline-block;position:relative"></span>Send £200</div>
-            <div style="display:flex;align-items:center;gap:8px;font-size:12.5px;color:#8a8a8a"><span style="width:11px;height:11px;border:2px solid #c9c9c9;border-radius:50%;display:inline-block"></span>Confirm</div>
-          </div>
-        </div>
-        <div style="text-align:center;font-family:'JetBrains Mono',monospace;font-size:11px;color:#9a9a9a;margin-top:16px">one thread · isolated windows · parallel</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FEATURE 2: Workflows -->
-  <section id="workflows" style="max-width:1160px;margin:0 auto;padding:80px 32px;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center">
+  <!-- FEATURE 2: Domain Expertise -->
+  <section id="domain" style="max-width:1160px;margin:0 auto;padding:80px 32px;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center">
     <div data-reveal="" data-delay="120" style="position:relative;order:2;opacity:0;transform:translateY(30px);transition:opacity 1s cubic-bezier(.22,1,.36,1),transform 1s cubic-bezier(.22,1,.36,1)">
-      <div style="position:absolute;inset:-6%;border-radius:34px;background:linear-gradient(135deg,#34A853,#4285F4,#A142F4);filter:blur(48px);opacity:.3;z-index:-1;animation:glowPulse 10s ease-in-out infinite"></div>
-      <div style="border-radius:24px;background:#f6f6f7;border:1px solid rgba(0,0,0,0.06);padding:24px;box-shadow:0 34px 90px -34px rgba(0,0,0,0.32)">
-        <div style="display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:#3d3d3d;margin-bottom:14px">📁 new-project</div>
-        <div style="background:#fff;border:1px solid rgba(0,0,0,0.07);border-radius:16px;padding:14px 16px;margin-bottom:20px">
-          <div style="color:#3d3d3d;font-size:14px">Book my usual table if it's free Friday<span style="display:inline-block;width:1.5px;height:15px;background:#0a0a0a;margin-left:2px;vertical-align:-2px;animation:blink 1.1s step-end infinite"></span></div>
-          <div style="display:flex;align-items:center;gap:8px;margin-top:12px;font-size:12px;color:#8a8a8a"><span style="background:#eee;padding:4px 9px;border-radius:8px">+ </span><span style="background:#eee;padding:4px 9px;border-radius:8px">Codexta ⌄</span></div>
+      <div style="position:absolute;inset:-6%;border-radius:34px;background:linear-gradient(135deg,#FBBC04,#EA4335,#A142F4);filter:blur(48px);opacity:.24;z-index:-1;animation:glowPulse 10s ease-in-out infinite"></div>
+      <div style="border-radius:24px;background:#f6f6f7;border:1px solid rgba(0,0,0,0.06);padding:22px;box-shadow:0 34px 90px -34px rgba(0,0,0,0.28)">
+        <!-- Central agent badge -->
+        <div style="text-align:center;margin-bottom:20px">
+          <div style="display:inline-flex;align-items:center;gap:8px;background:#0a0a0a;color:#fff;padding:9px 18px;border-radius:999px;font-size:13px;font-weight:600">
+            <div style="width:20px;height:20px;border-radius:6px;background:linear-gradient(135deg,#4285F4,#A142F4 42%,#EA4335 76%,#FBBC04);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:10px">C</div>
+            Codexta Agent
+          </div>
         </div>
-        <div style="display:flex;flex-direction:column;gap:0">
-          <div style="display:flex;align-items:center;gap:12px;font-size:13.5px"><span style="width:26px;height:26px;border-radius:50%;background:#e9f5ec;color:#34A853;display:flex;align-items:center;justify-content:center;font-size:13px">✓</span>Check calendar &amp; restaurant availability</div>
-          <div style="width:1px;height:16px;background:rgba(0,0,0,0.1);margin-left:13px"></div>
-          <div style="display:flex;align-items:center;gap:12px;font-size:13.5px"><span style="width:26px;height:26px;border-radius:50%;background:#e9f5ec;color:#34A853;display:flex;align-items:center;justify-content:center;font-size:13px">✓</span>Condition met — table free at 8pm</div>
-          <div style="width:1px;height:16px;background:rgba(0,0,0,0.1);margin-left:13px"></div>
-          <div style="display:flex;align-items:center;gap:12px;font-size:13.5px;font-weight:600"><span style="width:26px;height:26px;border-radius:50%;background:#0a0a0a;color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px">→</span>Booking confirmed · no apps opened</div>
+        <!-- 4 domain tiles -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+          <div style="background:#fff;border:1px solid rgba(0,0,0,0.07);border-radius:14px;padding:14px;border-top:3px solid #4285F4">
+            <div style="font-size:12px;font-weight:700;color:#0a0a0a;margin-bottom:9px">Banking</div>
+            <div style="display:flex;flex-direction:column;gap:4px">
+              <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#5a5a6a;background:#f0f0f2;padding:3px 8px;border-radius:5px">banking_list_accounts</span>
+              <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#5a5a6a;background:#f0f0f2;padding:3px 8px;border-radius:5px">banking_list_transactions</span>
+              <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#4285F4;background:#eaf1ff;padding:3px 8px;border-radius:5px">+ 3 domain tools</span>
+            </div>
+          </div>
+          <div style="background:#fff;border:1px solid rgba(0,0,0,0.07);border-radius:14px;padding:14px;border-top:3px solid #A142F4">
+            <div style="font-size:12px;font-weight:700;color:#0a0a0a;margin-bottom:9px">Retail</div>
+            <div style="display:flex;flex-direction:column;gap:4px">
+              <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#5a5a6a;background:#f0f0f2;padding:3px 8px;border-radius:5px">very_search_products</span>
+              <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#5a5a6a;background:#f0f0f2;padding:3px 8px;border-radius:5px">very_search_categories</span>
+              <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#A142F4;background:#f6ecff;padding:3px 8px;border-radius:5px">+ 4 domain tools</span>
+            </div>
+          </div>
+          <div style="background:#fff;border:1px solid rgba(0,0,0,0.07);border-radius:14px;padding:14px;border-top:3px solid #34A853">
+            <div style="font-size:12px;font-weight:700;color:#0a0a0a;margin-bottom:9px">Research</div>
+            <div style="display:flex;flex-direction:column;gap:4px">
+              <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#5a5a6a;background:#f0f0f2;padding:3px 8px;border-radius:5px">brain_search</span>
+              <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#5a5a6a;background:#f0f0f2;padding:3px 8px;border-radius:5px">brain_create</span>
+              <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#34A853;background:#e9f5ec;padding:3px 8px;border-radius:5px">+ 8 domain tools</span>
+            </div>
+          </div>
+          <div style="background:#fff;border:1px solid rgba(0,0,0,0.07);border-radius:14px;padding:14px;border-top:3px solid #FBBC04">
+            <div style="font-size:12px;font-weight:700;color:#0a0a0a;margin-bottom:9px">Development</div>
+            <div style="display:flex;flex-direction:column;gap:4px">
+              <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#5a5a6a;background:#f0f0f2;padding:3px 8px;border-radius:5px">bash_execute</span>
+              <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#5a5a6a;background:#f0f0f2;padding:3px 8px;border-radius:5px">git_clone</span>
+              <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#b45309;background:#fefce8;padding:3px 8px;border-radius:5px">+ 6 domain tools</span>
+            </div>
+          </div>
         </div>
+        <div style="text-align:center;font-family:'JetBrains Mono',monospace;font-size:10px;color:#9a9a9a;margin-top:14px">tools loaded per task · never mixed · zero overlap</div>
       </div>
     </div>
     <div data-reveal="" style="order:1;opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1)">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#8a8a8a;margin-bottom:18px">02 · Autonomy</div>
-      <h3 style="margin:0;font-size:clamp(28px,3.6vw,46px);font-weight:600;letter-spacing:-0.02em;line-height:1.05">One prompt. Entire workflows.</h3>
-      <p style="margin:22px 0 0;font-size:17px;line-height:1.65;color:#4b4b4b">One instruction. Codexta checks the conditions, makes the decision, finds what's needed, and moves the money — all before you've finished your coffee. Conditional logic. Cross-domain chaining. Real outcomes.</p>
-      <p style="margin:16px 0 0;font-size:17px;line-height:1.65;color:#4b4b4b">This is what separates a conversational assistant from a genuine AI agent.</p>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#8a8a8a;margin-bottom:18px">01 · Domain Expertise</div>
+      <h3 style="margin:0;font-size:clamp(28px,3.6vw,46px);font-weight:600;letter-spacing:-0.02em;line-height:1.05">One agent. Any domain. Zero configuration.</h3>
+      <p style="margin:22px 0 0;font-size:17px;line-height:1.65;color:#4b4b4b">Ask it to <em>find a dress and send £200 to your mother</em> and Codexta recognises two separate domains — splitting the work into isolated task frames, each loading only the tools it needs: retail tools for shopping, banking tools for the transfer.</p>
+      <p style="margin:16px 0 0;font-size:17px;line-height:1.65;color:#4b4b4b">Banking tools never enter a retail context. Retail tools never touch a payment. Each task frame is isolated and purpose-built — one agent that specialises on demand, without a single line of configuration.</p>
     </div>
   </section>
-
-  <!-- FEATURE 3: Trust -->
-  <section id="trust" style="max-width:1160px;margin:0 auto;padding:80px 32px;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center">
-    <div data-reveal="" style="opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1)">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#8a8a8a;margin-bottom:18px">03 · Trust</div>
-      <h3 style="margin:0;font-size:clamp(28px,3.6vw,46px);font-weight:600;letter-spacing:-0.02em;line-height:1.05">It never makes things up.</h3>
-      <p style="margin:22px 0 0;font-size:17px;line-height:1.65;color:#4b4b4b">Product prices, availability, account balances, weather — all pulled live from real APIs. If it can't verify it, it won't say it. Your users will trust it, because it earns that trust on every response.</p>
-    </div>
-    <div data-reveal="" data-delay="120" style="position:relative;opacity:0;transform:translateY(30px);transition:opacity 1s cubic-bezier(.22,1,.36,1),transform 1s cubic-bezier(.22,1,.36,1)">
-      <div style="position:absolute;inset:-6%;border-radius:34px;background:linear-gradient(135deg,#34A853,#FBBC04);filter:blur(48px);opacity:.3;z-index:-1;animation:glowPulse 11s ease-in-out infinite"></div>
-      <div style="border-radius:24px;background:#f6f6f7;border:1px solid rgba(0,0,0,0.06);padding:26px;box-shadow:0 34px 90px -34px rgba(0,0,0,0.32)">
-        <div style="background:#fff;border:1px solid rgba(0,0,0,0.06);border-radius:16px;padding:20px;margin-bottom:14px">
-          <div style="font-size:13px;color:#8a8a8a;margin-bottom:6px">Current balance</div>
-          <div style="font-size:34px;font-weight:700;letter-spacing:-0.02em">£4,182.50</div>
-          <div style="display:inline-flex;align-items:center;gap:7px;margin-top:14px;background:#e9f5ec;color:#1e7a3d;font-size:12px;font-weight:600;padding:6px 12px;border-radius:999px"><span style="width:7px;height:7px;border-radius:50%;background:#34A853;display:inline-block;animation:blink 1.6s ease-in-out infinite"></span>Live · verified from bank API</div>
-        </div>
-        <div style="display:flex;align-items:center;gap:10px;background:#fff;border:1px solid rgba(0,0,0,0.06);border-radius:14px;padding:13px 16px">
-          <span style="color:#c9c9c9;text-decoration:line-through;font-size:13px">"probably around £4k"</span>
-          <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#d64b3f;margin-left:auto">✕ never guessed</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FEATURE 4: Preferences -->
-  <section style="max-width:1160px;margin:0 auto;padding:80px 32px;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center">
-    <div data-reveal="" data-delay="120" style="position:relative;order:2;opacity:0;transform:translateY(30px);transition:opacity 1s cubic-bezier(.22,1,.36,1),transform 1s cubic-bezier(.22,1,.36,1)">
-      <div style="position:absolute;inset:-6%;border-radius:34px;background:linear-gradient(135deg,#A142F4,#4285F4,#34A853);filter:blur(48px);opacity:.3;z-index:-1;animation:glowPulse 9.5s ease-in-out infinite"></div>
-      <div style="border-radius:24px;background:#f6f6f7;border:1px solid rgba(0,0,0,0.06);padding:20px;box-shadow:0 34px 90px -34px rgba(0,0,0,0.32);display:flex;flex-direction:column;gap:12px">
-        <div style="display:flex;align-items:center;gap:14px;background:#fff;border:1px solid rgba(0,0,0,0.06);border-radius:16px;padding:15px 16px">
-          <div style="width:40px;height:40px;border-radius:11px;background:#eaf1ff;display:flex;align-items:center;justify-content:center;font-size:19px">☁</div>
-          <div style="flex:1"><div style="font-weight:600;font-size:14px">Weather</div><div style="font-size:12.5px;color:#8a8a8a">Always °C, 7-day forecast</div></div>
-          <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#1e7a3d;background:#e9f5ec;padding:4px 8px;border-radius:6px">SAVED</span>
-        </div>
-        <div style="display:flex;align-items:center;gap:14px;background:#fff;border:1px solid rgba(0,0,0,0.06);border-radius:16px;padding:15px 16px">
-          <div style="width:40px;height:40px;border-radius:11px;background:#e9f5ec;display:flex;align-items:center;justify-content:center;font-size:19px">＄</div>
-          <div style="flex:1"><div style="font-weight:600;font-size:14px">Banking</div><div style="font-size:12.5px;color:#8a8a8a">Confirm anything over £100</div></div>
-          <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#1e7a3d;background:#e9f5ec;padding:4px 8px;border-radius:6px">SAVED</span>
-        </div>
-        <div style="display:flex;align-items:center;gap:14px;background:#fff;border:1px solid rgba(0,0,0,0.06);border-radius:16px;padding:15px 16px">
-          <div style="width:40px;height:40px;border-radius:11px;background:#f6ecff;display:flex;align-items:center;justify-content:center;font-size:19px">🛍</div>
-          <div style="flex:1"><div style="font-weight:600;font-size:14px">Shopping</div><div style="font-size:12.5px;color:#8a8a8a">Prefer next-day · size M</div></div>
-          <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#1e7a3d;background:#e9f5ec;padding:4px 8px;border-radius:6px">SAVED</span>
-        </div>
-        <div style="text-align:center;font-family:'JetBrains Mono',monospace;font-size:11px;color:#9a9a9a;padding-top:2px">no settings screen · scoped per domain</div>
-      </div>
-    </div>
-    <div data-reveal="" style="order:1;opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1)">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#8a8a8a;margin-bottom:18px">04 · Memory</div>
-      <h3 style="margin:0;font-size:clamp(28px,3.6vw,46px);font-weight:600;letter-spacing:-0.02em;line-height:1.05">Preferences that actually stick — per domain.</h3>
-      <p style="margin:22px 0 0;font-size:17px;line-height:1.65;color:#4b4b4b">Codexta learns how users like to work and saves it — globally, or scoped to a specific domain like weather, banking, or shopping. Preferences persist across sessions and update on request. No settings screen required.</p>
-    </div>
-  </section>
-
-  <!-- FEATURE 5: Privacy -->
-  <section id="privacy" style="max-width:1160px;margin:0 auto;padding:80px 32px 60px;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center">
-    <div data-reveal="" style="opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1)">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#8a8a8a;margin-bottom:18px">05 · Security</div>
-      <h3 style="margin:0;font-size:clamp(28px,3.6vw,46px);font-weight:600;letter-spacing:-0.02em;line-height:1.05">Passwords the model never sees.</h3>
-      <p style="margin:22px 0 0;font-size:17px;line-height:1.65;color:#4b4b4b">When a user signs in, registers, or authenticates, the password never reaches the language model in plain text. It's encrypted the moment it's entered, held in session-only memory, and used at the real value the model never has access to.</p>
-      <p style="margin:16px 0 0;font-size:17px;line-height:1.65;color:#4b4b4b">Sealed end-to-end — closing an entire class of prompt-injection and credential-leak risk that affects most agent platforms today.</p>
-    </div>
-    <div data-reveal="" data-delay="120" style="position:relative;opacity:0;transform:translateY(30px);transition:opacity 1s cubic-bezier(.22,1,.36,1),transform 1s cubic-bezier(.22,1,.36,1)">
-      <div style="position:absolute;inset:-6%;border-radius:34px;background:linear-gradient(135deg,#4285F4,#0a0a0a,#A142F4);filter:blur(48px);opacity:.26;z-index:-1;animation:glowPulse 12s ease-in-out infinite"></div>
-      <div style="border-radius:24px;background:#101012;border:1px solid rgba(255,255,255,0.08);padding:28px;box-shadow:0 34px 90px -34px rgba(0,0,0,0.5);color:#fff">
-        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:22px">
-          <div style="display:flex;align-items:center;gap:9px;font-size:13px;color:#c9c9c9">🔒 Credential vault</div>
-          <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#7fd39a;background:rgba(52,168,83,0.15);padding:4px 9px;border-radius:6px">SEALED</span>
-        </div>
-        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.09);border-radius:14px;padding:16px;margin-bottom:18px">
-          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#8a8a8a;margin-bottom:8px">PASSWORD</div>
-          <div style="font-size:22px;letter-spacing:5px;color:#e6e6e6">••••••••••••</div>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:11px;font-size:13px">
-          <div style="display:flex;justify-content:space-between;color:#c9c9c9"><span>Encryption</span><span style="font-family:'JetBrains Mono',monospace;color:#fff">RSA-OAEP · 2048-bit</span></div>
-          <div style="display:flex;justify-content:space-between;color:#c9c9c9"><span>Storage</span><span style="font-family:'JetBrains Mono',monospace;color:#fff">session memory only</span></div>
-          <div style="display:flex;justify-content:space-between;color:#c9c9c9"><span>Model access</span><span style="font-family:'JetBrains Mono',monospace;color:#ff8a7a">NONE</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section id="get" style="position:relative;text-align:center;padding:130px 24px 120px;overflow:hidden">
-    <div style="position:absolute;top:20%;left:50%;transform:translateX(-50%);width:min(760px,80vw);height:320px;border-radius:50%;background:linear-gradient(135deg,#4285F4,#A142F4,#EA4335,#FBBC04);filter:blur(90px);opacity:.22;z-index:0"></div>
-    <div data-reveal="" style="position:relative;z-index:2;opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1)">
-      <h2 style="margin:0 auto;max-width:16ch;font-size:clamp(36px,6vw,88px);font-weight:600;letter-spacing:-0.035em;line-height:0.98">Your workflows. One prompt away.</h2>
-      <div style="display:flex;gap:14px;margin-top:40px;justify-content:center;flex-wrap:wrap">
-        <a href="mailto:info@codecta.com" style="display:flex;align-items:center;gap:9px;background:#0a0a0a;color:#fff;padding:16px 30px;border-radius:999px;font-size:16px;font-weight:600">Contact Us</a>
-        <a href="#context" style="background:#f2f2f3;color:#0a0a0a;padding:16px 30px;border-radius:999px;font-size:16px;font-weight:600">Read the docs</a>
-      </div>
-    </div>
-  </section>
-
-  <footer style="border-top:1px solid rgba(0,0,0,0.07);padding:40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px">
-    <div style="display:flex;align-items:center;gap:10px">
-      <div style="width:24px;height:24px;border-radius:7px;background:linear-gradient(135deg,#4285F4,#A142F4 42%,#EA4335 76%,#FBBC04);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:13px">C</div>
-      <span style="font-weight:600;font-size:15px">Codexta</span>
-    </div>
-    <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#9a9a9a">The operating system for your users' daily lives.</div>
-    <div style="font-size:13px;color:#9a9a9a">© 2026 Codexta</div>
-  </footer>
-
-</div>
-
-
-<!-- SECTION 1: Enterprise Banner (Gemma 4) -->
-<section style="padding:60px 40px;background:#ffffff;">
-  <div data-reveal="" style="max-width:840px;margin:0 auto;background:#111217;border-radius:16px;padding:24px 28px;display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:20px;box-sizing:border-box;">
-    <!-- Icon -->
-    <div style="flex-shrink:0;width:44px;height:44px;background:#1c1c24;border-radius:10px;border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:22px;line-height:1;">
-      ⚡
-    </div>
-    <!-- Text block -->
-    <div style="flex:1;min-width:0;">
-      <div style="font-family:'Figtree',-apple-system,BlinkMacSystemFont,sans-serif;font-size:17px;font-weight:600;color:#eeeef5;line-height:1.35;">
-        Runs flawlessly on Gemma 4 — self-hosted, no vendor lock-in
-      </div>
-      <div style="font-family:'Figtree',-apple-system,BlinkMacSystemFont,sans-serif;font-size:14px;color:#7a7a8a;margin-top:5px;line-height:1.5;">
-        Carefully engineered agent architecture. Efficient enough for open-weight models enterprises can serve themselves.
-      </div>
-    </div>
-    <!-- Badge -->
-    <div style="flex-shrink:0;border:1px solid #34A853;color:#34A853;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.12em;padding:6px 14px;border-radius:999px;white-space:nowrap;">
-      ENTERPRISE READY
-    </div>
-  </div>
-</section>
 
 <!-- SECTION 2: Enterprise Knowledge -->
 <section id="context" style="padding:100px 40px;background:#ffffff;">
@@ -558,6 +429,192 @@
   </div>
 </section>
 
+  <!-- FEATURE 2: Workflows -->
+  <section id="workflows" style="max-width:1160px;margin:0 auto;padding:80px 32px;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center">
+    <div data-reveal="" data-delay="120" style="position:relative;order:2;opacity:0;transform:translateY(30px);transition:opacity 1s cubic-bezier(.22,1,.36,1),transform 1s cubic-bezier(.22,1,.36,1)">
+      <div style="position:absolute;inset:-6%;border-radius:34px;background:linear-gradient(135deg,#34A853,#4285F4,#A142F4);filter:blur(48px);opacity:.3;z-index:-1;animation:glowPulse 10s ease-in-out infinite"></div>
+      <div style="border-radius:24px;background:#f6f6f7;border:1px solid rgba(0,0,0,0.06);padding:24px;box-shadow:0 34px 90px -34px rgba(0,0,0,0.32)">
+        <div style="display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:#3d3d3d;margin-bottom:14px">📁 new-project</div>
+        <div style="background:#fff;border:1px solid rgba(0,0,0,0.07);border-radius:16px;padding:14px 16px;margin-bottom:20px">
+          <div style="color:#3d3d3d;font-size:14px">Book my usual table if it's free Friday<span style="display:inline-block;width:1.5px;height:15px;background:#0a0a0a;margin-left:2px;vertical-align:-2px;animation:blink 1.1s step-end infinite"></span></div>
+          <div style="display:flex;align-items:center;gap:8px;margin-top:12px;font-size:12px;color:#8a8a8a"><span style="background:#eee;padding:4px 9px;border-radius:8px">+ </span><span style="background:#eee;padding:4px 9px;border-radius:8px">Codexta ⌄</span></div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:0">
+          <div style="display:flex;align-items:center;gap:12px;font-size:13.5px"><span style="width:26px;height:26px;border-radius:50%;background:#e9f5ec;color:#34A853;display:flex;align-items:center;justify-content:center;font-size:13px">✓</span>Check calendar &amp; restaurant availability</div>
+          <div style="width:1px;height:16px;background:rgba(0,0,0,0.1);margin-left:13px"></div>
+          <div style="display:flex;align-items:center;gap:12px;font-size:13.5px"><span style="width:26px;height:26px;border-radius:50%;background:#e9f5ec;color:#34A853;display:flex;align-items:center;justify-content:center;font-size:13px">✓</span>Condition met — table free at 8pm</div>
+          <div style="width:1px;height:16px;background:rgba(0,0,0,0.1);margin-left:13px"></div>
+          <div style="display:flex;align-items:center;gap:12px;font-size:13.5px;font-weight:600"><span style="width:26px;height:26px;border-radius:50%;background:#0a0a0a;color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px">→</span>Booking confirmed · no apps opened</div>
+        </div>
+      </div>
+    </div>
+    <div data-reveal="" style="order:1;opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1)">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#8a8a8a;margin-bottom:18px">03 · Autonomy</div>
+      <h3 style="margin:0;font-size:clamp(28px,3.6vw,46px);font-weight:600;letter-spacing:-0.02em;line-height:1.05">One prompt. Entire workflows.</h3>
+      <p style="margin:22px 0 0;font-size:17px;line-height:1.65;color:#4b4b4b">One instruction. Codexta checks the conditions, makes the decision, finds what's needed, and moves the money — all before you've finished your coffee. Conditional logic. Cross-domain chaining. Real outcomes.</p>
+      <p style="margin:16px 0 0;font-size:17px;line-height:1.65;color:#4b4b4b">This is what separates a conversational assistant from a genuine AI agent.</p>
+    </div>
+  </section>
+
+  <!-- FEATURE 3: Trust -->
+  <section id="trust" style="max-width:1160px;margin:0 auto;padding:80px 32px;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center">
+    <div data-reveal="" style="opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1)">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#8a8a8a;margin-bottom:18px">04 · Trust</div>
+      <h3 style="margin:0;font-size:clamp(28px,3.6vw,46px);font-weight:600;letter-spacing:-0.02em;line-height:1.05">It never makes things up.</h3>
+      <p style="margin:22px 0 0;font-size:17px;line-height:1.65;color:#4b4b4b">Product prices, availability, account balances, weather — all pulled live from real APIs. If it can't verify it, it won't say it. Your users will trust it, because it earns that trust on every response.</p>
+    </div>
+    <div data-reveal="" data-delay="120" style="position:relative;opacity:0;transform:translateY(30px);transition:opacity 1s cubic-bezier(.22,1,.36,1),transform 1s cubic-bezier(.22,1,.36,1)">
+      <div style="position:absolute;inset:-6%;border-radius:34px;background:linear-gradient(135deg,#34A853,#FBBC04);filter:blur(48px);opacity:.3;z-index:-1;animation:glowPulse 11s ease-in-out infinite"></div>
+      <div style="border-radius:24px;background:#f6f6f7;border:1px solid rgba(0,0,0,0.06);padding:26px;box-shadow:0 34px 90px -34px rgba(0,0,0,0.32)">
+        <div style="background:#fff;border:1px solid rgba(0,0,0,0.06);border-radius:16px;padding:20px;margin-bottom:14px">
+          <div style="font-size:13px;color:#8a8a8a;margin-bottom:6px">Current balance</div>
+          <div style="font-size:34px;font-weight:700;letter-spacing:-0.02em">£4,182.50</div>
+          <div style="display:inline-flex;align-items:center;gap:7px;margin-top:14px;background:#e9f5ec;color:#1e7a3d;font-size:12px;font-weight:600;padding:6px 12px;border-radius:999px"><span style="width:7px;height:7px;border-radius:50%;background:#34A853;display:inline-block;animation:blink 1.6s ease-in-out infinite"></span>Live · verified from bank API</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;background:#fff;border:1px solid rgba(0,0,0,0.06);border-radius:14px;padding:13px 16px">
+          <span style="color:#c9c9c9;text-decoration:line-through;font-size:13px">"probably around £4k"</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#d64b3f;margin-left:auto">✕ never guessed</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURE 4: Preferences -->
+  <section style="max-width:1160px;margin:0 auto;padding:80px 32px;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center">
+    <div data-reveal="" data-delay="120" style="position:relative;order:2;opacity:0;transform:translateY(30px);transition:opacity 1s cubic-bezier(.22,1,.36,1),transform 1s cubic-bezier(.22,1,.36,1)">
+      <div style="position:absolute;inset:-6%;border-radius:34px;background:linear-gradient(135deg,#A142F4,#4285F4,#34A853);filter:blur(48px);opacity:.3;z-index:-1;animation:glowPulse 9.5s ease-in-out infinite"></div>
+      <div style="border-radius:24px;background:#f6f6f7;border:1px solid rgba(0,0,0,0.06);padding:20px;box-shadow:0 34px 90px -34px rgba(0,0,0,0.32);display:flex;flex-direction:column;gap:12px">
+        <div style="display:flex;align-items:center;gap:14px;background:#fff;border:1px solid rgba(0,0,0,0.06);border-radius:16px;padding:15px 16px">
+          <div style="width:40px;height:40px;border-radius:11px;background:#eaf1ff;display:flex;align-items:center;justify-content:center;font-size:19px">☁</div>
+          <div style="flex:1"><div style="font-weight:600;font-size:14px">Weather</div><div style="font-size:12.5px;color:#8a8a8a">Always °C, 7-day forecast</div></div>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#1e7a3d;background:#e9f5ec;padding:4px 8px;border-radius:6px">SAVED</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:14px;background:#fff;border:1px solid rgba(0,0,0,0.06);border-radius:16px;padding:15px 16px">
+          <div style="width:40px;height:40px;border-radius:11px;background:#e9f5ec;display:flex;align-items:center;justify-content:center;font-size:19px">＄</div>
+          <div style="flex:1"><div style="font-weight:600;font-size:14px">Banking</div><div style="font-size:12.5px;color:#8a8a8a">Confirm anything over £100</div></div>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#1e7a3d;background:#e9f5ec;padding:4px 8px;border-radius:6px">SAVED</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:14px;background:#fff;border:1px solid rgba(0,0,0,0.06);border-radius:16px;padding:15px 16px">
+          <div style="width:40px;height:40px;border-radius:11px;background:#f6ecff;display:flex;align-items:center;justify-content:center;font-size:19px">🛍</div>
+          <div style="flex:1"><div style="font-weight:600;font-size:14px">Shopping</div><div style="font-size:12.5px;color:#8a8a8a">Prefer next-day · size M</div></div>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#1e7a3d;background:#e9f5ec;padding:4px 8px;border-radius:6px">SAVED</span>
+        </div>
+        <div style="text-align:center;font-family:'JetBrains Mono',monospace;font-size:11px;color:#9a9a9a;padding-top:2px">no settings screen · scoped per domain</div>
+      </div>
+    </div>
+    <div data-reveal="" style="order:1;opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1)">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#8a8a8a;margin-bottom:18px">05 · Memory</div>
+      <h3 style="margin:0;font-size:clamp(28px,3.6vw,46px);font-weight:600;letter-spacing:-0.02em;line-height:1.05">Preferences that actually stick — per domain.</h3>
+      <p style="margin:22px 0 0;font-size:17px;line-height:1.65;color:#4b4b4b">Codexta learns how users like to work and saves it — globally, or scoped to a specific domain like weather, banking, or shopping. Preferences persist across sessions and update on request. No settings screen required.</p>
+    </div>
+  </section>
+
+  <!-- FEATURE 5: Privacy -->
+  <section id="privacy" style="max-width:1160px;margin:0 auto;padding:80px 32px 60px;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center">
+    <div data-reveal="" style="opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1)">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#8a8a8a;margin-bottom:18px">06 · Security</div>
+      <h3 style="margin:0;font-size:clamp(28px,3.6vw,46px);font-weight:600;letter-spacing:-0.02em;line-height:1.05">Passwords the model never sees.</h3>
+      <p style="margin:22px 0 0;font-size:17px;line-height:1.65;color:#4b4b4b">When a user signs in, registers, or authenticates, the password never reaches the language model in plain text. It's encrypted the moment it's entered, held in session-only memory, and used at the real value the model never has access to.</p>
+      <p style="margin:16px 0 0;font-size:17px;line-height:1.65;color:#4b4b4b">Sealed end-to-end — closing an entire class of prompt-injection and credential-leak risk that affects most agent platforms today.</p>
+    </div>
+    <div data-reveal="" data-delay="120" style="position:relative;opacity:0;transform:translateY(30px);transition:opacity 1s cubic-bezier(.22,1,.36,1),transform 1s cubic-bezier(.22,1,.36,1)">
+      <div style="position:absolute;inset:-6%;border-radius:34px;background:linear-gradient(135deg,#4285F4,#0a0a0a,#A142F4);filter:blur(48px);opacity:.26;z-index:-1;animation:glowPulse 12s ease-in-out infinite"></div>
+      <div style="border-radius:24px;background:#101012;border:1px solid rgba(255,255,255,0.08);padding:28px;box-shadow:0 34px 90px -34px rgba(0,0,0,0.5);color:#fff">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:22px">
+          <div style="display:flex;align-items:center;gap:9px;font-size:13px;color:#c9c9c9">🔒 Credential vault</div>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#7fd39a;background:rgba(52,168,83,0.15);padding:4px 9px;border-radius:6px">SEALED</span>
+        </div>
+        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.09);border-radius:14px;padding:16px;margin-bottom:18px">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#8a8a8a;margin-bottom:8px">PASSWORD</div>
+          <div style="font-size:22px;letter-spacing:5px;color:#e6e6e6">••••••••••••</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:11px;font-size:13px">
+          <div style="display:flex;justify-content:space-between;color:#c9c9c9"><span>Encryption</span><span style="font-family:'JetBrains Mono',monospace;color:#fff">RSA-OAEP · 2048-bit</span></div>
+          <div style="display:flex;justify-content:space-between;color:#c9c9c9"><span>Storage</span><span style="font-family:'JetBrains Mono',monospace;color:#fff">session memory only</span></div>
+          <div style="display:flex;justify-content:space-between;color:#c9c9c9"><span>Model access</span><span style="font-family:'JetBrains Mono',monospace;color:#ff8a7a">NONE</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- SECTION 1: Enterprise Banner (Gemma 4) -->
+<section style="padding:60px 40px;background:#ffffff;">
+  <div data-reveal="" style="max-width:840px;margin:0 auto;background:#111217;border-radius:16px;padding:24px 28px;display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:20px;box-sizing:border-box;">
+    <!-- Icon -->
+    <div style="flex-shrink:0;width:44px;height:44px;background:#1c1c24;border-radius:10px;border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:22px;line-height:1;">
+      ⚡
+    </div>
+    <!-- Text block -->
+    <div style="flex:1;min-width:0;">
+      <div style="font-family:'Figtree',-apple-system,BlinkMacSystemFont,sans-serif;font-size:17px;font-weight:600;color:#eeeef5;line-height:1.35;">
+        Runs flawlessly on Gemma 4 — self-hosted, no vendor lock-in
+      </div>
+      <div style="font-family:'Figtree',-apple-system,BlinkMacSystemFont,sans-serif;font-size:14px;color:#7a7a8a;margin-top:5px;line-height:1.5;">
+        Carefully engineered agent architecture. Efficient enough for open-weight models enterprises can serve themselves.
+      </div>
+    </div>
+    <!-- Badge -->
+    <div style="flex-shrink:0;border:1px solid #34A853;color:#34A853;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.12em;padding:6px 14px;border-radius:999px;white-space:nowrap;">
+      ENTERPRISE READY
+    </div>
+  </div>
+</section>
+
+
+  <!-- FEATURE 1: Document Intelligence -->
+  <section id="context" style="max-width:1160px;margin:0 auto;padding:80px 32px;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center">
+    <div data-reveal="" style="opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1)">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#8a8a8a;margin-bottom:18px">02 · Document Intelligence</div>
+      <h3 style="margin:0;font-size:clamp(28px,3.6vw,46px);font-weight:600;letter-spacing:-0.02em;line-height:1.05">Upload a file. Get answers. Build your brain.</h3>
+      <p style="margin:22px 0 0;font-size:17px;line-height:1.65;color:#4b4b4b">Drop in a PDF, Excel spreadsheet, or PowerPoint deck. Codexta reads every page, chunks each section, and indexes it with hybrid BM25 + vector search — instantly queryable, cited back to the exact page and row.</p>
+      <p style="margin:16px 0 0;font-size:17px;line-height:1.65;color:#4b4b4b">It doesn't just read once. It stores findings in a persistent knowledge base so documents uploaded today answer questions asked next month — no re-uploading, no re-reading, no re-explaining.</p>
+    </div>
+    <div data-reveal="" data-delay="120" style="position:relative;opacity:0;transform:translateY(30px);transition:opacity 1s cubic-bezier(.22,1,.36,1),transform 1s cubic-bezier(.22,1,.36,1)">
+      <div style="position:absolute;inset:-6%;border-radius:34px;background:linear-gradient(135deg,#4285F4,#A142F4,#34A853);filter:blur(48px);opacity:.3;z-index:-1;animation:glowPulse 9s ease-in-out infinite"></div>
+      <div style="border-radius:24px;background:#101012;border:1px solid rgba(255,255,255,0.08);padding:22px;box-shadow:0 34px 90px -34px rgba(0,0,0,0.5);color:#fff">
+        <!-- Uploaded files -->
+        <div style="display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap">
+          <div style="display:flex;align-items:center;gap:7px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:7px 12px;font-size:12px;color:#c0c0d0">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#EA4335;background:rgba(234,67,53,.12);padding:2px 6px;border-radius:4px;font-weight:600">PDF</span>very-group-annual-2025.pdf
+          </div>
+          <div style="display:flex;align-items:center;gap:7px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:7px 12px;font-size:12px;color:#c0c0d0">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#34A853;background:rgba(52,168,83,.12);padding:2px 6px;border-radius:4px;font-weight:600">XLS</span>pending_payments_q1.xlsx
+          </div>
+        </div>
+        <!-- Processing steps -->
+        <div style="display:flex;flex-direction:column;gap:0;margin-bottom:14px">
+          <div style="display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.05)">
+            <span style="color:#34A853;font-size:12px;flex-shrink:0">✓</span>
+            <span style="font-size:13px;color:#c0c0d0">Read 47 pages · 3 sheets</span>
+            <span style="margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:10px;color:#5a5a6a;flex-shrink:0">document_read</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.05)">
+            <span style="color:#34A853;font-size:12px;flex-shrink:0">✓</span>
+            <span style="font-size:13px;color:#c0c0d0">142 sections indexed</span>
+            <span style="margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:10px;color:#5a5a6a;flex-shrink:0">brain_create</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;padding:9px 0">
+            <span style="color:#A142F4;font-size:12px;flex-shrink:0">✓</span>
+            <span style="font-size:13px;color:#c0c0d0">BM25 + vector index ready</span>
+            <span style="margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:10px;color:#A142F4;flex-shrink:0">hybrid search</span>
+          </div>
+        </div>
+        <!-- Divider -->
+        <div style="height:1px;background:rgba(255,255,255,.07);margin-bottom:14px"></div>
+        <!-- Query bubble -->
+        <div style="background:rgba(255,255,255,.05);border-radius:12px;padding:12px 14px;margin-bottom:10px">
+          <div style="font-size:13px;color:#eeeef5;margin-bottom:8px">"What are the pending payments for Q1?"</div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap">
+            <span style="background:rgba(161,66,244,.18);color:#c4b5fd;border-radius:999px;padding:3px 10px;font-size:10px;font-family:'JetBrains Mono',monospace">brain_search</span>
+            <span style="background:rgba(52,168,83,.14);color:#6ee7b7;border-radius:999px;padding:3px 10px;font-size:10px;font-family:'JetBrains Mono',monospace">anchor:3 match</span>
+          </div>
+        </div>
+        <!-- Source citation -->
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#7a7a8a">↳ pending_payments_q1.xlsx · sheet "Q1 Payments" · rows 3–17</div>
+      </div>
+    </div>
+  </section>
+
 <section id="cdx-orch">
 <div class="o1 orb"></div><div class="o2 orb"></div><div class="o3 orb"></div>
 <div class="wrap">
@@ -573,35 +630,32 @@
   <div class="sc" data-r>
     <div class="sc-hd">
       <div class="sc-num">Scenario 01</div>
-      <div class="sc-ttl">Payment with a conditional side-excursion</div>
+      <div class="sc-ttl">Product search, basket, finance approval — three domains, one conversation</div>
     </div>
 
     <div class="convo">
-      <div class="m mu"><div class="bbl">Send £200 to my landlord</div></div>
-      <div class="m ma"><div class="bbl">Which account? Savings (£15,000) or Current (£2,500)?</div></div>
-      <div class="m mu"><div class="bbl">Savings</div></div>
-      <div class="m ma"><div class="bbl">Draft ready — PAY-123 · £200 to Thomas Morley. Confirm?</div></div>
+      <div class="m mu"><div class="bbl">Find me some Nike Air Max and put it on finance</div></div>
+      <div class="m ma"><div class="bbl">Found Nike Air Max 90 · size 9 · £129 — added to basket. Checking your credit eligibility now.</div></div>
       <div class="m mu mt">
         <div class="bbl">
-          Yes — but first check the weather in Mostar. If it's warmer than 20°C, go ahead.
-          <div class="mt-tag">↓ mid-task condition · spawns weather excursion t-26.1</div>
+          Looks good, go ahead
+          <div class="mt-tag">↓ spawns finance task t-1.1 · inheritKeys: basket_total → loan domain</div>
         </div>
       </div>
     </div>
 
     <div class="flow3">
-      <!-- parent paused -->
-      <div class="tc bk">
-        <div class="tc-hd"><span class="tc-id">t-26</span><span class="badge bk">BANKING</span></div>
-        <div class="tc-ttl">Send £200 to landlord</div>
-        <div class="tc-st"><span class="sd pau"></span>awaiting child task</div>
+      <!-- shopping task paused -->
+      <div class="tc sh">
+        <div class="tc-hd"><span class="tc-id">t-1</span><span class="badge sh">SHOPPING</span></div>
+        <div class="tc-ttl">Find trainers + buy on finance</div>
+        <div class="tc-st"><span class="sd pau"></span>awaiting loan approval</div>
         <div class="ctx-lbl">Context window</div>
         <div class="ctx">
-          <div class="ci"><span class="ci-ico">🏦</span>auth_token · HSBC session</div>
-          <div class="ci"><span class="ci-ico">👤</span>payee · Thomas Morley</div>
-          <div class="ci"><span class="ci-ico">💷</span>amount · £200.00 GBP</div>
-          <div class="ci"><span class="ci-ico">🧾</span>draft PAY-123 · pending</div>
-          <div class="ci wait"><span class="ci-ico">⏸</span>waiting for weather result…</div>
+          <div class="ci"><span class="ci-ico">🔍</span>very_search → Nike Air Max 90 · £129</div>
+          <div class="ci"><span class="ci-ico">🛒</span>very_basket_add → basket BKT-441</div>
+          <div class="ci"><span class="ci-ico">💳</span>finance requested · £129.00</div>
+          <div class="ci wait"><span class="ci-ico">⏸</span>waiting for loan ref…</div>
         </div>
       </div>
 
@@ -613,19 +667,20 @@
           </line>
           <path d="M32 8L40 14L32 20" stroke="#A142F4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
-        <div class="cl sp"><b>spawn</b><br>inheritKeys: none<br>fresh context</div>
+        <div class="cl sp"><b>spawn</b><br>inheritKeys:<br><b>basket_total</b></div>
       </div>
 
-      <!-- child running -->
-      <div class="tc wx">
-        <div class="tc-hd"><span class="tc-id">t-26.1</span><span class="badge wx">WEATHER</span></div>
-        <div class="tc-ttl">Check weather in Mostar</div>
-        <div class="tc-st"><span class="sd run"></span>running</div>
+      <!-- finance child -->
+      <div class="tc bk">
+        <div class="tc-hd"><span class="tc-id">t-1.1</span><span class="badge bk">FINANCE</span></div>
+        <div class="tc-ttl">Apply for credit · £129</div>
+        <div class="tc-st"><span class="sd run"></span>approved</div>
         <div class="ctx-lbl">Context window</div>
         <div class="ctx">
-          <div class="ci"><span class="ci-ico">🌍</span>location · Mostar, BiH</div>
-          <div class="ci"><span class="ci-ico">🌤</span>weather_get → 31°C, sunny</div>
-          <div class="ci"><span class="ci-ico">🔧</span>tool: weather loaded</div>
+          <div class="ci inh"><span class="ci-ico">↩</span>basket_total · £129.00 · from t-1</div>
+          <div class="ci"><span class="ci-ico">📋</span>credit_check → eligible</div>
+          <div class="ci"><span class="ci-ico">✅</span>loan_apply → LOAN-7821 approved</div>
+          <div class="ci"><span class="ci-ico">🔧</span>tools: banking loaded</div>
         </div>
       </div>
 
@@ -637,21 +692,20 @@
           </line>
           <path d="M32 8L40 14L32 20" stroke="#34d170" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
-        <div class="cl hf"><b>handoff</b><br>1 of 3 entries<br>returned to parent</div>
+        <div class="cl hf"><b>handoff</b><br>loan_ref<br>returned to t-1</div>
       </div>
 
-      <!-- parent resumed -->
-      <div class="tc bk">
-        <div class="tc-hd"><span class="tc-id">t-26</span><span class="badge bk">BANKING</span></div>
-        <div class="tc-ttl">Send £200 to landlord</div>
-        <div class="tc-st"><span class="sd don"></span>resumed · confirming payment</div>
+      <!-- shopping resumed, checkout -->
+      <div class="tc sh">
+        <div class="tc-hd"><span class="tc-id">t-1</span><span class="badge sh">SHOPPING</span></div>
+        <div class="tc-ttl">Checkout with approved finance</div>
+        <div class="tc-st"><span class="sd don"></span>resumed · processing order</div>
         <div class="ctx-lbl">Context window</div>
         <div class="ctx">
-          <div class="ci"><span class="ci-ico">🏦</span>auth_token · HSBC session</div>
-          <div class="ci"><span class="ci-ico">👤</span>payee · Thomas Morley</div>
-          <div class="ci"><span class="ci-ico">💷</span>amount · £200.00 GBP</div>
-          <div class="ci"><span class="ci-ico">🧾</span>draft PAY-123 · pending</div>
-          <div class="ci inh"><span class="ci-ico">↩</span>weather_get → 31°C · condition ✓</div>
+          <div class="ci"><span class="ci-ico">🛒</span>basket BKT-441 · ready</div>
+          <div class="ci"><span class="ci-ico">💳</span>basket_total · £129.00</div>
+          <div class="ci inh"><span class="ci-ico">↩</span>loan_ref: LOAN-7821 · from t-1.1</div>
+          <div class="ci"><span class="ci-ico">📦</span>checkout → order ORD-9923 placed</div>
         </div>
       </div>
     </div>
@@ -732,6 +786,28 @@
 
 </div><!-- /wrap -->
 </section>
+
+  <section id="get" style="position:relative;text-align:center;padding:130px 24px 120px;overflow:hidden">
+    <div style="position:absolute;top:20%;left:50%;transform:translateX(-50%);width:min(760px,80vw);height:320px;border-radius:50%;background:linear-gradient(135deg,#4285F4,#A142F4,#EA4335,#FBBC04);filter:blur(90px);opacity:.22;z-index:0"></div>
+    <div data-reveal="" style="position:relative;z-index:2;opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1)">
+      <h2 style="margin:0 auto;max-width:16ch;font-size:clamp(36px,6vw,88px);font-weight:600;letter-spacing:-0.035em;line-height:0.98">Your workflows. One prompt away.</h2>
+      <div style="display:flex;gap:14px;margin-top:40px;justify-content:center;flex-wrap:wrap">
+        <a href="mailto:info@codecta.com" style="display:flex;align-items:center;gap:9px;background:#0a0a0a;color:#fff;padding:16px 30px;border-radius:999px;font-size:16px;font-weight:600">Contact Us</a>
+        <a href="#context" style="background:#f2f2f3;color:#0a0a0a;padding:16px 30px;border-radius:999px;font-size:16px;font-weight:600">Read the docs</a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="border-top:1px solid rgba(0,0,0,0.07);padding:40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px">
+    <div style="display:flex;align-items:center;gap:10px">
+      <div style="width:24px;height:24px;border-radius:7px;background:linear-gradient(135deg,#4285F4,#A142F4 42%,#EA4335 76%,#FBBC04);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:13px">C</div>
+      <span style="font-weight:600;font-size:15px">Codexta</span>
+    </div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#9a9a9a">The operating system for your users' daily lives.</div>
+    <div style="font-size:13px;color:#9a9a9a">© 2026 Codexta</div>
+  </footer>
+</div>
+
 
 <script>
 // Scroll reveal
