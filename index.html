@@ -356,20 +356,20 @@
     </div>
     <div data-reveal="" style="order:1;opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1)">
       <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#8a8a8a;margin-bottom:18px">01 · Domain Expertise</div>
-      <h3 style="margin:0;font-size:clamp(28px,3.6vw,46px);font-weight:600;letter-spacing:-0.02em;line-height:1.05">One agent. Any domain. Zero configuration.</h3>
+      <h3 style="margin:0;font-size:clamp(28px,3.6vw,46px);font-weight:600;letter-spacing:-0.02em;line-height:1.05">One agent. Every domain it knows, cleanly separated.</h3>
       <p style="margin:22px 0 0;font-size:17px;line-height:1.65;color:#4b4b4b">Ask it to <em>find a dress and send £200 to your mother</em> and Codexta recognises two separate domains — splitting the work into isolated task frames, each loading only the tools it needs: retail tools for shopping, banking tools for the transfer.</p>
-      <p style="margin:16px 0 0;font-size:17px;line-height:1.65;color:#4b4b4b">Banking tools never enter a retail context. Retail tools never touch a payment. Each task frame is isolated and purpose-built — one agent that specialises on demand, without a single line of configuration.</p>
+      <p style="margin:16px 0 0;font-size:17px;line-height:1.65;color:#4b4b4b">Banking tools never enter a retail context. Retail tools never touch a payment. Switching between domains it already knows costs zero configuration — and when it doesn't know one yet, that's not a code deploy: it's an authoring conversation away (see Self-Authoring, below).</p>
     </div>
   </section>
 
 <!-- SECTION 2: Enterprise Knowledge -->
-<section id="context" style="padding:100px 40px;background:#ffffff;">
+<section id="knowledge" style="padding:100px 40px;background:#ffffff;">
   <div style="max-width:1100px;margin:0 auto;display:flex;flex-direction:row;align-items:flex-start;gap:0;box-sizing:border-box;">
 
     <!-- Left column -->
     <div style="flex:1;padding-right:60px;max-width:520px;align-self:center;box-sizing:border-box;">
       <div data-reveal="" data-delay="0" style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;color:#9a9a9a;margin-bottom:20px;text-transform:uppercase;">
-        01 · ENTERPRISE KNOWLEDGE
+        02 · ENTERPRISE KNOWLEDGE
       </div>
       <h2 data-reveal="" data-delay="100" style="font-family:'Figtree',-apple-system,BlinkMacSystemFont,sans-serif;font-size:clamp(34px,4vw,52px);font-weight:600;letter-spacing:-.03em;line-height:1.08;color:#0a0a0a;margin:0;">
         Gigabytes of documents. Correlated in one answer.
@@ -503,6 +503,7 @@
     </div>
     <div data-reveal="" style="order:1;opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1)">
       <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#8a8a8a;margin-bottom:18px">03 · Autonomy</div>
+
       <h3 style="margin:0;font-size:clamp(28px,3.6vw,46px);font-weight:600;letter-spacing:-0.02em;line-height:1.05">One prompt. Entire workflows.</h3>
       <p style="margin:22px 0 0;font-size:17px;line-height:1.65;color:#4b4b4b">One instruction. Codexta checks the conditions, makes the decision, finds what's needed, and moves the money — all before you've finished your coffee. Conditional logic. Cross-domain chaining. Real outcomes.</p>
       <p style="margin:16px 0 0;font-size:17px;line-height:1.65;color:#4b4b4b">This is what separates a conversational assistant from a genuine AI agent.</p>
@@ -633,10 +634,56 @@
       </div>
     </div>
     <div data-reveal="" style="order:1;opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1)">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#8a8a8a;margin-bottom:18px">07 · Adaptive UI</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#8a8a8a;margin-bottom:18px">05 · Adaptive UI</div>
       <h3 style="margin:0;font-size:clamp(28px,3.6vw,46px);font-weight:600;letter-spacing:-0.02em;line-height:1.05">Not just text. The right interface.</h3>
       <p style="margin:22px 0 0;font-size:17px;line-height:1.65;color:#4b4b4b">Ask for trainers — you get a product grid, with images, sizes, prices and a one-click basket. Ask about your bank statements — you get a formatted table with colour-coded debits and credits.</p>
       <p style="margin:16px 0 0;font-size:17px;line-height:1.65;color:#4b4b4b">Codexta's <code style="font-family:'JetBrains Mono',monospace;font-size:14px;background:#f1f1f3;padding:2px 7px;border-radius:5px">present_</code> tools surface the component that fits the context — not bullet points — so every answer arrives in a format that's actually actionable.</p>
+      <p style="margin:16px 0 0;font-size:17px;line-height:1.65;color:#4b4b4b">And these aren't fixed. If a card is missing a field or a layout isn't quite right, you don't file a ticket and wait for a release — you just ask, and Codexta builds the fix itself (see Self-Authoring, next).</p>
+    </div>
+  </section>
+
+  <!-- FEATURE: Self-Authoring -->
+  <section class="cdx-feat" style="max-width:1160px;margin:0 auto;padding:80px 32px;">
+    <div data-reveal="" style="opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1)">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#8a8a8a;margin-bottom:18px">06 · Self-Authoring</div>
+      <h3 style="margin:0;font-size:clamp(28px,3.6vw,46px);font-weight:600;letter-spacing:-0.02em;line-height:1.05">It doesn't just use tools. It writes them.</h3>
+      <p style="margin:22px 0 0;font-size:17px;line-height:1.65;color:#4b4b4b">Ask it to hook up a new API and Codexta writes the tool itself — a real, compiled action, tested live against the endpoint, with credentials pulled from an encrypted vault it never sees in plaintext. Ask for a bespoke result card and it writes the UI component too, styled to match the app's theme automatically.</p>
+      <p style="margin:16px 0 0;font-size:17px;line-height:1.65;color:#4b4b4b">Every change is versioned. Nothing goes live on its own — a fix is saved as a draft first, and only an explicit "activate" makes it the version real conversations use.</p>
+    </div>
+    <div data-reveal="" data-delay="120" style="position:relative;opacity:0;transform:translateY(30px);transition:opacity 1s cubic-bezier(.22,1,.36,1),transform 1s cubic-bezier(.22,1,.36,1)">
+      <div style="position:absolute;inset:-6%;border-radius:34px;background:linear-gradient(135deg,#4285F4,#A142F4,#FBBC04);filter:blur(48px);opacity:.28;z-index:-1;animation:glowPulse 10.5s ease-in-out infinite"></div>
+      <div style="border-radius:24px;background:#101012;border:1px solid rgba(255,255,255,0.08);padding:22px;box-shadow:0 34px 90px -34px rgba(0,0,0,0.5);color:#fff">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#9a9a9a;margin-bottom:14px">author_tool_define("advanced_weather_get")</div>
+        <div style="display:flex;flex-direction:column;gap:0;margin-bottom:16px">
+          <div style="display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.05)">
+            <span style="color:#34A853;font-size:12px;flex-shrink:0">✓</span>
+            <span style="font-size:13px;color:#c0c0d0">C# compiled — 0 errors</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.05)">
+            <span style="color:#FBBC04;font-size:12px;flex-shrink:0">⚠</span>
+            <span style="font-size:13px;color:#c0c0d0">Live test blocked — missing secret</span>
+            <span style="margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:10px;color:#5a5a6a;flex-shrink:0">XWEATHER_CLIENT_ID</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;padding:9px 0">
+            <span style="color:#7eb3ff;font-size:12px;flex-shrink:0">⏸</span>
+            <span style="font-size:13px;color:#c0c0d0">Waiting on operator to add secret…</span>
+          </div>
+        </div>
+        <div style="height:1px;background:rgba(255,255,255,.07);margin-bottom:16px"></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;color:#5a5a6a;margin-bottom:10px">VERSION HISTORY</div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="display:flex;align-items:center;gap:10px;background:rgba(52,168,83,.08);border:1px solid rgba(52,168,83,.2);border-radius:10px;padding:8px 12px">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#eeeef5">v1</span>
+            <span style="font-size:12px;color:#9a9ab8">Initial version</span>
+            <span style="margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.08em;color:#6ee7b7;background:rgba(52,168,83,.14);padding:3px 8px;border-radius:99px">ACTIVE</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:8px 12px">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#eeeef5">v2</span>
+            <span style="font-size:12px;color:#9a9ab8">Adds wind speed field</span>
+            <span style="margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.08em;color:#c0c0c0;background:rgba(255,255,255,.08);padding:3px 8px;border-radius:99px">DRAFT</span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -664,16 +711,45 @@
       </div>
     </div>
     <div data-reveal="" style="order:1;opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1)">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#8a8a8a;margin-bottom:18px">05 · Memory</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#8a8a8a;margin-bottom:18px">07 · Memory</div>
       <h3 style="margin:0;font-size:clamp(28px,3.6vw,46px);font-weight:600;letter-spacing:-0.02em;line-height:1.05">Preferences that actually stick — per domain.</h3>
       <p style="margin:22px 0 0;font-size:17px;line-height:1.65;color:#4b4b4b">Codexta learns how users like to work and saves it — globally, or scoped to a specific domain like weather, banking, or shopping. Preferences persist across sessions and update on request. No settings screen required.</p>
+    </div>
+  </section>
+
+  <!-- FEATURE: Learns From Mistakes -->
+  <section class="cdx-feat" style="max-width:1160px;margin:0 auto;padding:80px 32px;">
+    <div data-reveal="" style="opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1)">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#8a8a8a;margin-bottom:18px">08 · Learns From Mistakes</div>
+      <h3 style="margin:0;font-size:clamp(28px,3.6vw,46px);font-weight:600;letter-spacing:-0.02em;line-height:1.05">Corrected once. Right from then on.</h3>
+      <p style="margin:22px 0 0;font-size:17px;line-height:1.65;color:#4b4b4b">Correct Codexta on a fact — a wrong return window, a stale API version, a step it skipped — and it doesn't just fix the answer in front of you. It writes the correction down as a lesson, tagged to the domain it belongs to, so the next task that touches the same ground finds it before making the same mistake.</p>
+      <p style="margin:16px 0 0;font-size:17px;line-height:1.65;color:#4b4b4b">If a stored lesson turns out to be stale itself, Codexta corrects the note in place instead of quietly working around it — a memory that's wrong once shouldn't keep being wrong.</p>
+    </div>
+    <div data-reveal="" data-delay="120" style="position:relative;opacity:0;transform:translateY(30px);transition:opacity 1s cubic-bezier(.22,1,.36,1),transform 1s cubic-bezier(.22,1,.36,1)">
+      <div style="position:absolute;inset:-6%;border-radius:34px;background:linear-gradient(135deg,#FBBC04,#A142F4);filter:blur(48px);opacity:.26;z-index:-1;animation:glowPulse 9.5s ease-in-out infinite"></div>
+      <div style="border-radius:24px;background:#f6f6f7;border:1px solid rgba(0,0,0,0.06);padding:20px;box-shadow:0 34px 90px -34px rgba(0,0,0,0.32);display:flex;flex-direction:column;gap:12px">
+        <div style="display:flex;align-items:center;gap:14px;background:#fff;border:1px solid rgba(0,0,0,0.06);border-radius:16px;padding:15px 16px">
+          <div style="width:40px;height:40px;border-radius:11px;background:#fef3e2;display:flex;align-items:center;justify-content:center;font-size:19px">📝</div>
+          <div style="flex:1"><div style="font-weight:600;font-size:14px">Returns policy</div><div style="font-size:12.5px;color:#8a8a8a">Nike items: free returns within 28 days, not 14</div></div>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#b45309;background:#fef3e2;padding:4px 8px;border-radius:6px">LESSON</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:14px;background:#fff;border:1px solid rgba(0,0,0,0.06);border-radius:16px;padding:15px 16px">
+          <div style="width:40px;height:40px;border-radius:11px;background:#fef3e2;display:flex;align-items:center;justify-content:center;font-size:19px">📝</div>
+          <div style="flex:1"><div style="font-weight:600;font-size:14px">Very API</div><div style="font-size:12.5px;color:#8a8a8a">Basket endpoint moved to /v2 — pass variantId, not sku</div></div>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#b45309;background:#fef3e2;padding:4px 8px;border-radius:6px">LESSON</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;background:#fff;border:1px solid rgba(0,0,0,0.06);border-radius:14px;padding:13px 16px">
+          <span style="font-size:12px;color:#3d3d3d">Corrected by user on 04 Jul 2026 · re-applied automatically since</span>
+        </div>
+        <div style="text-align:center;font-family:'JetBrains Mono',monospace;font-size:11px;color:#9a9a9a;padding-top:2px">tagged by domain · surfaced only where relevant</div>
+      </div>
     </div>
   </section>
 
   <!-- FEATURE 5: Privacy -->
   <section id="privacy" class="cdx-feat" style="max-width:1160px;margin:0 auto;padding:80px 32px 60px;">
     <div data-reveal="" style="opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1)">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#8a8a8a;margin-bottom:18px">06 · Security</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#8a8a8a;margin-bottom:18px">09 · Security</div>
       <h3 style="margin:0;font-size:clamp(28px,3.6vw,46px);font-weight:600;letter-spacing:-0.02em;line-height:1.05">Passwords the model never sees.</h3>
       <p style="margin:22px 0 0;font-size:17px;line-height:1.65;color:#4b4b4b">When a user signs in, registers, or authenticates, the password never reaches the language model in plain text. It's encrypted the moment it's entered, held in session-only memory, and used at the real value the model never has access to.</p>
       <p style="margin:16px 0 0;font-size:17px;line-height:1.65;color:#4b4b4b">Sealed end-to-end — closing an entire class of prompt-injection and credential-leak risk that affects most agent platforms today.</p>
@@ -708,10 +784,10 @@
     <!-- Text block -->
     <div style="flex:1;min-width:0;">
       <div style="font-family:'Figtree',-apple-system,BlinkMacSystemFont,sans-serif;font-size:17px;font-weight:600;color:#eeeef5;line-height:1.35;">
-        Runs flawlessly on Gemma 4 — self-hosted, no vendor lock-in
+        Model-agnostic by design — self-hosted on Gemma 4, DeepSeek, or your own model
       </div>
       <div style="font-family:'Figtree',-apple-system,BlinkMacSystemFont,sans-serif;font-size:14px;color:#7a7a8a;margin-top:5px;line-height:1.5;">
-        Carefully engineered agent architecture. Efficient enough for open-weight models enterprises can serve themselves.
+        Any OpenAI-compatible endpoint plugs in — including open-weight models enterprises serve themselves. No vendor lock-in, no data leaving your infrastructure.
       </div>
     </div>
     <!-- Badge -->
@@ -723,9 +799,9 @@
 
 
   <!-- FEATURE 1: Document Intelligence -->
-  <section id="context" class="cdx-feat" style="max-width:1160px;margin:0 auto;padding:80px 32px;">
+  <section id="documents" class="cdx-feat" style="max-width:1160px;margin:0 auto;padding:80px 32px;">
     <div data-reveal="" style="opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1)">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#8a8a8a;margin-bottom:18px">02 · Document Intelligence</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#8a8a8a;margin-bottom:18px">10 · Document Intelligence</div>
       <h3 style="margin:0;font-size:clamp(28px,3.6vw,46px);font-weight:600;letter-spacing:-0.02em;line-height:1.05">Upload a file. Get answers. Build your brain.</h3>
       <p style="margin:22px 0 0;font-size:17px;line-height:1.65;color:#4b4b4b">Drop in a PDF, Excel spreadsheet, or PowerPoint deck. Codexta reads every page, chunks each section, and indexes it with hybrid BM25 + vector search — instantly queryable, cited back to the exact page and row.</p>
       <p style="margin:16px 0 0;font-size:17px;line-height:1.65;color:#4b4b4b">It doesn't just read once. It stores findings in a persistent knowledge base so documents uploaded today answer questions asked next month — no re-uploading, no re-reading, no re-explaining.</p>
@@ -785,6 +861,69 @@
     <div class="eyebrow"><span class="eyebrow-dot"></span>Task orchestration</div>
     <h2 class="hed">Each task sees only what it needs to.</h2>
     <p class="sub">Codexta splits every request into isolated task frames. Each frame loads only its domain tools and the exact context that step requires — then passes a single result back. No bloat, no bleed-through, no contamination between domains.</p>
+  </div>
+
+  <!-- ── UNDER THE HOOD: message composition ── -->
+  <div class="sc" data-r>
+    <div class="sc-hd">
+      <div class="sc-num">Under the hood</div>
+      <div class="sc-ttl">Not a growing chat log — a state snapshot, rebuilt every turn</div>
+    </div>
+    <p class="sub" style="margin-bottom:32px;max-width:700px">Most agent frameworks keep one transcript and replay the whole thing every turn — every tool call that ever ran stays in there, and "the current state" is whatever the model can infer from the last matching mention buried in it. Codexta doesn't work that way. Every turn it rebuilds the message from scratch, in a fixed order — guidelines, then preferences, then <b style="color:var(--t)">context</b>, then the turn-by-turn trace — and a tool call that changes something doesn't add a new line to a growing history. It overwrites the one live snapshot for that entity, in place.</p>
+
+    <div class="flow2">
+      <!-- context snapshot, turn 5 -->
+      <div class="tc" style="border-top:2px solid var(--blue)">
+        <div class="tc-hd"><span class="tc-id">turn 5</span><span class="badge" style="background:rgba(66,133,244,.14);color:#7eb3ff">CONTEXT SNAPSHOT</span></div>
+        <div class="tc-ttl">&lt;context scope="product" key="request_id"&gt;</div>
+        <div class="ctx-lbl">Live entity state</div>
+        <div class="ctx">
+          <div class="ci"><span class="ci-ico">🆔</span>request_id: PRD-2291</div>
+          <div class="ci"><span class="ci-ico">📦</span>product: Personal Loan · £2,000</div>
+          <div class="ci"><span class="ci-ico">📍</span>state: PRODUCT_DRAFT_STATE</div>
+          <div class="ci"><span class="ci-ico">🕒</span>last_executed_action: product_create_request</div>
+        </div>
+      </div>
+
+      <!-- overwrite arrow -->
+      <div class="conn2">
+        <svg width="48" height="28" viewBox="0 0 48 28" fill="none">
+          <line x1="0" y1="14" x2="36" y2="14" stroke="#FBBC04" stroke-width="1.5" stroke-dasharray="5 3">
+            <animate attributeName="stroke-dashoffset" from="0" to="-16" dur="0.7s" repeatCount="indefinite"/>
+          </line>
+          <path d="M32 8L40 14L32 20" stroke="#FBBC04" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="cl" style="color:#fcd34d"><b>3 tool calls later</b><br>same entry<br><b>overwritten</b>, not appended</div>
+      </div>
+
+      <!-- context snapshot, turn 8 -->
+      <div class="tc" style="border-top:2px solid var(--green)">
+        <div class="tc-hd"><span class="tc-id">turn 8</span><span class="badge" style="background:rgba(52,168,83,.14);color:#6ee7b7">CONTEXT SNAPSHOT</span></div>
+        <div class="tc-ttl">&lt;context scope="product" key="request_id"&gt;</div>
+        <div class="ctx-lbl">Same entity, current state</div>
+        <div class="ctx">
+          <div class="ci"><span class="ci-ico">🆔</span>request_id: PRD-2291</div>
+          <div class="ci"><span class="ci-ico">📦</span>product: Personal Loan · £2,000</div>
+          <div class="ci inh"><span class="ci-ico">📍</span>state: PRODUCT_APPROVED_STATE</div>
+          <div class="ci"><span class="ci-ico">🕒</span>last_executed_action: product_set_state</div>
+        </div>
+      </div>
+    </div>
+
+    <p class="sub" style="margin-top:28px;margin-bottom:14px;max-width:700px">The turn-by-turn trace still records that the three calls happened — but not their payload. Each shows up as an empty marker; the data itself lives exactly once, in the snapshot above.</p>
+    <div class="convo" style="max-width:640px">
+      <div class="m ma"><div class="bbl" style="font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#7a7a8a">&lt;tool_result id="14" tool="product_set_state" /&gt;</div></div>
+      <div class="m ma"><div class="bbl" style="font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#7a7a8a">&lt;tool_result id="15" tool="product_get_request" /&gt;</div></div>
+      <div class="m ma"><div class="bbl" style="font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#7a7a8a">&lt;tool_result id="16" tool="product_set_state" /&gt;</div></div>
+    </div>
+
+    <p class="sub" style="margin-top:20px;margin-bottom:0;max-width:700px">Rebuilding the message every turn sounds like it should cost more, not less — but the layout is deliberate: guidelines and preferences (rarely change) sit at the top, context (changes slowly) in the middle, the live trace (changes every turn) at the bottom. Everything above the line that just moved is byte-for-byte identical to the previous turn, so the model's prompt cache still serves it — <b style="color:var(--t)">95%+ of input tokens hit cache</b> in practice, not just on the first reply of a session.</p>
+
+    <div class="chips" style="margin-top:32px">
+      <div class="chip"><span style="color:var(--blue)">⟳</span>Rebuilt from state, not replayed from history</div>
+      <div class="chip"><span style="color:var(--amber)">⬧</span>One live snapshot per entity — never a growing log of it</div>
+      <div class="chip"><span style="color:var(--green)">$</span>95%+ prompt-cache hit rate, turn after turn</div>
+    </div>
   </div>
 
   <!-- ── SCENARIO 1 ── -->
