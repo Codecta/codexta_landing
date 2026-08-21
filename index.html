@@ -241,6 +241,7 @@
     <div style="display:flex;align-items:center;gap:34px;font-size:15px;font-weight:500;color:#3d3d3d">
       <a href="#cdx-orch">How it thinks</a>
       <a href="#workflows">Workflows</a>
+      <a href="#white-label">White Label</a>
       <a href="#trust">Trust</a>
       <a href="#privacy">Privacy</a>
     </div>
@@ -254,8 +255,9 @@
         <div style="width:22px;height:22px;border-radius:6px;background:linear-gradient(135deg,#4285F4,#A142F4 42%,#EA4335 76%,#FBBC04)"></div>
         <span style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.16em;text-transform:uppercase;color:#5a5a5a">Codexta</span>
       </div>
-      <h1 style="margin:0;font-size:clamp(44px,8.4vw,124px);font-weight:600;letter-spacing:-0.035em;line-height:0.96;max-width:16ch">Your life, orchestrated.</h1>
-      <p style="margin:32px 0 0;font-size:clamp(18px,2.2vw,26px);font-weight:500;color:#4b4b4b;letter-spacing:-0.01em">One prompt conducts every domain, in concert. Zero app-switching.</p>
+      <h1 style="margin:0;font-size:clamp(44px,8.4vw,124px);font-weight:600;letter-spacing:-0.035em;line-height:0.96;max-width:16ch">One agent. Every part of your life.</h1>
+      <p style="margin:32px 0 0;font-size:clamp(18px,2.2vw,26px);font-weight:500;color:#4b4b4b;letter-spacing:-0.01em">Ask once. It handles banking, shopping, work — whatever the task actually is. Zero app-switching.</p>
+      <p style="margin:14px 0 0;font-size:clamp(14px,1.3vw,16px);font-weight:600;color:#8a8a8a;letter-spacing:.02em">White-label ready — wired into your own site or app under your own brand.</p>
       <div style="display:flex;gap:14px;margin-top:44px;flex-wrap:wrap;justify-content:center">
         <a href="https://codecta.com/contact-us/" style="display:flex;align-items:center;gap:9px;background:#0a0a0a;color:#fff;padding:15px 28px;border-radius:999px;font-size:16px;font-weight:600">Contact Us</a>
         <a href="#cdx-orch" style="display:flex;align-items:center;gap:8px;background:#f2f2f3;color:#0a0a0a;padding:15px 28px;border-radius:999px;font-size:16px;font-weight:600">See how it thinks</a>
@@ -899,10 +901,38 @@
     </div>
   </section>
 
+  <!-- FEATURE: White Label & Embed -->
+  <section id="white-label" class="cdx-feat" style="max-width:1160px;margin:0 auto;padding:80px 32px;">
+    <div data-reveal="" style="opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1)">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#8a8a8a;margin-bottom:18px">13 · White Label &amp; Embed</div>
+      <h3 style="margin:0;font-size:clamp(28px,3.6vw,46px);font-weight:600;letter-spacing:-0.02em;line-height:1.05">Your brand. Your app. Codexta underneath.</h3>
+      <p style="margin:22px 0 0;font-size:17px;line-height:1.65;color:#4b4b4b">Codexta doesn't have to look like Codexta. Branding — name, logo, colours, domain — is a single config, not a fork, so a retailer like Very can ship it as their own assistant: no "powered by" badge, no second product for shoppers to learn.</p>
+      <p style="margin:16px 0 0;font-size:17px;line-height:1.65;color:#4b4b4b">And it's not a standalone app you bolt on top — the same REST API driving this experience is what you wire into your existing site or app, so it becomes a feature of the product your customers already use, not a new destination.</p>
+    </div>
+    <div data-reveal="" data-delay="120" style="position:relative;opacity:0;transform:translateY(30px);transition:opacity 1s cubic-bezier(.22,1,.36,1),transform 1s cubic-bezier(.22,1,.36,1)">
+      <div style="position:absolute;inset:-6%;border-radius:34px;background:linear-gradient(135deg,#EA4335,#FBBC04,#4285F4);filter:blur(48px);opacity:.28;z-index:-1;animation:glowPulse 10.5s ease-in-out infinite"></div>
+      <div style="border-radius:24px;background:#101012;border:1px solid rgba(255,255,255,0.08);padding:26px;box-shadow:0 34px 90px -34px rgba(0,0,0,0.5);color:#fff">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#9a9a9a;margin-bottom:16px">brand config · one file controls the whole surface</div>
+        <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-radius:14px;padding:16px;margin-bottom:16px;font-family:'JetBrains Mono',monospace;font-size:12.5px;line-height:1.8;color:#c9c9d8">
+          <div><span style="color:#7eb3ff">"agentName"</span>: <span style="color:#fcd34d">"Very Assistant"</span>,</div>
+          <div><span style="color:#7eb3ff">"primaryColor"</span>: <span style="color:#fcd34d">"#e4022e"</span>,</div>
+          <div><span style="color:#7eb3ff">"domain"</span>: <span style="color:#fcd34d">"chat.very.co.uk"</span></div>
+        </div>
+        <div style="display:flex;justify-content:flex-start;margin-bottom:10px">
+          <div style="display:flex;align-items:center;gap:9px;background:#fff;color:#0a0a0a;padding:11px 16px;border-radius:16px 16px 16px 4px;font-size:13.5px;max-width:88%">
+            <span style="width:20px;height:20px;border-radius:6px;background:#e4022e;flex-shrink:0;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:11px">V</span>
+            Hi, I'm your Very assistant — want help tracking an order?
+          </div>
+        </div>
+        <div style="text-align:center;font-family:'JetBrains Mono',monospace;font-size:11px;color:#9a9a9a;margin-top:12px">same engine · zero Codexta branding · lives inside your app</div>
+      </div>
+    </div>
+  </section>
+
   <!-- FEATURE: How It Compares -->
   <section style="max-width:1160px;margin:0 auto;padding:40px 32px 90px;">
     <div data-reveal="" style="opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1)">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#8a8a8a;margin-bottom:18px">13 · How It Compares</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#8a8a8a;margin-bottom:18px">14 · How It Compares</div>
       <h3 style="margin:0;font-size:clamp(28px,3.6vw,46px);font-weight:600;letter-spacing:-0.02em;line-height:1.05;max-width:22ch">Built for a different job than a code CLI or a chat window.</h3>
       <p style="margin:22px 0 0;font-size:17px;line-height:1.65;color:#4b4b4b;max-width:80ch">LangChain/LangGraph is the closest peer on raw orchestration — its graph model genuinely covers task dependencies well, though that graph is authored by a developer at build time; Codexta's task graph is invented by the model itself, on the fly, per conversation. Claude Code and ChatGPT solve different problems (a coding CLI, a general chat product), so several rows below don't apply to them at all — marked as such rather than scored as a loss for a category they were never built for.</p>
     </div>
@@ -1002,6 +1032,20 @@
             <td style="padding:13px 16px;color:#6ee7b7"><b>✓</b> genuinely model-agnostic too (swapping providers still means updating your integration code)</td>
             <td style="padding:13px 16px;color:#ff9d8f">✕ tied to Claude models</td>
             <td style="padding:13px 16px;color:#ff9d8f">✕ tied to OpenAI models</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,.06)">
+            <td style="padding:13px 16px;color:#c8c8d8;font-weight:500">Embeddable into an existing site<br><span style="font-size:11.5px;color:#6a6a7a;font-weight:400">e.g. a retailer bolts it onto their own e-commerce site</span></td>
+            <td style="padding:13px 16px;color:#fcd34d">◐ the same REST API this app runs on can be wired into any site, but a developer has to build that integration — no drop-in widget yet</td>
+            <td style="padding:13px 16px;color:#fcd34d">◐ same story — it's a backend library, a developer builds the API + front-end widget from scratch</td>
+            <td style="padding:13px 16px;color:#5a5a6a">— different category (a local CLI/IDE tool, not a website embed)</td>
+            <td style="padding:13px 16px;color:#fcd34d">◐ the Assistants/Chat API can be embedded, but again a developer builds the widget — no first-party "drop into your site" product</td>
+          </tr>
+          <tr>
+            <td style="padding:13px 16px;color:#c8c8d8;font-weight:500">White-label branding<br><span style="font-size:11.5px;color:#6a6a7a;font-weight:400">your name, your colours, your domain — no "powered by" badge</span></td>
+            <td style="padding:13px 16px;color:#6ee7b7"><b>✓</b> config-driven — one file controls name, colours &amp; domain, so the whole surface ships under your brand</td>
+            <td style="padding:13px 16px;color:#fcd34d">◐ it's your own frontend code either way, so branding is entirely up to what a developer builds</td>
+            <td style="padding:13px 16px;color:#5a5a6a">— different category (a local CLI/IDE tool, not a customer-facing product)</td>
+            <td style="padding:13px 16px;color:#ff9d8f">✕ ships as OpenAI/ChatGPT-branded, no white-label option</td>
           </tr>
         </tbody>
       </table>
