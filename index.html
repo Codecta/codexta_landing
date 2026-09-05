@@ -223,6 +223,13 @@
 
   /* Enterprise knowledge section */
   section[style*="padding:100px 40px"]{padding:60px 20px}
+
+  /* Multi-column content grids (Why Codexta, Design Goals, Flavors) → stack */
+  div[style*="grid-template-columns:1fr 1fr;gap:24px"],
+  div[style*="grid-template-columns:repeat(3,1fr);gap:24px"],
+  div[style*="grid-template-columns:repeat(3,1fr);gap:20px"]{
+    grid-template-columns:1fr !important;
+  }
 }
 
   </style>
@@ -245,11 +252,7 @@
       <a href="#trust">Trust</a>
       <a href="#privacy">Security</a>
     </div>
-    <div style="display:flex;align-items:center;gap:18px">
-      <a href="https://codexta.codectaapps.com/use-cases" style="font-size:15px;font-weight:500;color:#3d3d3d">Use Cases</a>
-      <a href="https://codexta.codectaapps.com/" style="font-size:15px;font-weight:500;color:#3d3d3d">Demo</a>
-      <a href="https://codecta.com/contact-us/" style="display:flex;align-items:center;gap:8px;background:#0a0a0a;color:#fff;padding:10px 20px;border-radius:999px;font-size:14px;font-weight:600">Contact Us</a>
-    </div>
+    <a href="https://codecta.com/contact-us/" style="display:flex;align-items:center;gap:8px;background:#0a0a0a;color:#fff;padding:10px 20px;border-radius:999px;font-size:14px;font-weight:600">Contact Us</a>
   </nav>
 
   <header id="top" style="position:relative;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:150px 24px 90px;overflow:hidden">
@@ -259,17 +262,17 @@
         <div style="width:22px;height:22px;border-radius:6px;background:linear-gradient(135deg,#4285F4,#A142F4 42%,#EA4335 76%,#FBBC04)"></div>
         <span style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.16em;text-transform:uppercase;color:#5a5a5a">Codexta</span>
       </div>
-      <div style="display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:0.16em;text-transform:uppercase;color:#7c3aed;margin-bottom:22px">
-        <span style="width:5px;height:5px;border-radius:50%;background:#7c3aed"></span>
-        Agent platform for business processes
-      </div>
       <h1 style="margin:0;font-size:clamp(40px,7.6vw,108px);font-weight:600;letter-spacing:-0.035em;line-height:0.98;max-width:17ch">The agent that works across your business.</h1>
       <p style="margin:28px 0 0;font-size:clamp(19px,2.3vw,27px);font-weight:600;color:#0a0a0a;letter-spacing:-0.01em;max-width:44ch">One conversation. Every system you already use.</p>
-      <p style="margin:14px 0 0;font-size:clamp(17px,1.9vw,21px);font-weight:500;color:#4b4b4b;letter-spacing:-0.01em;max-width:50ch">Codexta connects your existing applications, knowledge and business processes so people can get work done without jumping between systems.</p>
-      <p style="margin:16px 0 0;font-size:clamp(14px,1.3vw,16px);font-weight:500;color:#8a8a8a;letter-spacing:.01em;max-width:56ch;line-height:1.6">Codexta sits in front of the applications you already run — connecting commerce, banking, support, knowledge and internal tools in one conversation. It helps people move work from request to resolution, while your systems, rules and approvals stay firmly in control.</p>
-      <div style="display:flex;gap:14px;margin-top:40px;flex-wrap:wrap;justify-content:center">
-        <a href="https://codecta.com/contact-us/" style="display:flex;align-items:center;gap:9px;background:#0a0a0a;color:#fff;padding:15px 28px;border-radius:999px;font-size:16px;font-weight:600">Contact Us</a>
-        <a href="#cdx-orch" style="display:flex;align-items:center;gap:8px;background:#f2f2f3;color:#0a0a0a;padding:15px 28px;border-radius:999px;font-size:16px;font-weight:600">See how it thinks</a>
+      <p style="margin:14px 0 0;font-size:clamp(16px,1.8vw,20px);font-weight:500;color:#4b4b4b;letter-spacing:-0.01em;max-width:48ch;line-height:1.55">Codexta connects the systems you already run — commerce, banking, support and knowledge — so people can get work done in one conversation, while your rules and approvals stay in control.</p>
+      <div style="display:flex;gap:10px;margin-top:20px;flex-wrap:wrap;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#6a6a6a">
+        <span style="border:1px solid rgba(0,0,0,0.12);border-radius:999px;padding:6px 14px">White-label</span>
+        <span style="border:1px solid rgba(0,0,0,0.12);border-radius:999px;padding:6px 14px">Embeddable</span>
+        <span style="border:1px solid rgba(0,0,0,0.12);border-radius:999px;padding:6px 14px">Enterprise-grade</span>
+      </div>
+      <div style="display:flex;gap:14px;margin-top:32px;flex-wrap:wrap;justify-content:center">
+        <a href="https://codexta.codectaapps.com/" style="display:flex;align-items:center;gap:9px;background:#0a0a0a;color:#fff;padding:15px 28px;border-radius:999px;font-size:16px;font-weight:600">See it in action</a>
+        <a href="https://codexta.codectaapps.com/use-cases" style="display:flex;align-items:center;gap:8px;background:#f2f2f3;color:#0a0a0a;padding:15px 28px;border-radius:999px;font-size:16px;font-weight:600">Explore use cases</a>
       </div>
 
       <!-- Hero visual: a person asks, Codexta coordinates the systems underneath — never shown as autonomous -->
@@ -295,27 +298,19 @@
             <div style="font-size:15px;font-weight:700;color:#6ee7b7">Refund eligible</div>
             <div style="font-family:'JetBrains Mono',monospace;font-size:22px;font-weight:700;margin-top:4px">£129.00</div>
           </div>
-          <button style="width:100%;background:#fff;color:#0a0a0a;border:none;padding:12px;border-radius:12px;font-size:14px;font-weight:700;cursor:default">Approve refund</button>
+          <button style="width:100%;background:#fff;color:#0a0a0a;border:none;padding:12px;border-radius:12px;font-size:14px;font-weight:700;cursor:default;margin-bottom:16px">Approve refund</button>
+          <div style="height:1px;background:rgba(255,255,255,.08);margin-bottom:14px"></div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#8a8a8a;letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px">Carried out across your systems</div>
+          <div style="display:flex;flex-direction:column;gap:0">
+            <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:#d8d8e0"><span style="width:20px;height:20px;flex-shrink:0;border-radius:50%;background:rgba(52,168,83,.16);color:#6ee7b7;display:flex;align-items:center;justify-content:center;font-size:11px">✓</span>Commerce API — refund created</div>
+            <div style="width:1px;height:12px;background:rgba(255,255,255,.12);margin-left:9px"></div>
+            <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:#d8d8e0"><span style="width:20px;height:20px;flex-shrink:0;border-radius:50%;background:rgba(52,168,83,.16);color:#6ee7b7;display:flex;align-items:center;justify-content:center;font-size:11px">✓</span>Support — ticket updated</div>
+            <div style="width:1px;height:12px;background:rgba(255,255,255,.12);margin-left:9px"></div>
+            <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:#d8d8e0"><span style="width:20px;height:20px;flex-shrink:0;border-radius:50%;background:rgba(52,168,83,.16);color:#6ee7b7;display:flex;align-items:center;justify-content:center;font-size:11px">✓</span>Audit log — action recorded</div>
+          </div>
         </div>
 
-        <div style="margin-top:26px;text-align:center">
-          <div style="display:flex;justify-content:center;gap:34px;font-family:'JetBrains Mono',monospace;font-size:10.5px;color:#8a8a8a;letter-spacing:.08em;text-transform:uppercase;margin-bottom:2px">
-            <span>Commerce</span><span>Support</span><span>Policy</span>
-          </div>
-          <svg width="200" height="30" viewBox="0 0 200 30" style="display:block;margin:0 auto" xmlns="http://www.w3.org/2000/svg">
-            <path d="M22 0 L100 26" stroke="#c7c7cc" stroke-width="1.5" fill="none"/>
-            <path d="M100 0 L100 26" stroke="#c7c7cc" stroke-width="1.5" fill="none"/>
-            <path d="M178 0 L100 26" stroke="#c7c7cc" stroke-width="1.5" fill="none"/>
-          </svg>
-          <div style="display:inline-flex;align-items:center;gap:7px;background:#0a0a0a;color:#fff;padding:8px 16px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.03em">
-            <div style="width:16px;height:16px;border-radius:5px;background:linear-gradient(135deg,#4285F4,#A142F4 42%,#EA4335 76%,#FBBC04)"></div>
-            CODEXTA
-          </div>
-          <div style="font-size:15px;color:#b0b0b0;line-height:1.3;margin:1px 0">↓</div>
-          <div style="font-family:'JetBrains Mono',monospace;font-size:10.5px;color:#8a8a8a;letter-spacing:.06em;text-transform:uppercase">existing systems</div>
-        </div>
-
-        <p style="margin-top:22px;font-size:15px;font-weight:600;color:#0a0a0a;line-height:1.5">Codexta brings everything together.<br><span style="color:#8a8a8a;font-weight:500">The person still decides.</span></p>
+        <p style="margin-top:22px;font-size:15px;font-weight:600;color:#0a0a0a;line-height:1.5">One question. Every system it touches.<br><span style="color:#8a8a8a;font-weight:500">The person still decides.</span></p>
       </div>
     </div>
     <div style="position:absolute;bottom:34px;left:50%;transform:translateX(-50%);font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.2em;color:#9a9a9a;animation:floatY 2.6s ease-in-out infinite">SCROLL ↓</div>
@@ -376,11 +371,32 @@
         <div style="font-size:13px;font-weight:700;letter-spacing:0.02em;color:#7c3aed;margin-bottom:14px">✓ WHAT CODEXTA DOES INSTEAD</div>
         <p style="margin:0;font-size:15.5px;line-height:1.65;color:#4b4b4b">No giant prompt, no graph drawn in advance. Each task loads exactly one guideline — the rules and tools for that domain, nothing else. When a request crosses into a second domain, Codexta spawns an isolated child task for it on the spot, passing forward only the specific facts that task actually needs.</p>
         <p style="margin:14px 0 0;font-size:15.5px;line-height:1.65;color:#4b4b4b">A guideline is a document, not code — scope, rules, execution steps, presentation rules. Reaching a new domain means writing one (see Business Processes, below), not re-architecting a graph or re-tuning a mega-prompt.</p>
-        <p style="margin:14px 0 0;font-size:15.5px;line-height:1.65;color:#4b4b4b"><strong style="color:#0a0a0a">And it can only do what a loaded guideline explicitly authorizes.</strong> There's no ambient "do whatever the user asks" mode — if a tool or action isn't scoped into the guideline for that task, Codexta has no way to reach it, no matter how the request is phrased. For a business putting an agent in front of real customers and real systems, that boundary is the whole point.</p>
       </div>
     </div>
 
     <p data-reveal="" data-delay="240" style="margin:28px 0 0;font-size:14.5px;line-height:1.6;color:#8a8a8a;max-width:70ch;opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1)">To be clear about what that does and doesn't mean: Codexta isn't a claim that one model can handle anything you throw at it. It ships today with a defined set of domains — the flavors below — and each one only does what its guideline actually authorizes it to do. Reaching the next one is fast. It still has to be reached.</p>
+  </section>
+
+  <!-- Design Goals -->
+  <section style="max-width:1080px;margin:0 auto;padding:0 32px 100px">
+    <div data-reveal="" style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#8a8a8a;margin-bottom:18px;opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1)">Design Goals</div>
+    <h2 data-reveal="" data-delay="60" style="margin:0;max-width:26ch;font-size:clamp(28px,3.8vw,48px);font-weight:600;letter-spacing:-0.02em;line-height:1.08;opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1)">Built so the business stays in control — not just the engineers.</h2>
+    <p data-reveal="" data-delay="100" style="margin:22px 0 0;max-width:70ch;font-size:16.5px;line-height:1.65;color:#4b4b4b;opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1)">Most agent frameworks put control in the hands of whoever can write code. Codexta puts it in the hands of whoever owns the policy — through authoring tools, a compiled decision process, and a full trace of what happened and why.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:44px">
+      <div data-reveal="" data-delay="140" style="background:#f6f2ff;border:1px solid rgba(161,66,244,0.18);border-radius:20px;padding:28px;opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1)">
+        <div style="font-size:13px;font-weight:700;letter-spacing:0.02em;color:#7c3aed;margin-bottom:14px">01 · CONTROL, AUTHORED BY THE BUSINESS</div>
+        <p style="margin:0;font-size:15.5px;line-height:1.65;color:#4b4b4b">Tone, edge cases, policy constraints and brand voice aren't buried in code a developer maintains — they're written as guidelines, in plain language, by the people who actually own the policy: compliance, ops, product. Change the rule, and the agent's behavior changes — no engineering ticket required.</p>
+      </div>
+      <div data-reveal="" data-delay="200" style="background:#f6f2ff;border:1px solid rgba(161,66,244,0.18);border-radius:20px;padding:28px;opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1)">
+        <div style="font-size:13px;font-weight:700;letter-spacing:0.02em;color:#7c3aed;margin-bottom:14px">02 · GUARANTEES COMPILED IN, NOT BOLTED ON</div>
+        <p style="margin:0;font-size:15.5px;line-height:1.65;color:#4b4b4b">A guideline's PROCESS block compiles into a real state machine the runtime enforces — illegal state jumps and out-of-order steps are denied by code, not just discouraged by a prompt. Unwanted behavior isn't caught after the fact; it's structurally unreachable in the first place.</p>
+      </div>
+      <div data-reveal="" data-delay="260" style="background:#f6f2ff;border:1px solid rgba(161,66,244,0.18);border-radius:20px;padding:28px;opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1)">
+        <div style="font-size:13px;font-weight:700;letter-spacing:0.02em;color:#7c3aed;margin-bottom:14px">03 · EVERY DECISION, TRACEABLE</div>
+        <p style="margin:0;font-size:15.5px;line-height:1.65;color:#4b4b4b">Every action the agent takes ties back to the exact guideline, state and rule that authorized it — compiled, tested and versioned automatically the moment it's written. You can always answer "why did it do that?" with a citation, not a guess, and roll a change back the same way you shipped it.</p>
+      </div>
+    </div>
   </section>
 
   <!-- FEATURE 2: Domain Expertise -->
@@ -1840,16 +1856,17 @@
   var wrap = document.getElementById('particles-wrap');
   if (!wrap) return;
   var colors = ['#EA4335','#FBBC04','#4285F4','#34A853','#A142F4','#FF6D01'];
-  var count = 60;
+  var count = 8;
   for (var i = 0; i < count; i++) {
-    var w = 3 + Math.random() * 5;
+    var w = 3 + Math.random() * 4;
     var rot = Math.floor(-40 + Math.random() * 80);
     var dx = Math.floor(-30 + Math.random() * 60);
     var dy = -(30 + Math.random() * 60);
     var delay = (Math.random() * 3).toFixed(2);
     var dur = (2.4 + Math.random() * 2.4).toFixed(2);
+    var op = (0.3 + Math.random() * 0.25).toFixed(2);
     var d = document.createElement('div');
-    d.style.cssText = 'position:absolute;left:' + (Math.random()*100) + '%;top:' + (Math.random()*100) + '%;width:' + w + 'px;height:' + (w*(1.4+Math.random())) + 'px;border-radius:3px;background:' + colors[i%colors.length] + ';--r:' + rot + 'deg;--dx:' + dx + 'px;--dy:' + dy + 'px;animation:drift ' + dur + 's ' + delay + 's ease-in-out infinite;will-change:transform,opacity';
+    d.style.cssText = 'position:absolute;left:' + (Math.random()*100) + '%;top:' + (Math.random()*100) + '%;width:' + w + 'px;height:' + (w*(1.4+Math.random())) + 'px;border-radius:3px;background:' + colors[i%colors.length] + ';--r:' + rot + 'deg;--dx:' + dx + 'px;--dy:' + dy + 'px;--o:' + op + ';animation:drift ' + dur + 's ' + delay + 's ease-in-out infinite;will-change:transform,opacity';
     wrap.appendChild(d);
   }
 })();
