@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="720" viewBox="0 0 640 720" role="img" aria-labelledby="title desc">
+  <title id="title">Codexta</title>
+  <desc id="desc">Codexta stacked logo, developed by codecta.com</desc>
+  <defs>
+    <path id="brain" d="M256 86c-43-34-105-24-133 20-46 5-75 45-64 92-34 31-27 86 16 108-15 50 20 95 69 94 22 44 80 58 112 24 32 34 90 20 112-24 49 1 84-44 69-94 43-22 50-77 16-108 11-47-18-87-64-92-28-44-90-54-133-20Z"/>
+    <clipPath id="left"><rect width="248" height="512"/></clipPath>
+    <clipPath id="right"><rect x="264" width="248" height="512"/></clipPath>
+  </defs>
+  <g transform="translate(150 30) scale(.6640625)">
+    <use href="#brain" fill="#14B8A6" clip-path="url(#left)"/><use href="#brain" fill="#6757E5" clip-path="url(#right)"/>
+    <g clip-path="url(#left)" fill="none" stroke="#FFF" stroke-linecap="round" stroke-width="18" opacity=".9"><path d="M215 133c-52-15-88 21-68 65 13 28-5 53-52 51"/><path d="M217 287c-46-20-82 10-67 49 9 25-1 43-26 54"/></g>
+    <g clip-path="url(#right)" fill="none" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" opacity=".92"><path d="M292 132v70h69"/><path d="M287 256h94v65h38"/><path d="M292 376h66"/></g>
+    <g fill="#FFF"><circle cx="361" cy="202" r="14"/><circle cx="419" cy="321" r="14"/><circle cx="358" cy="376" r="14"/></g>
+    <rect x="236" y="236" width="40" height="40" rx="10" fill="#F97066" transform="rotate(45 256 256)"/>
+  </g>
+  <text x="320" y="480" text-anchor="middle" fill="#101828" font-family="Manrope, Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="104" font-weight="750" letter-spacing="-4">Codexta</text>
+  <text x="320" y="535" text-anchor="middle" fill="#667085" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="24" font-weight="500">developed by codecta.com</text>
+</svg>
