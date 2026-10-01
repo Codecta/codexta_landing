@@ -1,0 +1,122 @@
+name: Deploy to cPanel
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      remote_path:
+        description: "Override remote path (defaults to the CPANEL_REMOTE_PATH variable)"
+        required: false
+        type: string
+      dry_run:
+        description: "Dry run - only report what would change, upload nothing"
+        required: false
+        type: boolean
+        default: false
+
+# Never let two deploys overlap mid-upload; queue them instead of cancelling,
+# so a half-finished mirror is never left on the server.
+concurrency:
+  group: deploy-cpanel
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install lftp
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq lftp
+
+      - name: Resolve remote path
+        id: target
+        env:
+          OVERRIDE: ${{ inputs.remote_path }}
+          DEFAULT_PATH: ${{ vars.CPANEL_REMOTE_PATH }}
+        run: |
+          set -euo pipefail
+          TARGET="${OVERRIDE:-$DEFAULT_PATH}"
+          if [ -z "$TARGET" ]; then
+            echo "::error::Remote path is not set. Define the CPANEL_REMOTE_PATH repo variable (use / for a chrooted FTP account)."
+            exit 1
+          fi
+          # The cftp@ account is chrooted, so "/" is the correct and only target.
+          # Only reject paths that would apply --delete to the whole hosting account.
+          case "$TARGET" in
+            public_html|public_html/|/home/*/public_html|/home/*/public_html/|/home/*|/home/*/)
+              echo "::error::Refusing to run mirror --delete against '$TARGET' (entire account). Use a chrooted FTP account or a subdirectory."
+              exit 1 ;;
+          esac
+          echo "path=$TARGET" >> "$GITHUB_OUTPUT"
+          echo "Deploy target: $TARGET"
+
+      - name: Deploy via FTPS
+        env:
+          FTP_HOST: ${{ secrets.CPANEL_FTP_HOST }}
+          FTP_USER: ${{ secrets.CPANEL_FTP_USER }}
+          # Passed through the environment rather than the command line so the
+          # password never shows up in the process list or the job log.
+          LFTP_PASSWORD: ${{ secrets.CPANEL_FTP_PASSWORD }}
+          FTP_PORT: ${{ vars.CPANEL_FTP_PORT || '21' }}
+          REMOTE_PATH: ${{ steps.target.outputs.path }}
+          # Shared cPanel hosts usually serve a wildcard certificate that does not
+          # match the site hostname. Set the CPANEL_VERIFY_CERT variable to "yes"
+          # if the host presents a certificate valid for CPANEL_FTP_HOST.
+          VERIFY_CERT: ${{ vars.CPANEL_VERIFY_CERT || 'no' }}
+          DRY_RUN: ${{ inputs.dry_run }}
+        run: |
+          set -euo pipefail
+          MIRROR_FLAGS="--reverse --delete --verbose --parallel=4 --no-perms"
+          if [ "${DRY_RUN:-false}" = "true" ]; then
+            MIRROR_FLAGS="$MIRROR_FLAGS --dry-run"
+            echo "::notice::DRY RUN - nothing will be uploaded"
+          fi
+
+          # Explicit FTPS: plain ftp:// scheme upgraded via AUTH TLS by ssl-force.
+          # mkdir runs before cmd:fail-exit so an existing target directory is not
+          # treated as an error; fail-exit then guards the mirror itself.
+          # Excluded paths are also protected from --delete:
+          #   .well-known/ - AutoSSL / Let's Encrypt domain validation
+          #   cgi-bin/     - created and managed by cPanel
+          #   .ftpquota    - written by the FTP server
+          #   CNAME        - GitHub Pages only, meaningless on cPanel
+          lftp -u "$FTP_USER" --env-password "ftp://$FTP_HOST:$FTP_PORT" <<EOF
+          set ftp:ssl-allow true
+          set ftp:ssl-force true
+          set ftp:ssl-protect-data true
+          set ssl:verify-certificate $VERIFY_CERT
+          set ftp:passive-mode true
+          set net:max-retries 3
+          set net:timeout 20
+          set xfer:clobber on
+          mkdir -pf "$REMOTE_PATH"
+          set cmd:fail-exit true
+          mirror $MIRROR_FLAGS \
+            --exclude-glob .git/ \
+            --exclude-glob .github/ \
+            --exclude-glob .gitignore \
+            --exclude-glob .DS_Store \
+            --exclude-glob .well-known/ \
+            --exclude-glob cgi-bin/ \
+            --exclude-glob .ftpquota \
+            --exclude-glob *.zip \
+            --exclude-glob *.tar.gz \
+            --exclude-glob CNAME \
+            ./ "$REMOTE_PATH"
+          bye
+          EOF
+
+      - name: Summary
+        if: success()
+        run: |
+          {
+            echo "### Deploy finished :rocket:"
+            echo ""
+            echo "- **Host:** \`${{ secrets.CPANEL_FTP_HOST }}\`"
+            echo "- **Path:** \`${{ steps.target.outputs.path }}\`"
+            echo "- **Commit:** \`${{ github.sha }}\`"
+            echo "- **Dry run:** \`${{ inputs.dry_run || false }}\`"
+          } >> "$GITHUB_STEP_SUMMARY"
