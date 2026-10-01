@@ -92,6 +92,8 @@ jobs:
           #   cgi-bin/     - created and managed by cPanel
           #   .ftpquota    - written by the FTP server
           #   CNAME        - GitHub Pages only, meaningless on cPanel
+          #   \.md$        - docs such as brand/symbiosis/BRAND.md; regex rather
+          #                  than a glob so it matches at any directory depth
           lftp -u "$FTP_USER" --env-password "ftp://$FTP_HOST:$FTP_PORT" <<EOF
           set ftp:ssl-allow true
           set ftp:ssl-force true
@@ -114,6 +116,7 @@ jobs:
             --exclude-glob *.zip \
             --exclude-glob *.tar.gz \
             --exclude-glob CNAME \
+            --exclude '\.md$' \
             ./ "$REMOTE_PATH"
           bye
           EOF
