@@ -29,7 +29,16 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Install lftp
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq lftp
+        # Bounded and verbose on purpose: -qq hides all progress, which makes a
+        # slow apt mirror look like a hung job.
+        timeout-minutes: 5
+        env:
+          DEBIAN_FRONTEND: noninteractive
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends lftp
+          lftp --version | head -1
 
       - name: Resolve remote path
         id: target
