@@ -257,7 +257,7 @@
     </section>
   </main>
 
-  <footer class="site-footer"><div class="wrap footer-inner"><a class="brand" href="./" aria-label="Codexta home"><img class="brand-logo" src="./brand/symbiosis/codexta-logo-light.svg" alt="Codexta — developed by codecta.com"></a><div class="footer-links"><a href="./#architecture">How it works</a><a href="./#proof">Pilot</a><a href="https://codecta.com/contact-us/">Contact</a></div><div class="footer-copy">© 2026 Codexta. AI that follows your rules.</div></div></footer>
+  <footer class="site-footer"><div class="wrap footer-inner"><a class="brand" href="./" aria-label="Codexta home"><img class="brand-logo" src="./brand/symbiosis/codexta-logo-light.svg" alt="Codexta — developed by codecta.com" width="142" height="38" loading="lazy"></a><div class="footer-links"><a href="./#architecture">How it works</a><a href="./#proof">Pilot</a><a href="https://codecta.com/contact-us/">Contact</a></div><div class="footer-copy">© 2026 Codexta. AI that follows your rules.</div></div></footer>
 
   <script>
     const menuButton=document.querySelector(".menu-button"),navLinks=document.querySelector(".nav-links");menuButton.addEventListener("click",()=>{const open=menuButton.getAttribute("aria-expanded")==="true";menuButton.setAttribute("aria-expanded",String(!open));menuButton.setAttribute("aria-label",open?"Open navigation":"Close navigation");navLinks.classList.toggle("is-open",!open);document.body.classList.toggle("menu-open",!open)});navLinks.addEventListener("click",event=>{if(!event.target.closest("a"))return;menuButton.setAttribute("aria-expanded","false");menuButton.setAttribute("aria-label","Open navigation");navLinks.classList.remove("is-open");document.body.classList.remove("menu-open")});
