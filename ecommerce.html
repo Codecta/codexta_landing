@@ -10,6 +10,9 @@
   <meta property="og:description" content="One connected platform for shopping assistance, store operations and customer support.">
   <meta property="og:image" content="https://codexta.codecta.com/media/demos/commerce.jpg">
   <title>Codexta for ecommerce — AI help for shoppers, staff and support</title>
+  <link rel="icon" type="image/svg+xml" href="./brand/symbiosis/codexta-mark.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="./brand/symbiosis/raster/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./brand/symbiosis/raster/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -36,9 +39,17 @@
       .rail-item{display:block;width:100%;border:0;background:transparent;text-align:left;font:400 12px/1.4 "DM Sans",system-ui,sans-serif;cursor:pointer;transition:background .15s,color .15s}.rail-item:hover{background:#e8ebe4;color:#26351d}.rail-item:focus-visible{outline:2px solid #739543;outline-offset:1px}.rail-status{padding:9px 10px;color:#666b72;font-size:12px;line-height:1.4}.rail-status small{display:block;color:#888c86;font:9px "DM Mono",monospace;margin-top:3px}.rail-status-dot{display:inline-block;width:6px;height:6px;background:#6c9b5f;border-radius:50%;margin-right:5px;vertical-align:1px}
   </style>
   <link rel="stylesheet" href="./commerce-refresh.css">
+  <link rel="stylesheet" href="./site-nav.css">
+  <style>.site-nav{position:sticky;top:0}</style>
 </head>
 <body>
-  <header class="topbar"><div class="wrap topbar-inner"><a class="brand" href="./index.html" aria-label="Codexta home"><img src="./brand/symbiosis/codexta-logo-light.svg" alt="Codexta, developed by Codecta" width="142" height="38"></a><nav class="nav" aria-label="Main navigation"><a href="#what-it-does">What it does</a><a href="#samples">Explore examples</a><a href="#difference">Why Codexta</a><a class="button" href="https://codecta.com/contact-us/">Discuss an ecommerce pilot <span aria-hidden="true">↗</span></a></nav></div></header>
+  <nav class="site-nav" aria-label="Primary navigation">
+    <div class="wrap nav-inner">
+      <a class="brand nav-brand" href="./index.html" aria-label="Codexta home"><img class="nav-brand-mark" src="./brand/symbiosis/codexta-mark.svg" alt="" width="36" height="36"><span class="nav-brand-name">Codexta</span></a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation"><span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span></button>
+      <div class="nav-links" id="nav-links"><a href="./index.html#solutions">Packages</a><a href="./ecommerce.html" aria-current="page">Commerce</a><a href="./service-knowledge.html">Service &amp; knowledge</a><a href="./index.html#architecture">How it works</a><a href="./index.html#controls">Security</a><a href="./index.html#pricing">Pricing</a><a href="./compare.html">Compare</a><a href="./index.html#faq">FAQ</a><a class="button" href="https://codecta.com/contact-us/">Start a pilot <span class="arrow" aria-hidden="true">↗</span></a></div>
+    </div>
+  </nav>
   <main>
     <section class="hero" id="top"><div class="wrap hero-grid"><div class="hero-intro"><div class="eyebrow">CODEXTA / AI FOR ECOMMERCE</div><h1>AI help for <span>shoppers, staff and support.</span></h1><p class="hero-copy">Codexta connects to your existing online store. It helps customers find and buy products, gives employees answers from shop data, and carries customer issues through to your support team.</p><div class="actions"><a class="button" href="#samples">Explore the examples <span aria-hidden="true">↘</span></a><a class="button secondary" href="#what-it-does">See what it does <span aria-hidden="true">↓</span></a></div><p class="note">Your shop stays in place · your rules and permissions stay in charge</p></div><div class="video"><span class="video-label">WATCH / ONE CUSTOMER JOURNEY IN 1:28</span><video controls playsinline preload="metadata" poster="./media/demos/commerce.jpg" aria-label="Codexta ecommerce assistant demo"><source src="./media/demos/commerce.mp4" type="video/mp4"><track kind="captions" src="./media/demos/commerce.vtt" srclang="en" label="English" default>Your browser does not support video playback.</video></div></div></section>
     <div class="proof"><div class="wrap proof-row"><span>Shopping help that can act</span><span>Answers for your team</span><span>Cases with the full history</span><span>Your existing store, still in place</span></div></div>
@@ -231,5 +242,6 @@
     });
     updatePreview();
   </script>
+  <script src="./site-nav.js"></script>
 </body>
 </html>
