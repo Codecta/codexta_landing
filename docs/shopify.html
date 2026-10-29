@@ -93,6 +93,7 @@
         <li><a href="#admin-at-a-glance">The admin at a glance</a></li>
         <li><a href="#knowledge-base">Knowledge base</a></li>
         <li><a href="#fix-answers">Fix a wrong or missing answer</a></li>
+        <li><a href="#teach">Teach the assistant: lessons and preferences</a></li>
         <li><a href="#assistant-texts">Name, greeting, starter questions and languages</a></li>
         <li><a href="#storefront">Turn the storefront assistant on or off</a></li>
         <li><a href="#conversations">Conversations, shoppers, events and assisted orders</a></li>
@@ -194,7 +195,7 @@
 
           <article class="task" id="kb-chat"><h3>How do I add to the knowledge base by chatting?</h3><ul class="meta"><li>Who: Owner, Admin, KB editor</li><li>Plan: any</li></ul>
             <p class="where">Shopify admin › Apps › Codexta › Assistant › Chat</p>
-            <ol><li>Ask with a clear writing word — document, record, add, write up or publish. For example:<ul class="says"><li><span class="say">“document how to …”</span></li><li><span class="say">“remember this for next time”</span></li><li><span class="say">“Add my shipping and returns pages to the knowledge base”</span></li><li><span class="say">“sync my FAQ”</span></li></ul></li><li>When a procedure changes, ask it to update the note; it rewrites the section rather than adding a second version.</li></ol>
+            <ol><li>Ask with a clear writing word — document, record, add, write up or publish. For example:<ul class="says"><li><span class="say">“document how to …”</span></li><li><span class="say">“Add my shipping and returns pages to the knowledge base”</span></li><li><span class="say">“sync my FAQ”</span></li></ul></li><li>When a procedure changes, ask it to update the note; it rewrites the section rather than adding a second version.</li></ol>
             <p class="tip">Reading your Shopify policies and pages into notes is part of the guided setup, which only the Owner and Admins can run.</p>
           </article>
 
@@ -221,7 +222,35 @@
           </article>
         </section>
 
-        <section class="doc-section" id="assistant-texts" aria-labelledby="h-texts"><div class="kicker">05</div><h2 id="h-texts">Name, greeting, starter questions and languages</h2>
+        <section class="doc-section" id="teach" aria-labelledby="h-teach"><div class="kicker">05</div><h2 id="h-teach">Teach the assistant: lessons and preferences</h2>
+          <p>There are two kinds of “remember this”. A <strong>lesson</strong> is a rule for how the assistant treats your shoppers. A <strong>preference</strong> is how the assistant works for the person who asks, whether that is you, a colleague or a shopper. Facts your shop publishes, such as delivery times, returns or opening hours, are neither: put those in the <a href="#knowledge-base">knowledge base</a>. If it is unclear which you mean, the assistant asks once.</p>
+
+          <article class="task" id="lesson-add"><h3>How do I teach the assistant a rule for my shoppers?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: any</li></ul>
+            <p class="where">Shopify admin › Apps › Codexta › Assistant › Chat</p>
+            <ol><li>Say what the assistant should do, and that it is for your shoppers. For example:<ul class="says"><li><span class="say">“Remember this for my shoppers: when someone asks for a gift idea, ask for their budget first.”</span></li><li><span class="say">“From now on, when a shopper asks about sizes, suggest our size guide before recommending a size.”</span></li></ul></li><li>The assistant asks which of your shoppers’ conversations the lesson is for, offering up to four, for example <span class="ui">Shopify shop - Product search and recommendations</span> or <span class="ui">Shopify shop assistant</span>. Pick one or more. If you already named one, it skips this question.</li><li>It shows the rule as it will store it, for example:<blockquote class="msg"><small>YOU SEE</small>When a shopper asks for a gift idea, ask for their budget before suggesting products.</blockquote>Press <span class="ui">Save it</span>, or <span class="ui">Change it</span> and say what to change. Nothing is stored before you approve the text.</li><li>It confirms which conversations the lesson was stored for. Shoppers get it from their next conversation.</li></ol>
+            <p>Lessons are stored in your own knowledge base and reach only your shop’s shoppers. The assistant refuses a lesson that contains a person’s name, email or order, or that promises a discount, refund or delivery date your policies do not state, and says why. If a lesson on the same topic already exists, it tells you and shows its id instead of adding a second one.</p>
+          </article>
+
+          <article class="task" id="lesson-remove"><h3>How do I see or remove lessons?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: any</li></ul>
+            <p class="where">Shopify admin › Apps › Codexta › Assistant › Chat</p>
+            <ol><li>Ask <span class="say">“What lessons do I have?”</span> or <span class="say">“Show what you were taught for product search”</span>. You get a table of each lesson’s id, title and rule, for example <span class="say">lessons/shopify_search/ask-budget-first</span>.</li><li>Say which one to drop, for example <span class="say">“Forget the gift budget lesson”</span>. If more than one could match, it asks which.</li><li>It asks you to confirm the ids. Press <span class="ui">Remove it</span>, or <span class="ui">Keep it</span> to cancel.</li><li>It says what was removed. Shoppers stop getting it from their next conversation.</li></ol>
+            <p class="tip">Remove lessons through the chat as above rather than editing the notes in the Knowledge base page.</p>
+          </article>
+
+          <article class="task" id="my-preferences"><h3>How do I set how the assistant works for me?</h3><ul class="meta"><li>Who: anyone who can open Assistant › Chat</li><li>Plan: any</li></ul>
+            <p class="where">Shopify admin › Apps › Codexta › Assistant › Chat</p>
+            <ol><li>Say how you want it to work for you. For example:<ul class="says"><li><span class="say">“Always answer me in short bullet points.”</span></li><li><span class="say">“When I ask for orders, show date, customer and total as a table.”</span></li></ul></li><li>It may ask whether this applies everywhere or only in one area, such as the back-office assistant. It then confirms what it saved and where.</li><li>To check or undo: <span class="say">“What are my preferences?”</span> shows them, and <span class="say">“Forget my table preference”</span> removes one.</li></ol>
+            <p>Your preferences are yours: colleagues and shoppers do not get them. A preference cannot switch off a confirmation or a safety step, for example <span class="say">“never ask me before changing a product”</span>. The assistant says it cannot save that.</p>
+          </article>
+
+          <article class="task" id="shopper-preferences"><h3>Can shoppers set their own preferences?</h3><ul class="meta"><li>Who: any shopper in the storefront chat</li><li>Plan: any</li></ul>
+            <p>Yes, there is nothing for you to switch on. A shopper can tell the storefront assistant how they like to be helped, for example:</p>
+            <ul class="says"><li><span class="say">“Keep your answers short, please.”</span></li><li><span class="say">“I wear EU size 39, remember that.”</span></li><li><span class="say">“Always show me the cheapest option first.”</span></li></ul>
+            <p>The assistant keeps it for that shopper only and applies it to their later chats too: for a signed-in shopper on their account, for a guest in the same browser. Asking <span class="say">“What do you remember about me?”</span> shows it, and <span class="say">“Forget my size”</span> removes it. A shopper’s preference never changes what the assistant tells other shoppers and never overrides your lessons or policies.</p>
+          </article>
+        </section>
+
+        <section class="doc-section" id="assistant-texts" aria-labelledby="h-texts"><div class="kicker">06</div><h2 id="h-texts">Name, greeting, starter questions and languages</h2>
 
           <article class="task" id="texts-chat"><h3>How do I change them by chatting?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: any</li></ul>
             <p class="where">Shopify admin › Apps › Codexta › Assistant › Chat</p>
@@ -241,7 +270,7 @@
           </article>
         </section>
 
-        <section class="doc-section" id="storefront" aria-labelledby="h-storefront"><div class="kicker">06</div><h2 id="h-storefront">Turn the storefront assistant on or off</h2>
+        <section class="doc-section" id="storefront" aria-labelledby="h-storefront"><div class="kicker">07</div><h2 id="h-storefront">Turn the storefront assistant on or off</h2>
           <p>The storefront assistant is the theme app embed <span class="ui">Codexta assistant</span>. There is no on/off switch inside Codexta itself, and the embed has no settings of its own.</p>
           <article class="task" id="embed-toggle"><h3>How do I turn it on or off?</h3><ul class="meta"><li>Who: anyone who can edit your theme in Shopify</li><li>Plan: any</li></ul>
             <p class="where">Shopify admin › Online Store › Themes › Customize › App embeds</p>
@@ -250,7 +279,7 @@
           </article>
         </section>
 
-        <section class="doc-section" id="conversations" aria-labelledby="h-conv"><div class="kicker">07</div><h2 id="h-conv">Conversations, shoppers, events and assisted orders</h2>
+        <section class="doc-section" id="conversations" aria-labelledby="h-conv"><div class="kicker">08</div><h2 id="h-conv">Conversations, shoppers, events and assisted orders</h2>
           <p>These pages are open to the Owner, Admins, Support managers, Support agents and Viewers on every plan.</p>
 
           <article class="task" id="overview"><h3>How do I choose what the Overview shows?</h3><ul class="meta"><li>Who: Owner, Admin (pin); everyone else reads</li><li>Plan: any</li></ul>
@@ -276,7 +305,7 @@
           </article>
         </section>
 
-        <section class="doc-section" id="support-console" aria-labelledby="h-support"><div class="kicker">08</div><h2 id="h-support">Support console and taking over a chat</h2>
+        <section class="doc-section" id="support-console" aria-labelledby="h-support"><div class="kicker">09</div><h2 id="h-support">Support console and taking over a chat</h2>
           <p>The support console is the helpdesk inside your Shopify admin. Its sections are <span class="ui">Inbox</span>, <span class="ui">My dashboard</span>, <span class="ui">Contacts</span>, <span class="ui">Help center</span> and <span class="ui">Calls</span>; Owners, Admins and Support managers also see <span class="ui">Team</span> and <span class="ui">Reports</span>, and Owners and Admins see <span class="ui">Settings</span>.</p>
 
           <article class="task" id="support-parts"><h3>How do I switch live chat, tickets or email intake on?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: any</li></ul>
@@ -296,7 +325,7 @@
           </article>
         </section>
 
-        <section class="doc-section" id="back-office" aria-labelledby="h-back"><div class="kicker">09</div><h2 id="h-back">Back-office assistant</h2>
+        <section class="doc-section" id="back-office" aria-labelledby="h-back"><div class="kicker">10</div><h2 id="h-back">Back-office assistant</h2>
           <p>In Assistant › Chat, the <span class="ui">Store assistant</span> works with your Shopify data. KB editors can open the chat but cannot reach store data. Support managers, Support agents and Viewers do not see the Assistant page.</p>
 
           <article class="task" id="ask"><h3>What can I ask?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: any</li></ul>
@@ -317,7 +346,7 @@
           </article>
         </section>
 
-        <section class="doc-section" id="team" aria-labelledby="h-team"><div class="kicker">10</div><h2 id="h-team">Team and roles</h2>
+        <section class="doc-section" id="team" aria-labelledby="h-team"><div class="kicker">11</div><h2 id="h-team">Team and roles</h2>
           <p>There is no invite button. Colleagues must be staff in your Shopify admin. The first time they open Codexta from the Shopify admin they appear as <span class="ui">Viewer</span>; the Owner then gives them a role.</p>
 
           <article class="task" id="set-role"><h3>How do I give a colleague a role?</h3><ul class="meta"><li>Who: Owner (Admins can view the page)</li><li>Plan: any</li></ul>
@@ -333,6 +362,7 @@
               <tr><th scope="row">Read the knowledge base</th><td class="y">Yes</td><td class="y">Yes</td><td class="y">Yes</td><td class="y">Yes</td><td class="y">Yes</td><td class="y">Yes</td></tr>
               <tr><th scope="row">Change the knowledge base</th><td class="y">Yes</td><td class="y">Yes</td><td class="y">Yes</td><td class="n">No</td><td class="n">No</td><td class="n">No</td></tr>
               <tr><th scope="row">Assistant › Chat</th><td class="y">Yes</td><td class="y">Yes</td><td class="y">Yes, no store data</td><td class="n">No</td><td class="n">No</td><td class="n">No</td></tr>
+              <tr><th scope="row">Teach lessons for shoppers</th><td class="y">Yes</td><td class="y">Yes</td><td class="n">No</td><td class="n">No</td><td class="n">No</td><td class="n">No</td></tr>
               <tr><th scope="row">Changes to products, prices, customers, discounts</th><td class="y">Yes</td><td class="y">Yes</td><td class="n">No</td><td class="n">No</td><td class="n">No</td><td class="n">No</td></tr>
               <tr><th scope="row">Support console</th><td class="y">Yes, with Settings</td><td class="y">Yes, with Settings</td><td class="n">No</td><td class="y">Cases and reports</td><td class="y">Cases</td><td class="n">No</td></tr>
               <tr><th scope="row">Settings (General, Integrations), guided setup</th><td class="y">Yes</td><td class="y">Yes</td><td class="n">No</td><td class="n">No</td><td class="n">No</td><td class="n">No</td></tr>
@@ -343,7 +373,7 @@
           </table></div>
         </section>
 
-        <section class="doc-section" id="authoring" aria-labelledby="h-authoring"><div class="kicker">11</div><h2 id="h-authoring">Authoring</h2>
+        <section class="doc-section" id="authoring" aria-labelledby="h-authoring"><div class="kicker">12</div><h2 id="h-authoring">Authoring</h2>
           <p>Authoring changes how your store’s assistant behaves — rules, wording and policies such as “never promise delivery dates” — by describing it in a chat. Changes apply to your store only.</p>
           <article class="task" id="authoring-use"><h3>How do I change how the assistant behaves?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: Scale</li></ul>
             <p class="where">Shopify admin › Apps › Codexta › Assistant › Chat</p>
@@ -356,7 +386,7 @@
           </article>
         </section>
 
-        <section class="doc-section" id="plan" aria-labelledby="h-plan"><div class="kicker">12</div><h2 id="h-plan">Plan and usage</h2>
+        <section class="doc-section" id="plan" aria-labelledby="h-plan"><div class="kicker">13</div><h2 id="h-plan">Plan and usage</h2>
           <article class="task" id="usage"><h3>How do I check usage or change plan?</h3><ul class="meta"><li>Who: Owner (change); Admin (view)</li><li>Plan: any</li></ul>
             <p class="where">Shopify admin › Apps › Codexta › Settings › Plan</p>
             <ol><li>See your plan, its status (for example trialing or active) and that it is billed through Shopify.</li><li>The <span class="ui">Conversations</span> and <span class="ui">Knowledge base notes</span> meters show this month’s use against your limit; the bar turns red at 90%.</li><li>Under <span class="ui">Change plan</span>, press <span class="ui">Switch to {plan}</span>. Shopify’s plan page opens; approve the change there.</li></ol>
@@ -366,7 +396,7 @@
           </article>
         </section>
 
-        <section class="doc-section" id="channels" aria-labelledby="h-channels"><div class="kicker">13</div><h2 id="h-channels">Instagram and other channels</h2>
+        <section class="doc-section" id="channels" aria-labelledby="h-channels"><div class="kicker">14</div><h2 id="h-channels">Instagram and other channels</h2>
           <article class="task" id="instagram"><h3>How do I connect Instagram?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: Growth, Scale</li></ul>
             <p class="where">Shopify admin › Apps › Codexta › Settings › Integrations (page title “Connect”)</p>
             <ol><li>Under <span class="ui">Instagram</span>, press <span class="ui">Connect Instagram</span>. Instagram opens in a new window.</li><li>Sign in with your Instagram professional account, then come back to Codexta.</li><li>The panel shows the account as connected and when access is valid until. Use <span class="ui">Reconnect</span> when it expires, or <span class="ui">Disconnect</span> to stop answering.</li></ol>
@@ -375,7 +405,7 @@
           </article>
         </section>
 
-        <section class="doc-section" id="uninstall" aria-labelledby="h-uninstall"><div class="kicker">14</div><h2 id="h-uninstall">Uninstall and your data</h2>
+        <section class="doc-section" id="uninstall" aria-labelledby="h-uninstall"><div class="kicker">15</div><h2 id="h-uninstall">Uninstall and your data</h2>
           <ul>
             <li><b>Uninstalling</b> cancels your Shopify subscription and revokes Codexta’s access to your shop.</li>
             <li><b>48 hours after you uninstall</b>, all of your shop’s data is deleted. If you reinstall before then, your shop’s Codexta setup is reactivated, but you choose a plan again.</li>
@@ -387,7 +417,7 @@
           <p>See the <a href="https://codexta.codectaapps.com/privacy.html">privacy policy</a> for what is held and who processes it.</p>
         </section>
 
-        <section class="doc-section" id="help" aria-labelledby="h-help"><div class="kicker">15</div><h2 id="h-help">Getting help</h2>
+        <section class="doc-section" id="help" aria-labelledby="h-help"><div class="kicker">16</div><h2 id="h-help">Getting help</h2>
           <ul>
             <li>The <a href="https://codexta.codectaapps.com/support.html">support page</a> explains how to reach us.</li>
             <li>Email <a href="mailto:codexta@codecta.com">codexta@codecta.com</a>. We reply within two business days.</li>
