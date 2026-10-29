@@ -81,77 +81,122 @@ Codexta gives her the current steps from three documents,
 including last month's rule change, with sources.
 
 21
-00:01:11.310 --> 00:01:13.966
-Support teams know a similar problem.
+00:01:11.310 --> 00:01:14.113
+Support teams have a similar problem.
 
 22
-00:01:13.966 --> 00:01:16.335
-One customer's issue gets solved,
+00:01:14.113 --> 00:01:16.613
+A fix stays in one person's head,
 
 23
-00:01:16.335 --> 00:01:19.134
-but the fix stays in one person's head,
+00:01:16.613 --> 00:01:19.416
+so every customer waits for a ticket.
 
 24
-00:01:19.134 --> 00:01:22.293
-so the next customer waits for a ticket too.
-
-25
-00:01:22.293 --> 00:01:24.590
+00:01:19.416 --> 00:01:21.840
 Here's how Codexta changes that.
 
-26
-00:01:26.240 --> 00:01:27.971
+25
+00:01:23.290 --> 00:01:25.348
 Tom can't pay with PayPal.
 
+26
+00:01:25.348 --> 00:01:30.018
+Codexta checks the knowledge base and offers an old outage,
+
 27
-00:01:27.971 --> 00:01:32.164
-Codexta finds an old PayPal outage, but that isn't his problem,
+00:01:30.018 --> 00:01:31.443
+but that isn't it.
 
 28
-00:01:32.164 --> 00:01:34.960
-so it opens a ticket for the support team.
+00:01:31.443 --> 00:01:33.422
+So Tom asks for a person,
 
 29
-00:01:36.010 --> 00:01:40.603
-Priya in support works out why: Safari was blocking the PayPal window.
+00:01:33.422 --> 00:01:36.825
+and Priya from support joins the same chat.
 
 30
-00:01:40.603 --> 00:01:43.425
-She's allowed to update the knowledge base,
+00:01:36.825 --> 00:01:40.150
+He doesn't have to explain anything twice.
 
 31
-00:01:43.425 --> 00:01:47.296
-so Codexta writes a short note, with none of Tom's details,
+00:01:41.200 --> 00:01:46.502
+Priya works in Codexta's support console: every chat and ticket in one place,
 
 32
-00:01:47.296 --> 00:01:49.330
-and saves it once she approves.
+00:01:46.502 --> 00:01:48.086
+the whole conversation,
 
 33
-00:01:50.380 --> 00:01:55.078
-A week later, James has the same problem, in different words.
+00:01:48.086 --> 00:01:51.460
+and one click to escalate a case to a specialist.
 
 34
-00:01:55.078 --> 00:01:57.157
-Codexta finds Priya's note.
+00:01:52.510 --> 00:01:56.079
+She finds the cause: Safari's pop-up blocker.
 
 35
-00:01:57.157 --> 00:01:59.390
-Sorted in seconds, no ticket.
+00:01:56.079 --> 00:01:59.728
+Priya is allowed to update the knowledge base,
 
 36
-00:02:00.440 --> 00:02:01.771
-Codexta, by Codecta.
+00:01:59.728 --> 00:02:04.011
+so Codexta writes a short note, without Tom's details,
 
 37
-00:02:01.771 --> 00:02:03.436
-Bring your own documents,
+00:02:04.011 --> 00:02:06.470
+and saves it once she approves.
 
 38
-00:02:03.436 --> 00:02:06.099
-and we'll show it working in four weeks.
+00:02:07.520 --> 00:02:10.652
+A week later, Lukas has the same problem,
 
 39
-00:02:06.099 --> 00:02:07.430
+00:02:10.652 --> 00:02:12.486
+and he writes in German.
+
+40
+00:02:12.486 --> 00:02:16.535
+Codexta finds Priya's note and answers him in German.
+
+41
+00:02:16.535 --> 00:02:18.750
+Sorted in seconds, no ticket.
+
+42
+00:02:19.800 --> 00:02:21.468
+Already have a helpdesk?
+
+43
+00:02:21.468 --> 00:02:26.958
+An admin describes it in the authoring tool and attaches the API documentation.
+
+44
+00:02:26.958 --> 00:02:31.058
+Codexta builds the connection, tests it, and once approved,
+
+45
+00:02:31.058 --> 00:02:33.908
+cases open where your team already works.
+
+46
+00:02:33.908 --> 00:02:36.340
+Order systems connect the same way.
+
+47
+00:02:37.390 --> 00:02:38.721
+Codexta, by Codecta.
+
+48
+00:02:38.721 --> 00:02:40.386
+Bring your own documents,
+
+49
+00:02:40.386 --> 00:02:43.049
+and we'll show it working in four weeks.
+
+50
+00:02:43.049 --> 00:02:44.380
 Thanks for watching!
+
