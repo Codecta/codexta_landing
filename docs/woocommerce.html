@@ -84,7 +84,7 @@
       <div class="eyebrow">MERCHANT GUIDE</div>
       <h1>Codexta for WooCommerce</h1>
       <p>How to install and connect the Codexta Assistant plugin, set up the assistant your shoppers talk to, and work with the back-office assistant and reports in your WordPress admin. Each task names the exact place, the buttons to press, who can do it and whether it depends on your plan.</p>
-      <p class="legend">Places are written as <span class="where where-inline">WooCommerce › Codexta Assistant › Settings › Team</span>: the WooCommerce menu in the WordPress admin, then the Codexta page and its own menu. Things you can type in the chat look like <span class="say">“Set up my assistant”</span>.</p>
+      <p class="legend">Places are written as <span class="where where-inline">WooCommerce › Codexta Assistant › Settings › Team</span>: the WooCommerce menu in the WordPress admin, then the Codexta page and its own menu. Things you can type in the chat look like <span class="say">“Set up my assistant”</span>. Unfamiliar words such as guideline, lesson or guest are explained in the <a href="./index.html#words">glossary</a>.</p>
     </div></header>
 
     <div class="docs-body"><div class="wrap docs-layout">
@@ -96,6 +96,7 @@
         <li><a href="#teach">Teach the assistant: lessons and preferences</a></li>
         <li><a href="#assistant-texts">Name, greeting, starter questions and languages</a></li>
         <li><a href="#storefront">The storefront assistant</a></li>
+        <li><a href="#guests">Guest shoppers and chat limits</a></li>
         <li><a href="#conversations">Conversations, shoppers, events and assisted orders</a></li>
         <li><a href="#support-console">Support console and taking over a chat</a></li>
         <li><a href="#back-office">Back-office assistant</a></li>
@@ -130,13 +131,13 @@
             <p>WooCommerce has no app billing, so a newly connected shop waits for Codexta to activate it on the plan you agree with us. Until then every Codexta page shows:</p>
             <blockquote class="msg"><small>YOU SEE</small>Waiting for activation by Codexta. Your assistant will not answer shoppers until Codexta activates it; contact Codexta to agree the plan.</blockquote>
             <p>Shoppers who open the chat meanwhile read:</p>
-            <blockquote class="msg"><small>SHOPPERS SEE</small>This assistant is not active yet. Please use another way to get in touch for now.</blockquote>
+            <blockquote class="msg"><small>SHOPPERS SEE</small>The assistant is not available right now. Please try again later.</blockquote>
             <p><a href="https://codecta.com/contact-us/">Contact us</a> to agree the plan. You can already open the Codexta page and look around, but the assistant does not answer shoppers, and changes to the knowledge base, authoring and enrichment wait for activation too.</p>
           </article>
 
           <article class="task" id="guided-setup"><h3>How do I run the guided setup?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: any</li></ul>
             <p class="where">WooCommerce › Codexta Assistant › Overview › Set up your assistant</p>
-            <ol><li>Press <span class="ui">Set up my assistant</span>. Codexta opens Assistant › Chat and sends <span class="say">“Set up my assistant”</span> for you.</li><li>The assistant shows each area — Assistant identity, Knowledge base, Voice and handover, On the storefront, Test — as done, partly done or missing, and asks <span class="ui">How do you want to go on?</span> Choose <span class="ui">Go through what is missing</span>, <span class="ui">Review everything</span>, <span class="ui">Just one area</span> or <span class="ui">Stop here</span>.</li><li>Answer its questions. It asks which languages your shoppers write in, drafts a name, greeting and up to four starter questions, and fills the knowledge base from your shop’s own pages, such as shipping, returns, payments, the FAQ and contact. It may ask for your shop’s web address.</li><li>Before anything is saved, it shows you the exact text. A plain <span class="say">“yes”</span> to a list of drafts approves exactly that list.</li><li>In the Test step it asks a few real questions and shows which note answered each. Questions about orders, stock, prices or the cart cannot be tested from the admin: try those on your storefront.</li></ol>
+            <ol><li>Press <span class="ui">Set up my assistant</span>. Codexta opens Assistant › Chat and sends <span class="say">“Set up my assistant”</span> for you.</li><li>The assistant lists five areas: Assistant identity, Knowledge base, Voice and handover, On the storefront and Test. Each shows as done, partly done or missing. Then it asks <span class="ui">How do you want to go on?</span> Choose <span class="ui">Go through what is missing</span>, <span class="ui">Review everything</span>, <span class="ui">Just one area</span> or <span class="ui">Stop here</span>.</li><li>Answer its questions. It asks which languages your shoppers write in and drafts a name, a greeting and up to four starter questions. Then it fills the knowledge base from your shop’s own pages, such as shipping, returns, payments, the FAQ and contact. It may ask for your shop’s web address.</li><li>Before anything is saved, it shows you the exact text. A plain <span class="say">“yes”</span> to a list of drafts approves exactly that list.</li><li>In the Test step it asks a few real questions and shows which note answered each. Questions about orders, stock, prices or the cart cannot be tested from the admin: try those on your storefront.</li></ol>
             <p>You can skip any area, stop and come back later. Anything already done is kept. To continue or start again, type in Assistant › Chat:</p>
             <ul class="says"><li><span class="say">“What is left to set up”</span></li><li><span class="say">“Run the setup again”</span></li><li><span class="say">“Add my shipping and returns pages to the knowledge base”</span></li></ul>
             <p class="tip">The card stays on the Overview until you press <span class="ui">Dismiss</span>. Dismissing is remembered for this shop in this browser. The assistant never asks for passwords or API keys.</p>
@@ -259,13 +260,18 @@
 
           <article class="task" id="texts-chat"><h3>How do I change them by chatting?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: any</li></ul>
             <p class="where">WooCommerce › Codexta Assistant › Assistant › Chat</p>
-            <ol><li>Type <span class="say">“Change the greeting and starter questions”</span>, or run the guided setup.</li><li>The assistant drafts the shop’s display name, the assistant’s name, a greeting of one or two sentences and up to four starter questions, and offers translations for each language your shoppers use.</li><li>It shows the exact text and saves only after you approve.</li></ol>
+            <ol><li>Type <span class="say">“Change the greeting and starter questions”</span>, or run the guided setup.</li><li>The assistant drafts the shop’s display name, its own name, a short greeting and up to four starter questions. It offers a translation for each language your shoppers use.</li><li>It shows the exact text and saves only after you approve.</li></ol>
             <p class="tip">The chat cannot change the accent colour, widget position, widget theme, <span class="ui">What your store sells</span>, <span class="ui">Allow guests</span> or chat limits. Change those in Settings › General.</p>
           </article>
 
           <article class="task" id="texts-settings"><h3>How do I change them in Settings?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: any</li></ul>
             <p class="where">WooCommerce › Codexta Assistant › Settings › General</p>
             <ol><li><span class="ui">Store</span>: <span class="ui">Store name</span> and <span class="ui">What your store sells</span> (one or two sentences the assistant keeps in mind in every chat).</li><li><span class="ui">Assistant</span>: <span class="ui">Assistant name</span>, <span class="ui">Accent colour</span>, <span class="ui">Widget position</span>, <span class="ui">How the assistant writes</span>, <span class="ui">Reply window</span>, <span class="ui">Knowledge base language</span> and <span class="ui">Widget theme</span>.</li><li><span class="ui">Greeting and suggested questions</span>: <span class="ui">Greeting</span> and <span class="ui">Idea 1</span> to <span class="ui">Idea 4</span>. Leave the ideas empty to use the assistant’s defaults.</li><li><span class="ui">Who can chat</span>: <span class="ui">Allow guests</span>, <span class="ui">Conversations per shopper per day</span> and <span class="ui">Guests’ share of monthly conversations (%)</span>.</li><li>Press <span class="ui">Save settings</span>. You see <span class="ui">Saved.</span></li></ol>
+          </article>
+          <article class="task" id="assistant-settings"><h3>What do the other assistant settings do?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: any</li></ul>
+            <p class="where">WooCommerce › Codexta Assistant › Settings › General › Assistant</p>
+            <ul><li><span class="ui">Your website</span> and <span class="ui">Draft from my website</span> (under Store): Codexta reads your site and fills the store name, description, greeting and ideas. You see <span class="ui">Drafted from your website: review it below, then save.</span> Nothing is saved until you press <span class="ui">Save settings</span>.</li><li><span class="ui">How the assistant writes</span>: <span class="ui">Precise (0.2)</span>, <span class="ui">Balanced (0.5)</span> or <span class="ui">Creative (0.9)</span>. <span class="ui">Default</span> keeps Codexta’s own setting. Precise sticks closest to your notes; Creative words answers more freely.</li><li><span class="ui">Reply window</span>: <span class="ui">Answer each message at once</span>, or <span class="ui">Wait {n} seconds for more lines</span> (3, 5, 10 or 15). This is useful when shoppers type a question in several short lines: they get one answer to all of them. While it waits, the chat shows <span class="ui">Sending in a moment; add more if you like.</span></li><li><span class="ui">Knowledge base language</span>: the language your notes are written in. A question in another language is also searched in this one, so a shopper writing in German still finds an English note.</li><li><span class="ui">Name the knowledge-base article an answer came from</span>: when ticked, answers from your notes name the note they came from.</li><li><span class="ui">Widget theme</span>: <span class="ui">System (follows the shopper’s device)</span>, <span class="ui">Light</span> or <span class="ui">Dark</span>. <span class="ui">Accent colour</span> is the main colour of the chat button and window; <span class="ui">Widget position</span> puts the button <span class="ui">Bottom right</span> or <span class="ui">Bottom left</span>.</li></ul>
+            <p>Press <span class="ui">Save settings</span>. The chat window picks up the change the next time a shopper opens it.</p>
           </article>
 
           <article class="task" id="languages"><h3>How do I add a language?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: any</li></ul>
@@ -280,14 +286,57 @@
           <article class="task" id="widget-toggle"><h3>How do I turn it on or off?</h3><ul class="meta"><li>Who: a WordPress administrator</li><li>Plan: any</li></ul>
             <p class="where">WordPress admin › Plugins</p>
             <ol><li>To take the assistant off for a while, <span class="ui">Deactivate</span> the Codexta Assistant plugin. The chat button disappears and Codexta starts no new conversations for your shop.</li><li>To bring it back, <span class="ui">Activate</span> the plugin again. Your setup, notes and conversations are kept.</li><li>Open your shop and check whether the chat button is shown.</li></ol>
-            <p class="tip">A developer can keep the chat button off on some pages or until a visitor accepts your cookie banner, with the plugin’s <span class="say">codexta_widget_enabled</span> filter. Until Codexta activates your shop the assistant does not answer: shoppers are told it is not active yet. To ask guests to sign in before chatting, untick <span class="ui">Allow guests</span> in Settings › General.</p>
+            <p class="tip">A developer can keep the chat button off on some pages or until a visitor accepts your cookie banner, with the plugin’s <span class="say">codexta_widget_enabled</span> filter. Until Codexta activates your shop the assistant does not answer: shoppers read <span class="ui">The assistant is not available right now. Please try again later.</span> Who may chat and how much is in <a href="#guests">Guest shoppers and chat limits</a>.</p>
           </article>
           <article class="task" id="cart"><h3>How does the assistant use the cart?</h3><ul class="meta"><li>Who: any shopper</li><li>Plan: any</li></ul>
-            <p>The assistant works on the shopper’s own WooCommerce cart, for guests too: what it adds is in the cart on your pages, and the cart on the page refreshes when it does. It can add, change and remove items, apply a coupon and send the shopper to your checkout. Shipping is settled at checkout, so the assistant quotes the goods without shipping.</p>
+            <p>The assistant uses the shopper’s own WooCommerce cart, for guests too. What it adds appears in the cart on your pages, which refreshes when it does. It can add, change and remove items, apply a coupon and send the shopper to your checkout. Shipping is settled at checkout, so the assistant quotes the goods without shipping.</p>
+          </article>
+        
+          <article class="task" id="chat-window"><h3>What do shoppers see in the chat window?</h3><ul class="meta"><li>Who: any shopper</li><li>Plan: any; read aloud and hiding Codexta’s mark are not on every plan (ask us)</li></ul>
+            <ul><li>Under the message box, every chat shows <span class="ui">AI assistant. It can make mistakes, so check important information.</span> with a <span class="ui">Privacy</span> link to Codexta’s privacy policy. It is shown in the shopper’s language and cannot be switched off.</li><li>The greeting, the ideas to tap and the assistant’s name come from Settings › General (see <a href="#texts-settings">above</a>).</li><li><span class="ui">Read aloud</span> under an answer reads it out (<span class="ui">Stop reading</span> stops it). It appears only when your plan includes read aloud.</li><li>The chat window shows Codexta’s mark. When your plan includes white label, the mark is left out, and if you set no assistant name the window is titled with your store’s name.</li></ul>
+            <p>Settings › Plan lists <span class="ui">read_aloud</span> and <span class="ui">white_label</span> among your plan’s features, marked <span class="ui">(not included)</span> when they are not part of it.</p>
           </article>
         </section>
 
-        <section class="doc-section" id="conversations" aria-labelledby="h-conv"><div class="kicker">08</div><h2 id="h-conv">Conversations, shoppers, events and assisted orders</h2>
+        <section class="doc-section" id="guests" aria-labelledby="h-guests"><div class="kicker">08</div><h2 id="h-guests">Guest shoppers and chat limits</h2>
+          <p>A guest is a shopper who chats without being signed in to your shop. Anyone can start a guest chat, so you decide whether guests may chat and how much of your monthly conversations they may use. Codexta adds a few limits of its own against abuse. Signed-in shoppers are never held back by the guest limits.</p>
+
+          <article class="task" id="guest-can"><h3>What can a guest do, and what needs signing in?</h3><ul class="meta"><li>Who: any shopper</li><li>Plan: any</li></ul>
+            <p>A guest can ask anything your knowledge base answers, search and compare products, fill the cart and go to checkout, and tell the assistant how they like to be helped. Signed-in customers can also ask about their own orders and request a return. Orders placed as a guest are not linked to a chat, so only signed-in customers’ orders count as <a href="#assisted-orders">assisted orders</a>.</p>
+            <p>A guest is remembered in the same browser: an open chat is picked up again for 30 minutes after the last message, and their preferences stay with that browser. A new browser, a private window or cleared site data is a new guest. When a guest signs in, the shopper is then recognised by their account on your shop (My account).</p>
+          </article>
+          <article class="task" id="allow-guests"><h3>How do I let only signed-in shoppers chat?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: any</li></ul>
+            <p class="where">WooCommerce › Codexta Assistant › Settings › General › Who can chat</p>
+            <ol><li>Untick <span class="ui">Allow guests</span>.</li><li>Press <span class="ui">Save settings</span>.</li></ol>
+            <p>Guests still see the chat button, but the chat asks them to sign in first:</p>
+            <blockquote class="msg"><small>SHOPPERS SEE</small>Please sign in to the shop to chat with the assistant.</blockquote>
+            <p class="tip"><span class="ui">Allow guests</span> does not apply to Instagram and the other messaging channels: they answer once you connect an account under Settings › Integrations.</p>
+          </article>
+          <article class="task" id="daily-limit"><h3>How do I limit how many chats one shopper starts?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: any</li></ul>
+            <p class="where">WooCommerce › Codexta Assistant › Settings › General › Who can chat</p>
+            <ol><li>Enter a number in <span class="ui">Conversations per shopper per day</span>. Empty or 0 means no limit.</li><li>Press <span class="ui">Save settings</span>.</li></ol>
+            <p>The limit counts new chats per shopper, signed in or guest, per day; the day starts at midnight UTC (London winter time). A shopper who reaches it reads:</p>
+            <blockquote class="msg"><small>SHOPPERS SEE</small>You’ve reached today’s limit of conversations. Please come back tomorrow.</blockquote>
+            <p class="tip">A shopper you <a href="#shoppers">block</a> gets the same message, so they are never told they are blocked.</p>
+          </article>
+          <article class="task" id="guest-share"><h3>How much of my monthly conversations can guests use?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: any</li></ul>
+            <p class="where">WooCommerce › Codexta Assistant › Settings › General › Who can chat</p>
+            <p>Your plan has a number of conversations per month (Settings › Plan, the <span class="ui">Conversations</span> meter). Guests may use only a share of them, so a burst of anonymous visitors cannot use up the month and leave nothing for your signed-in customers.</p>
+            <ol><li>Leave <span class="ui">Guests’ share of monthly conversations (%)</span> empty to use your plan’s own share; the field shows it as its placeholder, for example “(plan default)”.</li><li>Or enter your own percentage, from 1 to 100. Under the field you see what that means for your plan: <span class="ui">Now {share}%: up to {n} of {monthly} conversations.</span></li><li>Press <span class="ui">Save settings</span>.</li></ol>
+            <p>The field is greyed out while <span class="ui">Allow guests</span> is off. Signed-in shoppers can always use the rest of the month. When guests have used their share, new guest chats are refused until the next month; guests who are already chatting can finish.</p>
+          </article>
+          <article class="task" id="guest-brakes"><h3>What other limits apply, and who sets them?</h3><ul class="meta"><li>Who: set by Codexta; ask us to change them</li><li>Plan: any</li></ul>
+            <p>On top of your own settings, Codexta applies brakes you cannot change in the app. They protect your monthly conversations from scripts and floods:</p>
+            <ul><li><b>New guest chats from one internet connection (IP address)</b> are limited per hour.</li><li><b>New guest chats for your whole shop</b> are limited per day. The daily number is never more than a thirtieth of your plan’s monthly conversations, so guests cannot spend the month in a few days.</li><li><b>Messages from one shopper or one address</b> are limited per minute, for guests and signed-in shoppers alike.</li></ul>
+            <p>When a guest limit is reached, a new guest chat reads:</p>
+            <blockquote class="msg"><small>SHOPPERS SEE</small>The assistant is not available right now. Please try again later.</blockquote>
+            <p>When someone sends too many messages at once:</p>
+            <blockquote class="msg"><small>SHOPPERS SEE</small>Too many messages at once. Please wait a moment and try again.</blockquote>
+            <p class="tip">If real shoppers meet these limits — for example during a sale or a campaign — <a href="#help">contact us</a> and we raise them for your shop. The same message is shown when your monthly conversations are used up: the <span class="ui">Conversations</span> meter on Settings › Plan tells you whether that is the reason.</p>
+          </article>
+        </section>
+
+        <section class="doc-section" id="conversations" aria-labelledby="h-conv"><div class="kicker">09</div><h2 id="h-conv">Conversations, shoppers, events and assisted orders</h2>
           <p>These pages are open to the Owner, Admins, Support managers, Support agents and Viewers on every plan.</p>
 
           <article class="task" id="overview"><h3>How do I choose what the Overview shows?</h3><ul class="meta"><li>Who: Owner, Admin (pin); everyone else reads</li><li>Plan: any</li></ul>
@@ -313,7 +362,7 @@
           </article>
         </section>
 
-        <section class="doc-section" id="support-console" aria-labelledby="h-support"><div class="kicker">09</div><h2 id="h-support">Support console and taking over a chat</h2>
+        <section class="doc-section" id="support-console" aria-labelledby="h-support"><div class="kicker">10</div><h2 id="h-support">Support console and taking over a chat</h2>
           <p>The support console is the helpdesk inside the Codexta page: press <span class="ui">Support console</span> in its menu bar. Its sections are <span class="ui">Inbox</span>, <span class="ui">My dashboard</span>, <span class="ui">Contacts</span>, <span class="ui">Help center</span> and <span class="ui">Calls</span>; Owners, Admins and Support managers also see <span class="ui">Team</span> and <span class="ui">Reports</span>, and Owners and Admins see <span class="ui">Settings</span>.</p>
 
           <article class="task" id="support-parts"><h3>How do I switch live chat, tickets or email intake on?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: any</li></ul>
@@ -331,9 +380,14 @@
           <article class="task" id="returns-tickets"><h3>How do returns and tickets reach me?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: any</li></ul>
             <p>A signed-in customer can request a return of an item from one of their own orders in the storefront chat, with photos of the item and receipt. The return window counts from the date you marked the order completed. Submitting a request does not approve it: it becomes a ticket, and you decide on the order in WooCommerce › Orders. In Assistant › Chat you can ask <span class="say">“Any open return requests”</span> or <span class="say">“Any open tickets?”</span>; to answer, assign or close a ticket, use the Support console.</p>
           </article>
+          <article class="task" id="console-settings"><h3>What else can I set up in the support console?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: any; apps and agent bots are not on every plan (ask us)</li></ul>
+            <p class="where">WooCommerce › Codexta Assistant › Support console › Settings</p>
+            <p>Besides <span class="ui">Backends</span> and <span class="ui">Live chat</span>, the console has its own settings. Most shops only need a few of them; the full list is: <span class="ui">Queues</span>, <span class="ui">Tiers</span>, <span class="ui">Priorities</span>, <span class="ui">SLA policies</span>, <span class="ui">Business hours</span>, <span class="ui">Members</span>, <span class="ui">Roles</span>, <span class="ui">Channels</span>, <span class="ui">Email</span>, <span class="ui">Saved replies</span>, <span class="ui">Labels</span>, <span class="ui">Attributes</span>, <span class="ui">Campaigns</span>, <span class="ui">Monitors</span>, <span class="ui">Automation</span>, <span class="ui">Macros</span>, <span class="ui">Webhooks</span>, <span class="ui">Agent bots</span>, <span class="ui">Dashboard apps</span>, <span class="ui">Apps</span>, <span class="ui">Calls</span> and <span class="ui">Data &amp; audit</span>.</p>
+            <ul><li><span class="ui">Saved replies</span> are answers your team inserts by typing “/” and the reply’s code.</li><li><span class="ui">Apps</span> connects Linear, Stripe, Slack and Notion with keys from those services; <span class="ui">Agent bots</span> hands a channel’s new cases to an outside bot first. Each is refused when your plan does not include it: <span class="ui">Your plan does not include this app. Upgrade the plan to use it.</span></li><li><span class="ui">Data &amp; audit</span> erases one customer’s data on request and shows the audit log.</li></ul>
+          </article>
         </section>
 
-        <section class="doc-section" id="back-office" aria-labelledby="h-back"><div class="kicker">10</div><h2 id="h-back">Back-office assistant</h2>
+        <section class="doc-section" id="back-office" aria-labelledby="h-back"><div class="kicker">11</div><h2 id="h-back">Back-office assistant</h2>
           <p>In Assistant › Chat, the <span class="ui">Store assistant</span> works with your WooCommerce data. KB editors can open the chat but cannot reach store data. Support managers, Support agents and Viewers do not see the Assistant page.</p>
 
           <article class="task" id="ask"><h3>What can I ask?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: any</li></ul>
@@ -345,7 +399,7 @@
           <article class="task" id="changes"><h3>How do I make a change?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: any</li></ul>
             <p class="where">WooCommerce › Codexta Assistant › Assistant › Chat</p>
             <ol><li>Ask for the change, for example <span class="say">“Change the price of the Logo Hoodie to 49”</span> or <span class="say">“Create a discount code SPRING10 for 10% off, valid until the end of May”</span>.</li><li>The assistant looks up the current value and asks a yes/no question naming the record, the old value and the new value.</li><li>Answer yes to apply it. On no, nothing changes. Each change needs its own yes.</li></ol>
-            <p>It can change a product’s or variation’s regular and sale price, or end a sale; create a simple product (saved as a draft unless you ask to publish it); change a simple product’s name, description, stock or visibility; create a discount code with the terms you give; and keep a note on a customer. The customer note is kept by Codexta and is not shown in the WordPress admin, because WooCommerce has no customer tags.</p>
+            <p>It can:</p><ul><li>change a product’s or variation’s regular and sale price, or end a sale;</li><li>create a simple product (saved as a draft unless you ask to publish it);</li><li>change a simple product’s name, description, stock or visibility;</li><li>create a discount code with the terms you give;</li><li>keep a note on a customer.</li></ul><p>The customer note is kept by Codexta and is not shown in the WordPress admin, because WooCommerce has no customer tags.</p>
             <p class="tip">Not available in the chat: refunds, cancelling or editing orders, deleting anything, products with sizes or colours (variations), photos and attributes, and staff accounts. Do those in WooCommerce › Orders, Products or Marketing › Coupons.</p>
           </article>
 
@@ -354,7 +408,7 @@
           </article>
         </section>
 
-        <section class="doc-section" id="team" aria-labelledby="h-team"><div class="kicker">11</div><h2 id="h-team">Team and roles</h2>
+        <section class="doc-section" id="team" aria-labelledby="h-team"><div class="kicker">12</div><h2 id="h-team">Team and roles</h2>
           <p>There is no invite button. Only WordPress users who can manage WooCommerce can open the Codexta page: administrators and shop managers. A WordPress administrator is always an <span class="ui">Owner</span> in Codexta. A shop manager becomes an <span class="ui">Admin</span> the first time they open the page; after that the Owner decides their role.</p>
 
           <article class="task" id="set-role"><h3>How do I give a colleague a role?</h3><ul class="meta"><li>Who: Owner (Admins can view the page)</li><li>Plan: any</li></ul>
@@ -381,39 +435,53 @@
           </table></div>
         </section>
 
-        <section class="doc-section" id="authoring" aria-labelledby="h-authoring"><div class="kicker">12</div><h2 id="h-authoring">Authoring</h2>
+        <section class="doc-section" id="authoring" aria-labelledby="h-authoring"><div class="kicker">13</div><h2 id="h-authoring">Authoring</h2>
           <p>Authoring changes how your store’s assistant behaves — rules, wording and policies such as “never promise delivery dates” — by describing it in a chat. Changes apply to your store only.</p>
           <article class="task" id="authoring-use"><h3>How do I change how the assistant behaves?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: not on every plan (ask us)</li></ul>
-            <p class="where">WooCommerce › Codexta Assistant › Assistant › Chat</p>
-            <ol><li>Start a new chat and choose <span class="ui">Authoring</span> at the top, next to <span class="ui">Store assistant</span>.</li><li>Describe the change. It is prepared on a separate branch, where a chat shows what your shoppers would get.</li><li>It goes live only when you ask. A change to a guideline lands at once, for your store only; new tools and cards wait for Codexta review.</li></ol>
-            <p>Track changes under Assistant › <span class="ui">Changes</span> (<span class="ui">Waiting for Codexta review</span>, <span class="ui">Who changed what</span>) and work with the files under Assistant › <span class="ui">Code</span>. Authoring cannot change permissions, plans, secrets, other stores, channels, identity or credentials.</p>
+            <p class="where">WooCommerce › Codexta Assistant › Assistant › Chat › Authoring</p>
+            <p>Start a new chat and choose <span class="ui">Authoring</span> at the top. (The other choices are <span class="ui">Store assistant</span>, your back-office helper, and <span class="ui">Shopping assistant</span>, a preview of what shoppers get.) Then describe the change, for example <span class="say">“When a shopper asks about delivery, never promise a date”</span>. The assistant prepares the change as a draft that you can <a href="./authoring.html#try">try</a> first. Shoppers get it only when you say <span class="say">“Publish it”</span>, and only in your store. Authoring changes the assistant’s rules only: not permissions, plans, sign-in, channels or other stores.</p>
+            <p><b>See the <a href="./authoring.html">Authoring guide</a></b> for worked examples: <a href="./authoring.html#change-rule">changing a rule</a>, <a href="./authoring.html#new-guideline">adding a guideline of your own</a>, <a href="./authoring.html#try">trying a change</a>, <a href="./authoring.html#publish">publishing it</a> and <a href="./authoring.html#undo">undoing it</a>.</p>
           </article>
           <article class="task" id="guidelines"><h3>How do I switch an assistant skill off, or take Codexta’s updates?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: any</li></ul>
             <p class="where">WooCommerce › Codexta Assistant › Assistant › Guidelines</p>
             <ol><li>Switch a guideline off for your store, or press <span class="ui">Reset</span> to go back to the default. It takes a few seconds.</li><li>Under Assistant › Changes › <span class="ui">Updates from Codexta</span>, choose <span class="ui">View changes</span>, <span class="ui">Take the update</span>, <span class="ui">Use Codexta’s version (remove my copy)</span> or <span class="ui">Keep mine</span>.</li></ol>
+            <p class="tip">More in the Authoring guide: <a href="./authoring.html#switches">switching guidelines</a> and <a href="./authoring.html#updates">Codexta’s updates</a>.</p>
           </article>
         </section>
 
-        <section class="doc-section" id="plan" aria-labelledby="h-plan"><div class="kicker">13</div><h2 id="h-plan">Plan and usage</h2>
+        <section class="doc-section" id="plan" aria-labelledby="h-plan"><div class="kicker">14</div><h2 id="h-plan">Plan and usage</h2>
           <article class="task" id="usage"><h3>How do I check usage or change plan?</h3><ul class="meta"><li>Who: Owner, Admin (view)</li><li>Plan: any</li></ul>
             <p class="where">WooCommerce › Codexta Assistant › Settings › Plan</p>
             <ol><li>See your plan and its status, for example pending or active.</li><li>The <span class="ui">Conversations</span> and <span class="ui">Knowledge base notes</span> meters show this month’s use against your limit; the bar turns red at 90%. Below them, each feature is marked as included or not.</li><li>To change plan, <a href="https://codecta.com/contact-us/">contact us</a>. Pressing a plan button on this page tells you the same: <span class="ui">The plan of a WooCommerce shop is set by Codexta; contact us to change it.</span></li></ol>
             <p>Plans and prices are agreed with Codexta directly; there is no checkout in WordPress. When the monthly conversation limit is reached, shoppers read:</p>
-            <blockquote class="msg"><small>SHOPPERS SEE</small>This assistant has reached its conversation limit for this month. Please try again next month, or use another way to get in touch.</blockquote>
-            <p class="tip">Guests can use 25% of the monthly conversations by default; change this under Settings › General › <span class="ui">Who can chat</span>.</p>
+            <blockquote class="msg"><small>SHOPPERS SEE</small>The assistant is not available right now. Please try again later.</blockquote>
+            <p>Your team, in the Codexta pages, is told the reason instead: <span class="ui">This assistant has reached its conversation limit for this month. Please try again next month, or use another way to get in touch.</span></p>
+            <p class="tip">How much of the month guests may use is set under Settings › General › <span class="ui">Who can chat</span>; see <a href="#guest-share">Guest shoppers and chat limits</a>.</p>
+          </article>
+          <article class="task" id="plan-features"><h3>What do the features on Settings › Plan mean?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: any</li></ul>
+            <p class="where">WooCommerce › Codexta Assistant › Settings › Plan</p>
+            <p>Below the meters, each feature your plan can switch on is listed, marked <span class="ui">(not included)</span> when it is not part of your plan:</p>
+            <ul><li><span class="ui">authoring</span>: changing how the assistant behaves by chatting (see the <a href="./authoring.html">Authoring guide</a>).</li><li><span class="ui">enrichment</span>: <a href="#kb-enrich">✦ Enrich</a> on a knowledge-base note.</li><li><span class="ui">instagram</span>: Instagram and the other <a href="#channels">messaging channels</a>.</li><li><span class="ui">white_label</span> and <span class="ui">read_aloud</span>: the chat window without Codexta’s mark, and reading answers aloud (see <a href="#chat-window">the chat window</a>).</li><li><span class="ui">linear</span>, <span class="ui">stripe</span>, <span class="ui">slack</span>, <span class="ui">notion</span> and <span class="ui">agent_bots</span>: the apps and outside bots of the <a href="#console-settings">support console</a>.</li></ul>
+            <p>A feature that is not included is refused where you would use it, for example <span class="ui">Your plan does not include this app. Upgrade the plan to use it.</span> The number of conversations, knowledge-base notes and how long conversations are kept also depend on the plan; your own numbers are on this page.</p>
           </article>
         </section>
 
-        <section class="doc-section" id="channels" aria-labelledby="h-channels"><div class="kicker">14</div><h2 id="h-channels">Instagram and other channels</h2>
+        <section class="doc-section" id="channels" aria-labelledby="h-channels"><div class="kicker">15</div><h2 id="h-channels">Instagram and other channels</h2>
           <article class="task" id="instagram"><h3>How do I connect Instagram?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: not on every plan (ask us)</li></ul>
             <p class="where">WooCommerce › Codexta Assistant › Settings › Integrations (page title “Connect”)</p>
             <ol><li>Under <span class="ui">Instagram</span>, press <span class="ui">Connect Instagram</span>. Instagram opens in a new window.</li><li>Sign in with your Instagram professional account, then come back to Codexta.</li><li>The panel shows the account as connected and when access is valid until. Use <span class="ui">Reconnect</span> when it expires, or <span class="ui">Disconnect</span> to stop answering.</li></ol>
             <p>The assistant answers direct messages with the same knowledge base and your products. Replies go out within 24 hours of the customer’s message. <span class="ui">Allow guests</span> does not apply to Instagram, and returns are requested in the storefront chat only.</p>
-            <p class="tip">If your plan does not include Instagram, the page says <span class="ui">Instagram is not part of your current plan.</span> The same page lists other messaging channels; if one you need says it is not set up, contact support.</p>
+            <p class="tip">If your plan does not include Instagram, the page says <span class="ui">Instagram is not part of your current plan.</span> The same page lists the <a href="#other-channels">other messaging channels</a>.</p>
+          </article>
+          <article class="task" id="other-channels"><h3>Which other channels can I connect?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: not on every plan (ask us)</li></ul>
+            <p class="where">WooCommerce › Codexta Assistant › Settings › Integrations (page title “Connect”)</p>
+            <p>The page lists <span class="ui">Instagram</span>, <span class="ui">Messenger</span>, <span class="ui">WhatsApp</span>, <span class="ui">Telegram</span>, <span class="ui">SMS (Twilio)</span>, <span class="ui">SMS (Bandwidth)</span> and <span class="ui">LINE</span>. Each panel says what to copy from that service and has its own <span class="ui">Connect</span> button, for example:</p>
+            <ol><li>Under <span class="ui">Telegram</span>, ask @BotFather in Telegram for a new bot (/newbot).</li><li>Paste the token it gives you and press <span class="ui">Connect Telegram</span>.</li><li>The panel shows <span class="ui">Connected</span>. To stop answering, press <span class="ui">Disconnect</span> and confirm.</li></ol>
+            <p>A channel your plan does not include says <span class="ui">Social messaging is not part of your current plan.</span> One that says <span class="ui">… is not set up on this Codexta installation. Ask your Codexta contact to enable it.</span> needs us first: <a href="#help">contact us</a>. Every channel answers from the same knowledge base, and its chats appear under Conversations with the shopper shown as social.</p>
           </article>
         </section>
 
-        <section class="doc-section" id="uninstall" aria-labelledby="h-uninstall"><div class="kicker">15</div><h2 id="h-uninstall">Deactivate, disconnect and your data</h2>
+        <section class="doc-section" id="uninstall" aria-labelledby="h-uninstall"><div class="kicker">16</div><h2 id="h-uninstall">Deactivate, disconnect and your data</h2>
           <ul>
             <li><b>Deactivating</b> the plugin pauses your shop in Codexta: the chat button disappears and no new conversations start. Activating it again resumes. Nothing is deleted.</li>
             <li><b>Disconnecting</b> (the <span class="ui">Disconnect</span> button on WooCommerce › Codexta Assistant) or <b>deleting</b> the plugin revokes the WooCommerce access key Codexta used, and Codexta stops working for your shop.</li>
@@ -425,7 +493,7 @@
           <p>Mention the chat assistant and Codexta in your shop’s privacy policy. See the <a href="https://codexta.codectaapps.com/privacy.html">privacy policy</a> for what Codexta holds and who processes it.</p>
         </section>
 
-        <section class="doc-section" id="help" aria-labelledby="h-help"><div class="kicker">16</div><h2 id="h-help">Getting help</h2>
+        <section class="doc-section" id="help" aria-labelledby="h-help"><div class="kicker">17</div><h2 id="h-help">Getting help</h2>
           <ul>
             <li>The <a href="https://codexta.codectaapps.com/support.html">support page</a> explains how to reach us.</li>
             <li>Email <a href="mailto:codexta@codecta.com">codexta@codecta.com</a>. We reply within two business days.</li>

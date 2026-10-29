@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Codexta authoring for every shop: change the guidelines your store’s assistant follows by chatting, try the change, publish it, undo it, and switch guidelines on or off.">
+  <meta name="theme-color" content="#f4f2ec">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Codexta authoring — change what the assistant knows and does">
+  <meta property="og:description" content="Change your store’s assistant by chatting: examples, testing, publishing and undo.">
+  <meta property="og:image" content="https://codexta.codecta.com/brand/symbiosis/raster/social-avatar-1200.png">
+  <title>Codexta authoring — change what the assistant knows and does</title>
+  <link rel="icon" type="image/svg+xml" href="../brand/symbiosis/codexta-mark.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../brand/symbiosis/raster/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../brand/symbiosis/raster/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#f6f5f0;--muted:#a3a6af;--dark:#111319;--panel:#191c24;--line:#30343e;--lime:#d5ff67;--blue:#a9c2ff;--wrap:1160px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--dark);color:var(--ink);font-family:"DM Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}.wrap{width:min(calc(100% - 48px),var(--wrap));margin:auto}.topbar{height:76px;border-bottom:1px solid rgba(255,255,255,.09);display:flex;align-items:center}.topbar-inner{display:flex;justify-content:space-between;align-items:center}.brand{display:flex;align-items:center}.brand img{width:142px;height:auto}.nav{display:flex;gap:28px;align-items:center;font-size:14px;color:#c6c8cf}.nav a:hover{color:var(--lime)}.button{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 18px;border:1px solid var(--lime);border-radius:5px;background:var(--lime);color:#161910;font-size:14px;font-weight:700;transition:transform .2s,background .2s}.button:hover{transform:translateY(-2px);background:#e2ff9c}.button.secondary{border-color:#454a55;background:transparent;color:var(--ink)}.button.secondary:hover{background:#222630}.hero{padding:110px 0 90px;background:radial-gradient(ellipse at 78% 12%,rgba(101,118,170,.18),transparent 50%),linear-gradient(180deg,#111319,#141720)}.hero-grid{display:grid;grid-template-columns:1fr .92fr;gap:64px;align-items:center}.eyebrow,.kicker{font:500 12px/1.5 "DM Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--lime)}h1{font-size:clamp(52px,7.1vw,88px);line-height:.96;letter-spacing:-.065em;font-weight:600;margin:23px 0 24px;max-width:680px}h1 span{color:var(--lime)}.hero-copy{font-size:19px;line-height:1.6;color:#c4c6ce;max-width:610px;margin:0}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}.note{margin:20px 0 0;color:var(--muted);font-size:13px}.video{position:relative;border:1px solid #393e4a;border-radius:12px;overflow:hidden;background:#090a0e;box-shadow:0 32px 90px rgba(0,0,0,.38)}.video video{display:block;width:100%;height:auto}.video-label{position:absolute;left:15px;top:15px;background:rgba(14,16,21,.8);backdrop-filter:blur(8px);padding:8px 10px;border-radius:3px;font:11px "DM Mono",monospace;letter-spacing:.06em;color:var(--lime)}section{padding:94px 0}.section-head{max-width:720px;margin-bottom:44px}.section-head h2{font-size:clamp(36px,5vw,58px);line-height:1;letter-spacing:-.055em;font-weight:600;margin:14px 0 17px}.section-head p{color:#b4b6bf;font-size:17px;line-height:1.65;margin:0}.proof{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0}.proof-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:#c7c9d0;font-size:13px}.proof-row span{display:flex;align-items:center;gap:9px}.proof-row span:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--lime)}.journey{background:#f2f1ec;color:#17191e}.journey .section-head p{color:#62636a}.journey .kicker{color:#485d11}.journey-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#d8d7d0;border:1px solid #d8d7d0}.journey-card{min-height:226px;background:#f7f6f1;padding:27px}.step{font:12px "DM Mono",monospace;color:#768148}.journey-card h3{font-size:21px;letter-spacing:-.03em;margin:28px 0 10px}.journey-card p{color:#686a70;line-height:1.6;margin:0;font-size:15px}.quote{margin-top:26px;padding:25px 28px;background:#e9e8e1;display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center}.quote p{font-size:17px;line-height:1.5;margin:0;max-width:800px}.quote small{font:11px "DM Mono",monospace;color:#666}.controls-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.control{padding:27px;border:1px solid var(--line);background:var(--panel);min-height:180px}.control .mark{color:var(--lime);font-size:22px}.control h3{font-size:20px;margin:16px 0 8px;letter-spacing:-.03em}.control p{color:#aeb0ba;font-size:15px;line-height:1.6;margin:0}.future{background:#191c24}.future .section-head p{color:#b4b6bf}.future-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.future-card{border:1px solid #383c47;padding:24px;background:#1d2029}.future-card h3{font-size:18px;margin:0 0 9px}.future-card p{color:#afb1ba;line-height:1.6;margin:0;font-size:14px}.future-card small{display:block;margin-top:14px;color:var(--lime);font:10px "DM Mono",monospace;letter-spacing:.1em;text-transform:uppercase}.platforms{padding:58px 0;border-top:1px solid var(--line)}.platform-row{display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap}.platform-row p{color:#aeb0b8;margin:0;max-width:300px;line-height:1.5}.platform-tags{display:flex;gap:9px;flex-wrap:wrap}.platform-tags span{border:1px solid #3b404b;border-radius:99px;padding:10px 14px;color:#e0e1e5;font-size:13px}.cta{padding:88px 0}.cta-card{padding:55px;background:var(--lime);color:#171910;display:grid;grid-template-columns:1fr auto;gap:25px;align-items:end}.cta-card h2{font-size:clamp(36px,5vw,60px);line-height:1;letter-spacing:-.06em;margin:0 0 17px;max-width:740px}.cta-card p{margin:0;line-height:1.6;color:#414832;max-width:660px}.cta-card .button{background:#171910;color:#f7f7f1;border-color:#171910;white-space:nowrap}.footer{border-top:1px solid var(--line);padding:27px 0;color:#a4a6ae;font-size:12px}.footer-row{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.footer a:hover{color:var(--lime)}
+    @media(max-width:850px){.hero-grid{grid-template-columns:1fr;gap:42px}.hero{padding:80px 0 70px}.journey-grid{grid-template-columns:1fr 1fr}.cta-card{grid-template-columns:1fr}.cta-card .button{justify-self:start}}
+    @media(max-width:600px){.wrap{width:min(calc(100% - 34px),var(--wrap))}.nav>a:not(.button){display:none}.nav{gap:12px}.topbar{height:66px}.hero{padding:66px 0 54px}h1{font-size:clamp(48px,15vw,70px)}.hero-copy{font-size:17px}.actions{flex-direction:column}.button{width:100%}section{padding:70px 0}.journey-grid,.controls-grid,.future-grid{grid-template-columns:1fr}.journey-card{min-height:190px}.quote{grid-template-columns:1fr}.quote p{font-size:15px}.cta-card{padding:36px 25px}.proof-row{display:grid;grid-template-columns:1fr 1fr}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+  </style>
+  <link rel="stylesheet" href="../commerce-refresh.css">
+  <link rel="stylesheet" href="../site-nav.css">
+  <style>.site-nav{position:sticky;top:0}</style>
+  <style>
+    .docs-hero{background:var(--paper);color:var(--ink);padding:72px 0 44px;border-bottom:1px solid var(--line)}
+    .crumbs{font:500 12px "DM Mono",monospace;letter-spacing:.06em;color:var(--muted);margin:0 0 18px}.crumbs a{color:#244fc8}.crumbs a:hover{text-decoration:underline}
+    .docs-hero h1{font-size:clamp(40px,5.4vw,66px);line-height:1;letter-spacing:-.06em;margin:14px 0 18px;max-width:820px;color:var(--ink)}
+    .docs-hero p{font-size:18px;line-height:1.6;color:#504d46;max-width:720px;margin:0}
+    .docs-hero .legend{margin-top:22px;font-size:14px;color:#5d5a54}
+    .docs-body{background:#fff;color:var(--ink);padding:56px 0 96px}
+    .docs-layout{display:grid;grid-template-columns:250px minmax(0,1fr);gap:64px;align-items:start}
+    .toc{position:sticky;top:96px;max-height:calc(100vh - 116px);overflow:auto;font-size:14px}
+    .toc summary{font:500 11px "DM Mono",monospace;letter-spacing:.1em;color:var(--blue);list-style:none;cursor:pointer;padding:4px 0 12px}
+    .toc summary::-webkit-details-marker{display:none}
+    .toc ol{list-style:none;margin:0;padding:0;border-left:1px solid var(--line)}
+    .toc a{display:block;padding:7px 0 7px 14px;color:#47443e;line-height:1.35}.toc a:hover{color:var(--blue)}
+    .toc a:focus-visible{outline-offset:-2px}
+    .docs-layout>*{min-width:0}
+    .doc-section{padding:0 0 56px;margin:0 0 56px;border-bottom:1px solid var(--line);scroll-margin-top:92px;min-width:0}
+    .doc-section:last-child{border-bottom:0;margin-bottom:0}
+    .doc-section>h2{font-size:clamp(30px,3.6vw,42px);line-height:1.05;letter-spacing:-.05em;margin:10px 0 14px}
+    .doc-section>p,.task>p,.task li,.doc-section>ul li{font-size:15px;line-height:1.65;color:#4a4842}
+    .doc-section>p{max-width:760px}
+    .task{margin-top:34px;scroll-margin-top:92px}
+    .task h3{font-size:21px;letter-spacing:-.03em;margin:0 0 10px}
+    .meta{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px;padding:0;list-style:none}
+    .meta li{font:500 11px "DM Mono",monospace;color:#4b5161;background:#f4f2ec;border:1px solid var(--line);border-radius:99px;padding:5px 10px;line-height:1.3}
+    .where{font:12px/1.6 "DM Mono",monospace;color:#173aa7;background:var(--blue-soft);border-left:3px solid var(--blue);padding:8px 12px;margin:0 0 12px;overflow-wrap:anywhere}
+    .where-inline{display:inline;padding:2px 6px;border-left:0}
+    .task ol{margin:0;padding-left:22px}.task ol li{padding-left:4px;margin:6px 0}
+    .task ul,.doc-section>ul{margin:8px 0 0;padding-left:20px}
+    .ui{font-weight:600;color:var(--ink);background:#f4f2ec;border:1px solid #e3e0d8;border-radius:4px;padding:0 5px;overflow-wrap:anywhere}
+    .say{font:13px "DM Mono",monospace;background:var(--blue-soft);color:#173aa7;padding:2px 6px;border-radius:4px;overflow-wrap:anywhere}
+    .says{list-style:none;padding:0!important;display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 0!important}
+    blockquote.msg{margin:12px 0;padding:12px 16px;border-left:3px solid #568467;background:#f1f6f2;font-size:14px;line-height:1.55;color:#435448}
+    blockquote.msg small{display:block;font:500 10px "DM Mono",monospace;letter-spacing:.08em;color:#426c4e;margin-bottom:4px}
+    .tip{margin:12px 0 0;font-size:14px;line-height:1.6;color:#5d5a54;border-left:2px solid var(--blue);padding-left:12px}
+    .table-wrap{overflow-x:auto;border:1px solid var(--line);margin:14px 0 0}
+    .doc-table{width:100%;border-collapse:collapse;font-size:13px;min-width:560px}
+    .doc-table th,.doc-table td{padding:10px 12px;border-bottom:1px solid #eceae4;text-align:left;vertical-align:top;line-height:1.5}
+    .doc-table thead th{background:var(--paper);font-weight:600}
+    .doc-table tbody th{font-weight:600}
+    .doc-table td.y{color:#1f7a4d;font-weight:600}.doc-table td.n{color:#9a968d}
+    .docs-body a:not(.button){color:#244fc8}.docs-body p a:not(.button),.docs-body li a:not(.button){border-bottom:1px solid #aabaf4}
+    @media(max-width:960px){.docs-layout{grid-template-columns:1fr;gap:28px}.toc{position:static;max-height:none;border:1px solid var(--line);background:var(--paper);padding:12px 16px}.toc summary{padding:4px 0}.toc[open] summary{padding-bottom:12px}.toc summary:after{content:" +"}.toc[open] summary:after{content:" −"}}
+    @media(max-width:600px){.docs-hero{padding:54px 0 34px}.docs-hero p{font-size:16px}.docs-body{padding:36px 0 70px}.task h3{font-size:19px}}
+      .docs-hero .legend a{color:#244fc8;border-bottom:1px solid #aabaf4}
+  </style>
+</head>
+<body>
+  <nav class="site-nav" aria-label="Primary navigation">
+    <div class="wrap nav-inner">
+      <a class="brand nav-brand" href="../index.html" aria-label="Codexta home"><img class="nav-brand-mark" src="../brand/symbiosis/codexta-mark.svg" alt="" width="36" height="36"><span class="nav-brand-name">Codexta</span></a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation"><span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span></button>
+      <div class="nav-links" id="nav-links"><a href="../index.html#solutions">Packages</a><a href="../ecommerce.html">Commerce</a><a href="../service-knowledge.html">Service &amp; knowledge</a><a href="../index.html#architecture">How it works</a><a href="../index.html#controls">Security</a><a href="../index.html#pricing">Pricing</a><a href="./index.html" aria-current="page">Docs</a><a href="../compare.html">Compare</a><a href="../index.html#faq">FAQ</a><a class="button" href="https://codecta.com/contact-us/">Start a pilot <span class="arrow" aria-hidden="true">↗</span></a></div>
+    </div>
+  </nav>
+  <main>
+    <header class="docs-hero"><div class="wrap">
+      <p class="crumbs"><a href="./index.html">DOCS</a> / AUTHORING</p>
+      <div class="eyebrow">MERCHANT GUIDE · ALL SHOPS</div>
+      <h1>Authoring: change what the assistant knows and does</h1>
+      <p>Authoring lets you change the rules your store’s assistant follows. You describe the change in a chat, the assistant writes it, you try it, and it goes live only when you say so. It works the same in every shop Codexta connects to, and a change applies to your store only.</p>
+      <p class="legend">Places are written as <span class="where where-inline">Codexta › Assistant › Changes</span>. In Shopify, Codexta is under <b>Shopify admin › Apps › Codexta</b>; in WooCommerce, under <b>WooCommerce › Codexta Assistant</b>. Things you can type in the chat look like <span class="say">“Show me the shopping guideline”</span>. Back to the <a href="./shopify.html">Shopify guide</a> or the <a href="./woocommerce.html">WooCommerce guide</a>. New words are explained in the <a href="./index.html#words">glossary</a>.</p>
+    </div></header>
+
+    <div class="docs-body"><div class="wrap docs-layout">
+      <details class="toc" id="toc" open><summary>ON THIS PAGE</summary><nav aria-label="On this page"><ol>
+        <li><a href="#overview">What authoring is</a></li>
+        <li><a href="#what-you-can-change">What you can and cannot change</a></li>
+        <li><a href="#start">Start an authoring chat</a></li>
+        <li><a href="#see-guideline">See a guideline</a></li>
+        <li><a href="#change-rule">Change a rule for shoppers</a></li>
+        <li><a href="#new-guideline">Add a guideline of your own</a></li>
+        <li><a href="#try">Try a change before it goes live</a></li>
+        <li><a href="#publish">Publish a change</a></li>
+        <li><a href="#undo">Undo a change</a></li>
+        <li><a href="#switches">Switch a guideline on or off</a></li>
+        <li><a href="#updates">Take Codexta’s updates</a></li>
+        <li><a href="#changes-tab">The Changes tab</a></li>
+        <li><a href="#code-tab">The Code tab</a></li>
+        <li><a href="#tools-cards">Tools and cards</a></li>
+        <li><a href="#refusals">Messages you may see</a></li>
+      </ol></nav></details>
+
+      <div class="docs-content">
+
+        <section class="doc-section" id="overview" aria-labelledby="h-overview"><div class="kicker">01</div><h2 id="h-overview">What authoring is</h2>
+          <p>The assistant works from <b>guidelines</b>: written rules for one kind of work, such as the shopping guideline (search, cart, checkout, orders) or the back-office guideline (orders, customers, products). Codexta ships these guidelines. Authoring lets you keep <b>your own copy</b> of one and change it, or add a new one, without touching any other shop.</p>
+          <ul>
+            <li><b>Your store only.</b> Every change is written to your store’s own folder. Other stores and Codexta’s own guidelines never change.</li>
+            <li><b>Prepared as a draft.</b> The assistant works on a separate draft copy, called a <i>branch</i>. Your shoppers keep getting the current version until you publish.</li>
+            <li><b>You decide when it goes live.</b> Approving a draft is not publishing. The assistant publishes only when you ask it to.</li>
+            <li><b>Who:</b> the Owner and Admins. KB editors, Support managers, Support agents and Viewers do not see authoring.</li>
+            <li><b>Plan:</b> authoring is not on every plan. Switching guidelines on or off (<a href="#switches">below</a>) is on every plan.</li>
+          </ul>
+          <p class="tip">For a single habit such as “ask for the budget before suggesting a gift”, a <b>lesson</b> is quicker: tell the Store assistant and it applies it from the next chat (see “Teach the assistant” in the <a href="./shopify.html#teach">Shopify</a> or <a href="./woocommerce.html#teach">WooCommerce</a> guide). Use authoring when you want to change how a whole guideline reads or works.</p>
+<p class="tip"><b>Words on this page.</b> <b>Branch</b>: your draft copy. <b>Build</b>: the automatic check of a change; <b>green</b> means it passed, <b>red</b> means it has a mistake. <b>Publish</b> (also “merge”): make the draft live. <b>main</b>: the live version your shoppers get. <b>Diff</b>: the list of lines added and removed. More words in the <a href="./index.html#words">docs glossary</a>.</p>
+        </section>
+
+        <section class="doc-section" id="what-you-can-change" aria-labelledby="h-scope"><div class="kicker">02</div><h2 id="h-scope">What you can and cannot change</h2>
+          <div class="table-wrap" role="region" aria-label="What authoring can change" tabindex="0"><table class="doc-table">
+            <thead><tr><th scope="col">What</th><th scope="col">Can you change it?</th><th scope="col">How</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">A guideline your shoppers use</th><td class="y">Yes</td><td>Your own copy of the shopping, product-search or knowledge-base guideline (and their parts, such as returns). Your copy replaces Codexta’s for your store.</td></tr>
+              <tr><th scope="row">A guideline your team uses</th><td class="y">Yes</td><td>Your own copy of the back-office guideline, or a new guideline of your own for the Store assistant.</td></tr>
+              <tr><th scope="row">Which guidelines are on</th><td class="y">Yes</td><td>Assistant › Guidelines, a switch per guideline. On every plan.</td></tr>
+              <tr><th scope="row">Tools (what the assistant can do in your shop) and chat cards</th><td class="n">Not yet</td><td>Writing tools and cards is switched off for shops. Ask us if you need one (<a href="#tools-cards">see below</a>).</td></tr>
+              <tr><th scope="row">Permissions, roles, plans, secrets, channels, sign-in</th><td class="n">No</td><td>Set by Codexta or in Settings, never through authoring.</td></tr>
+              <tr><th scope="row">Other stores, other shop platforms, Codexta’s own guidelines</th><td class="n">No</td><td>Refused. Your copy never changes Codexta’s original.</td></tr>
+            </tbody>
+          </table></div>
+          <p>A copy of a Codexta guideline must keep the original’s conditions: it can narrow who it applies to, never widen it. Guideline text cannot grant anyone extra access; who may see or do something is decided by Codexta on the server.</p>
+          
+        </section>
+
+        <section class="doc-section" id="start" aria-labelledby="h-start"><div class="kicker">03</div><h2 id="h-start">Start an authoring chat</h2>
+          <article class="task" id="start-chat"><h3>How do I open authoring?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: not on every plan</li></ul>
+            <p class="where">Codexta › Assistant › Chat</p>
+            <ol><li>If a chat is open, press <span class="ui">New chat</span>.</li><li>At the top, choose <span class="ui">Authoring</span>. The other choices are <span class="ui">Store assistant</span> (your back-office helper) and, for Owners and Admins on a plan with authoring, <span class="ui">Shopping assistant</span>, which shows what your shoppers get.</li><li>The chat greets you with <span class="ui">Describe the capability you want to add or change.</span> Write what you want in your own words, in any language.</li></ol>
+            <p class="tip">The choice is fixed once the chat starts. To switch, press <span class="ui">New chat</span>.</p>
+          </article>
+        </section>
+
+        <section class="doc-section" id="see-guideline" aria-labelledby="h-see"><div class="kicker">04</div><h2 id="h-see">See a guideline</h2>
+          <article class="task" id="show-guideline"><h3>How do I read what the assistant follows?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: not on every plan</li></ul>
+            <p class="where">Codexta › Assistant › Chat › Authoring</p>
+            <p>Ask to see it. The assistant shows the full text in a code card; it does not summarise instead.</p>
+            <ul class="says"><li><span class="say">“Show me the shopping guideline”</span></li><li><span class="say">“Which guideline decides how products are recommended?”</span></li><li><span class="say">“Show me the returns rules”</span></li></ul>
+            <p class="tip">The names of every guideline your assistant runs are listed under Assistant › <span class="ui">Guidelines</span>, each with a short description.</p>
+          </article>
+        </section>
+
+        <section class="doc-section" id="change-rule" aria-labelledby="h-change"><div class="kicker">05</div><h2 id="h-change">Change a rule for shoppers</h2>
+          <article class="task" id="change-example"><h3>How do I change what the assistant tells shoppers?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: not on every plan</li></ul>
+            <p class="where">Codexta › Assistant › Chat › Authoring</p>
+            <ol><li>Describe the rule as you would to a new colleague. For example:
+              <blockquote class="msg"><small>YOU WRITE</small>When a shopper asks about delivery, always mention that shipping is free over the amount in our shipping note.</blockquote></li>
+              <li>The assistant finds the guideline that governs delivery questions, makes your store’s copy of it, and changes only that passage. Everything else in the guideline stays word for word.</li>
+              <li>It checks the change (the build) and tells you whether it is ready. This takes seconds.
+              <blockquote class="msg"><small>YOU SEE (EXAMPLE)</small>I added the rule to your copy of the shop guideline, under delivery. The build is green. Try it here: ask “How much is delivery?” the way a shopper would. When you are happy, say “publish it”.</blockquote></li>
+              <li><a href="#try">Try it</a>, then <a href="#publish">publish it</a>.</li></ol>
+            <p>More things you can ask for:</p>
+            <ul class="says"><li><span class="say">“Never promise a delivery date; say when the order usually ships instead.”</span></li><li><span class="say">“Offer gift wrapping when the basket is over 50.”</span></li><li><span class="say">“When you show more than three products, end with one question that narrows the choice.”</span></li><li><span class="say">“Keep product answers to two sentences plus the cards.”</span></li></ul>
+            <p class="tip">If a request is unclear, the assistant asks once, with concrete options, before it writes anything. It refuses rules that would need a tool your shop does not have, or that would change permissions, plans or other stores.</p>
+          </article>
+        </section>
+
+        <section class="doc-section" id="new-guideline" aria-labelledby="h-new"><div class="kicker">06</div><h2 id="h-new">Add a guideline of your own</h2>
+          <article class="task" id="new-example"><h3>How do I add a new guideline?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: not on every plan</li></ul>
+            <p class="where">Codexta › Assistant › Chat › Authoring</p>
+            <p>Use a new guideline for something your team does that no Codexta guideline covers. New guidelines are for the <span class="ui">Store assistant</span> (your back office); their names start with <span class="say">merchant_</span>, which the assistant adds for you. For shoppers, change your copy of the shopping guideline instead (<a href="#change-rule">above</a>).</p>
+            <blockquote class="msg"><small>YOU WRITE</small>Add a guideline for my team: when someone asks for the weekly summary, list last week’s orders that are still processing, the coupons that expire this week, and any open return requests, in that order.</blockquote>
+            <ol><li>The assistant checks first whether an existing guideline already covers it, and if so offers to change that one.</li><li>It writes the new guideline with a short description, so the Store assistant knows when to use it, and builds it.</li><li>Try it in a new <span class="ui">Store assistant</span> chat after publishing: <span class="say">“weekly summary”</span>.</li></ol>
+            <p class="tip">A new guideline can use only what the Store assistant can already do in your shop (orders, customers, products, coupons, tickets). The assistant tells you when something would need a new tool.</p>
+          </article>
+        </section>
+
+        <section class="doc-section" id="try" aria-labelledby="h-try"><div class="kicker">07</div><h2 id="h-try">Try a change before it goes live</h2>
+          <article class="task" id="try-change"><h3>How do I test a change?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: not on every plan</li></ul>
+            <p class="where">Codexta › Assistant › Chat › Authoring</p>
+            <ol><li>Wait until the assistant says the build is green (the change passed its check). Until then, the chat still uses the live version.</li><li>In the same chat, ask a question the change governs, the way a shopper or colleague would, for example <span class="say">“How much is delivery to Zagreb?”</span>. This chat uses your draft; your shoppers never see it.</li><li>If the answer is not right, say what to change: <span class="say">“Mention the free-shipping amount only once”</span>. The assistant edits, builds again, and you try again.</li></ol>
+            <p>To see exactly what changed, ask <span class="say">“Show me the diff”</span>. Lines added are marked <b>+</b>, lines removed <b>−</b>.</p>
+            <p class="tip">The assistant calls a change working only after it has really checked or tried it. Shoppers keep getting the live version the whole time.</p>
+          </article>
+        </section>
+
+        <section class="doc-section" id="publish" aria-labelledby="h-publish"><div class="kicker">08</div><h2 id="h-publish">Publish a change</h2>
+          <article class="task" id="publish-change"><h3>How do I make a change live?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: not on every plan</li></ul>
+            <p class="where">Codexta › Assistant › Chat › Authoring</p>
+            <ol><li>Say <span class="say">“Publish it”</span> (or “merge it”). Saying yes to a draft is not enough: the assistant waits for you to ask.</li><li>A guideline change goes live for your store at once, from each conversation’s next message.</li><li>The assistant says what it checked and how to undo it. The change is listed under Assistant › Changes › <span class="ui">Who changed what</span>.</li></ol>
+            <p class="tip">You can also publish from the Code tab: <span class="ui">Merge or send for review</span>, then <span class="ui">Merge</span> in the dialog. The dialog explains: <span class="ui">Guideline changes go live for your store from its next message.</span></p>
+          </article>
+        </section>
+
+        <section class="doc-section" id="undo" aria-labelledby="h-undo"><div class="kicker">09</div><h2 id="h-undo">Undo a change</h2>
+          <article class="task" id="undo-change"><h3>How do I go back?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: not on every plan (switching off: any plan)</li></ul>
+            <p class="where">Codexta › Assistant › Chat › Authoring</p>
+            <ul><li><b>Go back to Codexta’s version:</b> <span class="say">“Remove my copy of the shop guideline and use Codexta’s again”</span>. Deleting your copy brings back Codexta’s guideline. Publish it like any other change.</li><li><b>Undo one rule:</b> <span class="say">“Take out the free-shipping rule I added”</span>. Every earlier version is kept in the history.</li><li><b>Stop it right away:</b> switch your own guideline off under Assistant › <span class="ui">Guidelines</span> (<a href="#switches">below</a>). This takes a few seconds and needs no build.</li></ul>
+          </article>
+        </section>
+
+        <section class="doc-section" id="switches" aria-labelledby="h-switches"><div class="kicker">10</div><h2 id="h-switches">Switch a guideline on or off</h2>
+          <article class="task" id="switch-guideline"><h3>How do I switch a guideline off for my store?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: any</li></ul>
+            <p class="where">Codexta › Assistant › Guidelines</p>
+            <ol><li>The page lists every guideline your assistant runs, grouped by where it is used (<span class="ui">Store assistant</span>, <span class="ui">Shopping assistant</span>), each with its description and an <span class="ui">On</span> / <span class="ui">Off</span> switch.</li><li>Untick the switch. If other guidelines that are on still use it, you are asked first: <span class="ui">These guidelines are on and still use “…”. Turn it off anyway?</span></li><li>The switch saves in a few seconds and applies to your store only. No guideline text changes.</li></ol>
+            <p>A guideline you have switched shows <span class="ui">default: on</span> (or off) and a <span class="ui">Reset</span> link, which removes your switch and goes back to the default.</p>
+          </article>
+        </section>
+
+        <section class="doc-section" id="updates" aria-labelledby="h-updates"><div class="kicker">11</div><h2 id="h-updates">Take Codexta’s updates</h2>
+          <article class="task" id="take-update"><h3>What happens when Codexta improves a guideline I copied?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: any</li></ul>
+            <p class="where">Codexta › Assistant › Changes › Updates from Codexta</p>
+            <p>Your copy does not change by itself. When Codexta changes the original, the guideline shows <span class="ui">update available</span> in this panel (copies you edited are marked <span class="ui">edited by your store</span>).</p>
+            <ol><li>Press <span class="ui">View changes</span> to see what Codexta changed since your copy was made.</li><li>Choose one:<ul><li><span class="ui">Take the update</span>: your copy becomes Codexta’s new version. Your own edits in it are replaced; your on/off switch is kept.</li><li><span class="ui">Use Codexta’s version (remove my copy)</span>: your copy is removed and the switch goes back to Codexta’s default.</li><li><span class="ui">Keep mine</span>: keep your text and dismiss this update.</li></ul></li></ol>
+            <p class="tip">If you took an update and want your rule back, ask the Authoring chat to add it again to the new version.</p>
+          </article>
+        </section>
+
+        <section class="doc-section" id="changes-tab" aria-labelledby="h-changes"><div class="kicker">12</div><h2 id="h-changes">The Changes tab</h2>
+          <p>Assistant › <span class="ui">Changes</span> (page title <span class="ui">Authoring</span>) shows, for Owners and Admins:</p>
+          <ul><li><span class="ui">Updates from Codexta</span>: your copies whose Codexta original changed (<a href="#updates">above</a>). Hidden when there are none.</li><li><span class="ui">Waiting for Codexta review</span>: changes that hold code and wait for us. While shops cannot write tools or cards, this reads <span class="ui">No change is waiting.</span></li><li><span class="ui">Who changed what</span>: every authoring change, when, on which branch and by whom.</li></ul>
+          <p class="tip">On a plan without authoring, the page says <span class="ui">Authoring is not part of your plan.</span></p>
+        </section>
+
+        <section class="doc-section" id="code-tab" aria-labelledby="h-code"><div class="kicker">13</div><h2 id="h-code">The Code tab</h2>
+          <article class="task" id="code-editor"><h3>Can I edit the files myself?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: not on every plan</li></ul>
+            <p class="where">Codexta › Assistant › Code</p>
+            <p>Yes. The Code tab is an editor with your store’s branches and folder. Most people never need it: the Authoring chat does the same work. It is useful to read a change line by line.</p>
+            <ul><li><b>Left bar:</b> <span class="ui">Explorer</span> (files), <span class="ui">Search</span>, <span class="ui">Source Control</span> and <span class="ui">Problems</span>.</li><li><b>Status bar (bottom):</b> the branch name (press it to switch, or to create one with <span class="ui">Create branch from main</span>), <span class="ui">test mode</span> on a branch, the build state (<span class="ui">head green</span>, <span class="ui">head red</span> or <span class="ui">head not built</span>, and <span class="ui">last green</span>) and <span class="ui">Build</span>.</li><li><b>Source Control:</b> <span class="ui">Commit</span> with a message, <span class="ui">Changes</span> since the last commit, <span class="ui">Changes vs main</span> (what publishing would bring; click a file for its diff), <span class="ui">Merge main into branch</span> and <span class="ui">Merge or send for review</span>.</li></ul>
+            <p class="tip"><b>main</b> is what your shoppers run; it is read-only and changes only by publishing a branch. On main you see: <span class="ui">main changes only by merge. Create a branch from the status bar to make changes.</span></p>
+          </article>
+        </section>
+
+        <section class="doc-section" id="tools-cards" aria-labelledby="h-tools"><div class="kicker">14</div><h2 id="h-tools">Tools and cards</h2>
+          <p><b>Tools</b> are what the assistant can do in your shop (search products, change a cart, read an order). <b>Cards</b> are how results look in the chat (product cards, the basket). Writing your own tools and cards is <b>switched off for shops</b> for now, because they would run code inside Codexta. If you ask for one, the assistant says it cannot be done in your store’s authoring.</p>
+          <p>Instead you can:</p>
+          <ul><li>change how the assistant <b>uses</b> an existing tool, such as which results it shows first or how it words them, with a <a href="#change-rule">guideline change</a>;</li><li>ask us for a tool or card your shop needs, at <a href="mailto:codexta@codecta.com">codexta@codecta.com</a>. When shop tools open up, a change that holds code will be listed under <span class="ui">Waiting for Codexta review</span> and go live only after we approve it.</li></ul>
+        </section>
+
+        <section class="doc-section" id="refusals" aria-labelledby="h-refusals"><div class="kicker">15</div><h2 id="h-refusals">Messages you may see</h2>
+          <div class="table-wrap" role="region" aria-label="Authoring messages" tabindex="0"><table class="doc-table">
+            <thead><tr><th scope="col">Message</th><th scope="col">What it means</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Authoring is not part of the … plan. Upgrade the plan to use it.</th><td>Your plan does not include authoring. Guideline switches still work.</td></tr>
+              <tr><th scope="row">Opening the workspace needs the authoring permission.</th><td>Only the Owner and Admins can open the Code tab.</td></tr>
+              <tr><th scope="row">… is not a guideline of your platform</th><td>The change named a guideline your shop does not run (for example another shop platform’s). Ask for the guideline your assistant uses.</td></tr>
+              <tr><th scope="row">… is a Codexta-staff guideline; tenants cannot override it</th><td>Some guidelines are Codexta’s own and cannot be copied.</td></tr>
+              <tr><th scope="row">tenant code is switched off on this host</th><td>The change tried to add a tool or card; see <a href="#tools-cards">Tools and cards</a>.</td></tr>
+              <tr><th scope="row">Build red</th><td>The change has a mistake. The assistant reads the errors and fixes them; a red change is never published.</td></tr>
+            </tbody>
+          </table></div>
+          <p>Still stuck? Write to <a href="mailto:codexta@codecta.com">codexta@codecta.com</a> with the branch name from the Changes tab.</p>
+        </section>
+      </div>
+    </div></div>
+  </main>
+  <footer class="footer"><div class="wrap footer-row"><a href="../index.html">← Codexta overview</a><span>Codexta · developed by Codecta</span><a href="https://codecta.com/contact-us/">Contact</a></div></footer>
+  <script src="../site-nav.js"></script>
+  <script>(()=>{const t=document.getElementById("toc");if(!t)return;const m=matchMedia("(min-width:961px)");const s=()=>{t.open=m.matches};s();m.addEventListener("change",s);t.addEventListener("click",e=>{if(!m.matches&&e.target.closest("a"))t.open=false})})();</script>
+</body>
+</html>

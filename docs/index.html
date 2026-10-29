@@ -38,7 +38,10 @@
     .doc-card p{font-size:15px;line-height:1.6;color:#5d5a54;margin:0 0 20px}
     .doc-card b{margin-top:auto;font-size:13px;color:#244fc8}
     .doc-more{margin:26px 0 0;font-size:14px;color:var(--muted)}
-    @media(max-width:700px){.doc-cards{grid-template-columns:1fr}.docs-hero{padding:60px 0 36px}.docs-hero p{font-size:16px}.docs-list{padding-bottom:72px}}
+    .glossary{margin-top:64px;scroll-margin-top:92px}.glossary h2{font-size:clamp(28px,3.4vw,40px);letter-spacing:-.05em;margin:0 0 20px}
+    .glossary dl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:#d8dbe4;border:1px solid #d8dbe4;margin:0}
+    .glossary dl>div{background:#fff;padding:18px 20px}.glossary dt{font-weight:600;margin:0 0 6px}.glossary dd{margin:0;font-size:15px;line-height:1.55;color:#5d5a54}
+    @media(max-width:700px){.doc-cards,.glossary dl{grid-template-columns:1fr}.docs-hero{padding:60px 0 36px}.docs-hero p{font-size:16px}.docs-list{padding-bottom:72px}}
     @media(prefers-reduced-motion:reduce){.doc-card{transition:none}.doc-card:hover{transform:none}}
   </style>
 </head>
@@ -54,10 +57,12 @@
     <header class="docs-hero"><div class="wrap"><div class="eyebrow">CODEXTA / DOCS</div><h1>Codexta docs</h1><p>Step-by-step guides for the people who run Codexta day to day: setting it up, keeping its knowledge current and working with your team.</p></div></header>
     <section class="docs-list" aria-label="Guides"><div class="wrap">
       <div class="doc-cards">
-        <a class="doc-card" href="./shopify.html"><span>SHOPIFY APP</span><h2>Codexta for Shopify — merchant guide</h2><p>Install, choose a plan, switch on the app embed and run the guided setup. Then the knowledge base, teaching the assistant, conversations, the back-office assistant, team roles and your data.</p><b>Read the guide →</b></a>
-        <a class="doc-card" href="./woocommerce.html"><span>WOOCOMMERCE PLUGIN</span><h2>Codexta for WooCommerce — merchant guide</h2><p>Install and connect the plugin, get activated and run the guided setup. Then the knowledge base, teaching the assistant, conversations, the back-office assistant, team roles and your data.</p><b>Read the guide →</b></a>
+        <a class="doc-card" href="./shopify.html"><span>SHOPIFY APP</span><h2>Codexta for Shopify — merchant guide</h2><p>Install, choose a plan, switch on the app embed and run the guided setup. Then the knowledge base, teaching the assistant, conversations, the back-office assistant, guest limits, team roles and your data.</p><b>Read the guide →</b></a>
+        <a class="doc-card" href="./woocommerce.html"><span>WOOCOMMERCE PLUGIN</span><h2>Codexta for WooCommerce — merchant guide</h2><p>Install and connect the plugin, get activated and run the guided setup. Then the knowledge base, teaching the assistant, conversations, the back-office assistant, guest limits, team roles and your data.</p><b>Read the guide →</b></a>
+        <a class="doc-card" href="./authoring.html"><span>ANY PLATFORM</span><h2>Authoring — change how the assistant behaves</h2><p>Change a rule the assistant follows, or add one of your own, try it as a draft, then make it live. Worked examples for owners and admins, the same on Shopify and WooCommerce.</p><b>Read the guide →</b></a>
       </div>
       <p class="doc-more">More platforms coming.</p>
+      <section class="glossary" id="words" aria-labelledby="h-words"><h2 id="h-words">Words used in these guides</h2><dl><div><dt>Assistant</dt><dd>The chat that answers your shoppers on your shop. In your admin there is a second one, the <b>Store assistant</b>, for you and your team.</dd></div><div><dt>Knowledge base and notes</dt><dd>Your own written answers (shipping, returns, sizing…), one topic per <b>note</b>. The assistant answers shoppers from these.</dd></div><div><dt>Guideline</dt><dd>A set of written rules for one kind of work, such as helping shoppers find products. Codexta provides them; you can switch them on or off.</dd></div><div><dt>Lesson</dt><dd>A single rule you teach the assistant in the chat, such as “ask for the budget before suggesting a gift”. It applies from the next chat.</dd></div><div><dt>Preference</dt><dd>How one person likes to be helped, such as “short answers”. Each shopper or colleague sets their own.</dd></div><div><dt>Guest</dt><dd>A shopper who chats without signing in to your shop. Guests can shop with the assistant; their own orders and returns need signing in.</dd></div><div><dt>Plan feature</dt><dd>Something only some plans include, such as authoring or Instagram. Settings › Plan shows which ones you have.</dd></div><div><dt>Authoring</dt><dd>Changing the assistant’s guidelines, or adding your own, by describing the change in a chat.</dd></div><div><dt>Publish</dt><dd>Making a tried change live for your shoppers. Until then it is a draft only you can test.</dd></div><div><dt>Roles</dt><dd>What each colleague may see and do: Owner, Admin, KB editor (KB = knowledge base), Support manager, Support agent, Viewer.</dd></div></dl></section>
     </div></section>
   </main>
   <footer class="footer"><div class="wrap footer-row"><a href="../index.html">← Codexta overview</a><span>Codexta · developed by Codecta</span><a href="https://codecta.com/contact-us/">Contact</a></div></footer>
