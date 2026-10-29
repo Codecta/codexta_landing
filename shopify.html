@@ -49,17 +49,7 @@
     .section-head p a{color:#244fc8;font-weight:600;border-bottom:1px solid #aabaf4}
     .ui{font-weight:600;color:var(--ink);white-space:nowrap}
     .say{font:13px "DM Mono",monospace;background:var(--blue-soft);color:#173aa7;padding:2px 6px;border-radius:4px}
-    .plans{background:#fff;color:var(--ink);padding:100px 0}
-    .table-wrap{overflow-x:auto;border:1px solid var(--line);background:#fff}
-    .plan-table{width:100%;min-width:640px;border-collapse:collapse;font-size:14px}
-    .plan-table th,.plan-table td{padding:14px 16px;border-bottom:1px solid #eceae4;text-align:left;vertical-align:top}
-    .plan-table thead th{background:var(--paper);font-size:18px;letter-spacing:-.03em}
-    .plan-table thead th small{display:block;font:500 12px "DM Mono",monospace;color:var(--blue);letter-spacing:0;margin-top:6px}
-    .plan-table tbody th{font-weight:600;color:#47443e;width:26%}
-    .plan-table td.no{color:#9a968d}
-    .plan-notes{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:26px}
-    .plan-notes p{margin:0;font-size:14px;line-height:1.6;color:#5d5a54;border-left:2px solid var(--blue);padding-left:14px}
-    .plan-notes a,.privacy a,.help a,.faq-answer a{color:#244fc8;font-weight:600;border-bottom:1px solid #aabaf4}
+    .privacy a,.help a,.faq-answer a{color:#244fc8;font-weight:600;border-bottom:1px solid #aabaf4}
     .privacy{background:var(--paper);color:var(--ink);padding:100px 0}
     .privacy .support-points{grid-template-columns:repeat(3,minmax(0,1fr));margin-bottom:28px}
     .privacy .note-line,.help p{font-size:15px;line-height:1.6;color:#5d5a54;margin:0}
@@ -79,7 +69,7 @@
     .faq-item summary:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
     .faq-answer{margin:0 0 22px;font-size:15px;line-height:1.65;color:#5d5a54;max-width:640px}
     @media(max-width:850px){.offer-grid,.faq-layout{grid-template-columns:1fr;gap:40px}.privacy .support-points{grid-template-columns:1fr 1fr}.help-row{grid-template-columns:1fr}}
-    @media(max-width:600px){.glance{grid-template-columns:1fr}.glance>div+div{border-left:0;border-top:1px solid #e4e6eb}.offer,.setup,.plans,.privacy,.faq{padding:72px 0}.plan-notes,.privacy .support-points{grid-template-columns:1fr}.ui{white-space:normal}}
+    @media(max-width:600px){.glance{grid-template-columns:1fr}.glance>div+div{border-left:0;border-top:1px solid #e4e6eb}.offer,.setup,.privacy,.faq{padding:72px 0}.privacy .support-points{grid-template-columns:1fr}.ui{white-space:normal}}
   </style>
 </head>
 <body>
@@ -125,18 +115,6 @@
       </div>
     </div></section>
 
-    <section class="plans" id="plans"><div class="wrap"><div class="section-head"><div class="kicker">PLANS</div><h2>Monthly plans, billed through Shopify.</h2><p>Prices, limits and the free trial are on the <a href="#install">Shopify App Store listing</a> and on Shopify’s plan page when you install. There is no free plan. What each plan adds:</p></div>
-      <div class="table-wrap" role="region" aria-label="Plan comparison" tabindex="0"><table class="plan-table">
-        <thead><tr><th scope="col"><span class="visually-hidden">Feature</span></th><th scope="col">Lite</th><th scope="col">Start</th><th scope="col">Growth</th><th scope="col">Scale</th></tr></thead>
-        <tbody>
-          <tr><th scope="row">Storefront assistant, admin assistant, knowledge base</th><td>Included</td><td>Included</td><td>Included</td><td>Included</td></tr>
-          <tr><th scope="row">Note enrichment (✦ Enrich)</th><td class="no">—</td><td>Included</td><td>Included</td><td>Included</td></tr>
-          <tr><th scope="row">Instagram direct messages</th><td class="no">—</td><td class="no">—</td><td>Included</td><td>Included</td></tr>
-          <tr><th scope="row">Authoring</th><td class="no">—</td><td class="no">—</td><td class="no">—</td><td>Included</td></tr>
-        </tbody>
-      </table></div>
-      <div class="plan-notes"><p><b>Limits.</b> Each plan sets how many conversations a month, how many knowledge base notes and how long conversations are kept. Your own plan’s limits and this month’s use are in Codexta under Settings › Plan.</p><p><b>Billing.</b> You pay through your Shopify bill and change plan on Shopify’s own plan page. For a larger plan priced on quote, write to <a href="mailto:codexta@codecta.com">codexta@codecta.com</a>.</p></div>
-    </div></section>
 
     <section class="privacy" id="privacy"><div class="wrap"><div class="section-head"><div class="kicker">PRIVACY AND DATA</div><h2>Your shop’s data stays with your shop.</h2><p>Each shop’s notes, conversations and settings are kept apart from every other shop.</p></div>
       <div class="support-points">
@@ -149,7 +127,7 @@
 
     <section class="faq" id="faq"><div class="wrap faq-layout"><div><div class="kicker">QUESTIONS</div><div class="section-head"><h2>Short answers.</h2><p>More in the <a href="./docs/shopify.html">merchant guide</a>.</p></div></div>
       <div class="faq-list">
-        <details class="faq-item"><summary>Is there a free plan?</summary><p class="faq-answer">No. Codexta has four paid plans — Lite, Start, Growth and Scale — each with a free trial. Until a plan is approved, the assistant does not answer shoppers.</p></details>
+        <details class="faq-item"><summary>Is there a free plan?</summary><p class="faq-answer">No. Every plan is paid and comes with a free trial; the plans and their prices are on Shopify’s plan page and the App Store listing. Until a plan is approved, the assistant does not answer shoppers.</p></details>
         <details class="faq-item"><summary>How does the trial work?</summary><p class="faq-answer">You choose a plan on Shopify’s plan page and approve it there. The trial days shown there are free; after that the plan is charged on your Shopify bill. You can switch plan from Settings › Plan in Codexta, which opens Shopify’s plan page.</p></details>
         <details class="faq-item"><summary>Does Codexta change my theme code?</summary><p class="faq-answer">No. The storefront assistant is a theme app embed called “Codexta assistant”. You switch it on or off in the theme editor under App embeds and press Save.</p></details>
         <details class="faq-item"><summary>Who on my team can change things?</summary><p class="faq-answer">The store owner gives each colleague a role under Settings › Team. Only the Owner and Admins can change settings or let the back-office assistant change products, prices, customers or discounts, and it asks them before each change. KB editors can change the knowledge base. Support agents, Support managers and Viewers read reports and conversations. <a href="./docs/shopify.html#team">See all roles</a>.</p></details>
