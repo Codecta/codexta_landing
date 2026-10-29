@@ -15,7 +15,7 @@
 .site-nav .menu-button[aria-expanded="true"] .menu-icon span:nth-child(2){opacity:0}
 .site-nav .menu-button[aria-expanded="true"] .menu-icon span:last-child{transform:translateY(-6px) rotate(-45deg)}
 body.menu-open{overflow:hidden}
-@media(max-width:1120px){
+@media(max-width:1160px){
   .site-nav .menu-button{display:grid;place-items:center}
   .site-nav .nav-links{position:fixed;inset:72px 0 auto;display:none;align-items:stretch;flex-direction:column;gap:0;padding:18px 16px 28px;background:var(--paper);border-bottom:1px solid var(--line)}
   .site-nav .nav-links.is-open{display:flex}
