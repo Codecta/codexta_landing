@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Codexta for WooCommerce merchant guide: install and connect the plugin, get activated, set up the assistant, and manage the knowledge base, conversations, team roles and the back-office assistant.">
+  <meta name="theme-color" content="#f4f2ec">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Codexta for WooCommerce — merchant guide">
+  <meta property="og:description" content="Step-by-step tasks for running Codexta in your WordPress admin.">
+  <meta property="og:image" content="https://codexta.codecta.com/brand/symbiosis/raster/social-avatar-1200.png">
+  <title>Codexta for WooCommerce — merchant guide</title>
+  <link rel="icon" type="image/svg+xml" href="../brand/symbiosis/codexta-mark.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../brand/symbiosis/raster/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../brand/symbiosis/raster/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#f6f5f0;--muted:#a3a6af;--dark:#111319;--panel:#191c24;--line:#30343e;--lime:#d5ff67;--blue:#a9c2ff;--wrap:1160px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--dark);color:var(--ink);font-family:"DM Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}.wrap{width:min(calc(100% - 48px),var(--wrap));margin:auto}.topbar{height:76px;border-bottom:1px solid rgba(255,255,255,.09);display:flex;align-items:center}.topbar-inner{display:flex;justify-content:space-between;align-items:center}.brand{display:flex;align-items:center}.brand img{width:142px;height:auto}.nav{display:flex;gap:28px;align-items:center;font-size:14px;color:#c6c8cf}.nav a:hover{color:var(--lime)}.button{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 18px;border:1px solid var(--lime);border-radius:5px;background:var(--lime);color:#161910;font-size:14px;font-weight:700;transition:transform .2s,background .2s}.button:hover{transform:translateY(-2px);background:#e2ff9c}.button.secondary{border-color:#454a55;background:transparent;color:var(--ink)}.button.secondary:hover{background:#222630}.hero{padding:110px 0 90px;background:radial-gradient(ellipse at 78% 12%,rgba(101,118,170,.18),transparent 50%),linear-gradient(180deg,#111319,#141720)}.hero-grid{display:grid;grid-template-columns:1fr .92fr;gap:64px;align-items:center}.eyebrow,.kicker{font:500 12px/1.5 "DM Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--lime)}h1{font-size:clamp(52px,7.1vw,88px);line-height:.96;letter-spacing:-.065em;font-weight:600;margin:23px 0 24px;max-width:680px}h1 span{color:var(--lime)}.hero-copy{font-size:19px;line-height:1.6;color:#c4c6ce;max-width:610px;margin:0}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}.note{margin:20px 0 0;color:var(--muted);font-size:13px}.video{position:relative;border:1px solid #393e4a;border-radius:12px;overflow:hidden;background:#090a0e;box-shadow:0 32px 90px rgba(0,0,0,.38)}.video video{display:block;width:100%;height:auto}.video-label{position:absolute;left:15px;top:15px;background:rgba(14,16,21,.8);backdrop-filter:blur(8px);padding:8px 10px;border-radius:3px;font:11px "DM Mono",monospace;letter-spacing:.06em;color:var(--lime)}section{padding:94px 0}.section-head{max-width:720px;margin-bottom:44px}.section-head h2{font-size:clamp(36px,5vw,58px);line-height:1;letter-spacing:-.055em;font-weight:600;margin:14px 0 17px}.section-head p{color:#b4b6bf;font-size:17px;line-height:1.65;margin:0}.proof{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0}.proof-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:#c7c9d0;font-size:13px}.proof-row span{display:flex;align-items:center;gap:9px}.proof-row span:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--lime)}.journey{background:#f2f1ec;color:#17191e}.journey .section-head p{color:#62636a}.journey .kicker{color:#485d11}.journey-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#d8d7d0;border:1px solid #d8d7d0}.journey-card{min-height:226px;background:#f7f6f1;padding:27px}.step{font:12px "DM Mono",monospace;color:#768148}.journey-card h3{font-size:21px;letter-spacing:-.03em;margin:28px 0 10px}.journey-card p{color:#686a70;line-height:1.6;margin:0;font-size:15px}.quote{margin-top:26px;padding:25px 28px;background:#e9e8e1;display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center}.quote p{font-size:17px;line-height:1.5;margin:0;max-width:800px}.quote small{font:11px "DM Mono",monospace;color:#666}.controls-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.control{padding:27px;border:1px solid var(--line);background:var(--panel);min-height:180px}.control .mark{color:var(--lime);font-size:22px}.control h3{font-size:20px;margin:16px 0 8px;letter-spacing:-.03em}.control p{color:#aeb0ba;font-size:15px;line-height:1.6;margin:0}.future{background:#191c24}.future .section-head p{color:#b4b6bf}.future-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.future-card{border:1px solid #383c47;padding:24px;background:#1d2029}.future-card h3{font-size:18px;margin:0 0 9px}.future-card p{color:#afb1ba;line-height:1.6;margin:0;font-size:14px}.future-card small{display:block;margin-top:14px;color:var(--lime);font:10px "DM Mono",monospace;letter-spacing:.1em;text-transform:uppercase}.platforms{padding:58px 0;border-top:1px solid var(--line)}.platform-row{display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap}.platform-row p{color:#aeb0b8;margin:0;max-width:300px;line-height:1.5}.platform-tags{display:flex;gap:9px;flex-wrap:wrap}.platform-tags span{border:1px solid #3b404b;border-radius:99px;padding:10px 14px;color:#e0e1e5;font-size:13px}.cta{padding:88px 0}.cta-card{padding:55px;background:var(--lime);color:#171910;display:grid;grid-template-columns:1fr auto;gap:25px;align-items:end}.cta-card h2{font-size:clamp(36px,5vw,60px);line-height:1;letter-spacing:-.06em;margin:0 0 17px;max-width:740px}.cta-card p{margin:0;line-height:1.6;color:#414832;max-width:660px}.cta-card .button{background:#171910;color:#f7f7f1;border-color:#171910;white-space:nowrap}.footer{border-top:1px solid var(--line);padding:27px 0;color:#a4a6ae;font-size:12px}.footer-row{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.footer a:hover{color:var(--lime)}
+    @media(max-width:850px){.hero-grid{grid-template-columns:1fr;gap:42px}.hero{padding:80px 0 70px}.journey-grid{grid-template-columns:1fr 1fr}.cta-card{grid-template-columns:1fr}.cta-card .button{justify-self:start}}
+    @media(max-width:600px){.wrap{width:min(calc(100% - 34px),var(--wrap))}.nav>a:not(.button){display:none}.nav{gap:12px}.topbar{height:66px}.hero{padding:66px 0 54px}h1{font-size:clamp(48px,15vw,70px)}.hero-copy{font-size:17px}.actions{flex-direction:column}.button{width:100%}section{padding:70px 0}.journey-grid,.controls-grid,.future-grid{grid-template-columns:1fr}.journey-card{min-height:190px}.quote{grid-template-columns:1fr}.quote p{font-size:15px}.cta-card{padding:36px 25px}.proof-row{display:grid;grid-template-columns:1fr 1fr}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+  </style>
+  <link rel="stylesheet" href="../commerce-refresh.css">
+  <link rel="stylesheet" href="../site-nav.css">
+  <style>.site-nav{position:sticky;top:0}</style>
+  <style>
+    .docs-hero{background:var(--paper);color:var(--ink);padding:72px 0 44px;border-bottom:1px solid var(--line)}
+    .crumbs{font:500 12px "DM Mono",monospace;letter-spacing:.06em;color:var(--muted);margin:0 0 18px}.crumbs a{color:#244fc8}.crumbs a:hover{text-decoration:underline}
+    .docs-hero h1{font-size:clamp(40px,5.4vw,66px);line-height:1;letter-spacing:-.06em;margin:14px 0 18px;max-width:820px;color:var(--ink)}
+    .docs-hero p{font-size:18px;line-height:1.6;color:#504d46;max-width:720px;margin:0}
+    .docs-hero .legend{margin-top:22px;font-size:14px;color:#5d5a54}
+    .docs-body{background:#fff;color:var(--ink);padding:56px 0 96px}
+    .docs-layout{display:grid;grid-template-columns:250px minmax(0,1fr);gap:64px;align-items:start}
+    .toc{position:sticky;top:96px;max-height:calc(100vh - 116px);overflow:auto;font-size:14px}
+    .toc summary{font:500 11px "DM Mono",monospace;letter-spacing:.1em;color:var(--blue);list-style:none;cursor:pointer;padding:4px 0 12px}
+    .toc summary::-webkit-details-marker{display:none}
+    .toc ol{list-style:none;margin:0;padding:0;border-left:1px solid var(--line)}
+    .toc a{display:block;padding:7px 0 7px 14px;color:#47443e;line-height:1.35}.toc a:hover{color:var(--blue)}
+    .toc a:focus-visible{outline-offset:-2px}
+    .docs-layout>*{min-width:0}
+    .doc-section{padding:0 0 56px;margin:0 0 56px;border-bottom:1px solid var(--line);scroll-margin-top:92px;min-width:0}
+    .doc-section:last-child{border-bottom:0;margin-bottom:0}
+    .doc-section>h2{font-size:clamp(30px,3.6vw,42px);line-height:1.05;letter-spacing:-.05em;margin:10px 0 14px}
+    .doc-section>p,.task>p,.task li,.doc-section>ul li{font-size:15px;line-height:1.65;color:#4a4842}
+    .doc-section>p{max-width:760px}
+    .task{margin-top:34px;scroll-margin-top:92px}
+    .task h3{font-size:21px;letter-spacing:-.03em;margin:0 0 10px}
+    .meta{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px;padding:0;list-style:none}
+    .meta li{font:500 11px "DM Mono",monospace;color:#4b5161;background:#f4f2ec;border:1px solid var(--line);border-radius:99px;padding:5px 10px;line-height:1.3}
+    .where{font:12px/1.6 "DM Mono",monospace;color:#173aa7;background:var(--blue-soft);border-left:3px solid var(--blue);padding:8px 12px;margin:0 0 12px;overflow-wrap:anywhere}
+    .where-inline{display:inline;padding:2px 6px;border-left:0}
+    .task ol{margin:0;padding-left:22px}.task ol li{padding-left:4px;margin:6px 0}
+    .task ul,.doc-section>ul{margin:8px 0 0;padding-left:20px}
+    .ui{font-weight:600;color:var(--ink);background:#f4f2ec;border:1px solid #e3e0d8;border-radius:4px;padding:0 5px;overflow-wrap:anywhere}
+    .say{font:13px "DM Mono",monospace;background:var(--blue-soft);color:#173aa7;padding:2px 6px;border-radius:4px;overflow-wrap:anywhere}
+    .says{list-style:none;padding:0!important;display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 0!important}
+    blockquote.msg{margin:12px 0;padding:12px 16px;border-left:3px solid #568467;background:#f1f6f2;font-size:14px;line-height:1.55;color:#435448}
+    blockquote.msg small{display:block;font:500 10px "DM Mono",monospace;letter-spacing:.08em;color:#426c4e;margin-bottom:4px}
+    .tip{margin:12px 0 0;font-size:14px;line-height:1.6;color:#5d5a54;border-left:2px solid var(--blue);padding-left:12px}
+    .table-wrap{overflow-x:auto;border:1px solid var(--line);margin:14px 0 0}
+    .doc-table{width:100%;border-collapse:collapse;font-size:13px;min-width:560px}
+    .doc-table th,.doc-table td{padding:10px 12px;border-bottom:1px solid #eceae4;text-align:left;vertical-align:top;line-height:1.5}
+    .doc-table thead th{background:var(--paper);font-weight:600}
+    .doc-table tbody th{font-weight:600}
+    .doc-table td.y{color:#1f7a4d;font-weight:600}.doc-table td.n{color:#9a968d}
+    .docs-body a:not(.button){color:#244fc8}.docs-body p a:not(.button),.docs-body li a:not(.button){border-bottom:1px solid #aabaf4}
+    @media(max-width:960px){.docs-layout{grid-template-columns:1fr;gap:28px}.toc{position:static;max-height:none;border:1px solid var(--line);background:var(--paper);padding:12px 16px}.toc summary{padding:4px 0}.toc[open] summary{padding-bottom:12px}.toc summary:after{content:" +"}.toc[open] summary:after{content:" −"}}
+    @media(max-width:600px){.docs-hero{padding:54px 0 34px}.docs-hero p{font-size:16px}.docs-body{padding:36px 0 70px}.task h3{font-size:19px}}
+  </style>
+</head>
+<body>
+  <nav class="site-nav" aria-label="Primary navigation">
+    <div class="wrap nav-inner">
+      <a class="brand nav-brand" href="../index.html" aria-label="Codexta home"><img class="nav-brand-mark" src="../brand/symbiosis/codexta-mark.svg" alt="" width="36" height="36"><span class="nav-brand-name">Codexta</span></a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation"><span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span></button>
+      <div class="nav-links" id="nav-links"><a href="../index.html#solutions">Packages</a><a href="../ecommerce.html">Commerce</a><a href="../service-knowledge.html">Service &amp; knowledge</a><a href="../index.html#architecture">How it works</a><a href="../index.html#controls">Security</a><a href="../index.html#pricing">Pricing</a><a href="./index.html" aria-current="page">Docs</a><a href="../compare.html">Compare</a><a href="../index.html#faq">FAQ</a><a class="button" href="https://codecta.com/contact-us/">Start a pilot <span class="arrow" aria-hidden="true">↗</span></a></div>
+    </div>
+  </nav>
+  <main>
+    <header class="docs-hero"><div class="wrap">
+      <p class="crumbs"><a href="./index.html">DOCS</a> / CODEXTA FOR WOOCOMMERCE</p>
+      <div class="eyebrow">MERCHANT GUIDE</div>
+      <h1>Codexta for WooCommerce</h1>
+      <p>How to install and connect the Codexta Assistant plugin, set up the assistant your shoppers talk to, and work with the back-office assistant and reports in your WordPress admin. Each task names the exact place, the buttons to press, who can do it and whether it depends on your plan.</p>
+      <p class="legend">Places are written as <span class="where where-inline">WooCommerce › Codexta Assistant › Settings › Team</span>: the WooCommerce menu in the WordPress admin, then the Codexta page and its own menu. Things you can type in the chat look like <span class="say">“Set up my assistant”</span>.</p>
+    </div></header>
+
+    <div class="docs-body"><div class="wrap docs-layout">
+      <details class="toc" id="toc" open><summary>ON THIS PAGE</summary><nav aria-label="On this page"><ol>
+        <li><a href="#getting-started">Getting started</a></li>
+        <li><a href="#admin-at-a-glance">The Codexta page at a glance</a></li>
+        <li><a href="#knowledge-base">Knowledge base</a></li>
+        <li><a href="#fix-answers">Fix a wrong or missing answer</a></li>
+        <li><a href="#teach">Teach the assistant: lessons and preferences</a></li>
+        <li><a href="#assistant-texts">Name, greeting, starter questions and languages</a></li>
+        <li><a href="#storefront">The storefront assistant</a></li>
+        <li><a href="#conversations">Conversations, shoppers, events and assisted orders</a></li>
+        <li><a href="#support-console">Support console and taking over a chat</a></li>
+        <li><a href="#back-office">Back-office assistant</a></li>
+        <li><a href="#team">Team and roles</a></li>
+        <li><a href="#authoring">Authoring</a></li>
+        <li><a href="#plan">Plan and usage</a></li>
+        <li><a href="#channels">Instagram and other channels</a></li>
+        <li><a href="#uninstall">Deactivate, disconnect and your data</a></li>
+        <li><a href="#help">Getting help</a></li>
+      </ol></nav></details>
+
+      <div class="docs-content">
+
+        <section class="doc-section" id="getting-started" aria-labelledby="h-getting-started"><div class="kicker">01</div><h2 id="h-getting-started">Getting started</h2>
+          <p>Four steps take you from the plugin to a working assistant: install the plugin, connect your shop, get activated by Codexta, and run the guided setup.</p>
+
+          <article class="task" id="install"><h3>How do I install the plugin?</h3><ul class="meta"><li>Who: a WordPress administrator</li><li>Plan: any</li></ul>
+            <p class="where">WordPress admin › Plugins › Add New Plugin › Upload Plugin</p>
+            <ol><li>Get the <span class="ui">Codexta Assistant</span> plugin from us (see <a href="../woocommerce.html">Codexta for WooCommerce</a>).</li><li>Upload the .zip file and press <span class="ui">Install Now</span>, then <span class="ui">Activate Plugin</span>.</li><li>The plugin needs WordPress 6.4, PHP 7.4 and WooCommerce 8.0 or newer. It works with High-Performance Order Storage and the Cart and Checkout blocks.</li></ol>
+            <p class="tip">The plugin does nothing until you connect it. Nothing is sent to Codexta before that, and the assistant is not shown on your storefront.</p>
+          </article>
+
+          <article class="task" id="connect"><h3>How do I connect my shop?</h3><ul class="meta"><li>Who: a WordPress administrator or shop manager</li><li>Plan: any</li></ul>
+            <p class="where">WordPress admin › WooCommerce › Codexta Assistant</p>
+            <ol><li>Press <span class="ui">Connect to Codexta</span>.</li><li>WooCommerce shows its own screen asking you to approve access for <span class="ui">Codexta Assistant</span>. Approve it.</li><li>You come back to the plugin page. It shows <span class="ui">Connected to Codexta.</span> and <span class="ui">Status: Connected</span>, with the Codexta page below it.</li></ol>
+            <p>There are no keys or passwords to copy: WooCommerce creates the access key, and the plugin and Codexta set up the rest themselves. If you see <span class="ui">The connection attempt expired. Please click Connect again.</span>, press <span class="ui">Connect to Codexta</span> again. While connecting, Codexta starts your knowledge base from your shop’s name and description, its published pages and its product categories.</p>
+            <p class="tip">The <span class="ui">Settings</span> part of the plugin page holds the <span class="ui">Codexta URL</span> and an optional <span class="ui">Server URL</span>. Leave them as they are unless we ask you to change them.</p>
+          </article>
+
+          <article class="task" id="activation"><h3>Why does the assistant not answer yet?</h3><ul class="meta"><li>Who: Owner</li><li>Plan: agreed with Codexta</li></ul>
+            <p class="where">WooCommerce › Codexta Assistant › Settings › Plan</p>
+            <p>WooCommerce has no app billing, so a newly connected shop waits for Codexta to activate it on the plan you agree with us. Until then every Codexta page shows:</p>
+            <blockquote class="msg"><small>YOU SEE</small>Waiting for activation by Codexta. Your assistant will not answer shoppers until Codexta activates it; contact Codexta to agree the plan.</blockquote>
+            <p>Shoppers who open the chat meanwhile read:</p>
+            <blockquote class="msg"><small>SHOPPERS SEE</small>This assistant is not active yet. Please use another way to get in touch for now.</blockquote>
+            <p><a href="https://codecta.com/contact-us/">Contact us</a> to agree the plan. You can already open the Codexta page and look around, but the assistant does not answer shoppers, and changes to the knowledge base, authoring and enrichment wait for activation too.</p>
+          </article>
+
+          <article class="task" id="guided-setup"><h3>How do I run the guided setup?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: any</li></ul>
+            <p class="where">WooCommerce › Codexta Assistant › Overview › Set up your assistant</p>
+            <ol><li>Press <span class="ui">Set up my assistant</span>. Codexta opens Assistant › Chat and sends <span class="say">“Set up my assistant”</span> for you.</li><li>The assistant shows each area — Assistant identity, Knowledge base, Voice and handover, On the storefront, Test — as done, partly done or missing, and asks <span class="ui">How do you want to go on?</span> Choose <span class="ui">Go through what is missing</span>, <span class="ui">Review everything</span>, <span class="ui">Just one area</span> or <span class="ui">Stop here</span>.</li><li>Answer its questions. It asks which languages your shoppers write in, drafts a name, greeting and up to four starter questions, and fills the knowledge base from your shop’s own pages, such as shipping, returns, payments, the FAQ and contact. It may ask for your shop’s web address.</li><li>Before anything is saved, it shows you the exact text. A plain <span class="say">“yes”</span> to a list of drafts approves exactly that list.</li><li>In the Test step it asks a few real questions and shows which note answered each. Questions about orders, stock, prices or the cart cannot be tested from the admin: try those on your storefront.</li></ol>
+            <p>You can skip any area, stop and come back later. Anything already done is kept. To continue or start again, type in Assistant › Chat:</p>
+            <ul class="says"><li><span class="say">“What is left to set up”</span></li><li><span class="say">“Run the setup again”</span></li><li><span class="say">“Add my shipping and returns pages to the knowledge base”</span></li></ul>
+            <p class="tip">The card stays on the Overview until you press <span class="ui">Dismiss</span>. Dismissing is remembered for this shop in this browser. The assistant never asks for passwords or API keys.</p>
+          </article>
+        </section>
+
+        <section class="doc-section" id="admin-at-a-glance" aria-labelledby="h-admin"><div class="kicker">02</div><h2 id="h-admin">The Codexta page at a glance</h2>
+          <p>Codexta lives on one page in the WordPress admin, under WooCommerce › Codexta Assistant. The page has its own menu bar at the top, with your shop’s name on the left and your role on the right. Each person sees only the entries their <a href="#team">role</a> allows.</p>
+          <div class="table-wrap" role="region" aria-label="Menu entries" tabindex="0"><table class="doc-table">
+            <thead><tr><th scope="col">Menu entry</th><th scope="col">What it shows</th><th scope="col">Tabs</th><th scope="col">Who sees it</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Overview</th><td>Tiles for the last 30 days (UTC) and a <span class="ui">Conversations per day</span> chart. Owners and admins also see the <span class="ui">Set up your assistant</span> card and a <span class="ui">Support</span> card.</td><td>—</td><td>Everyone</td></tr>
+              <tr><th scope="row">Assistant</th><td>The back-office chat; for owners and admins also authoring changes, code and guideline switches.</td><td>Chat, Changes, Code, Guidelines</td><td>Owner, Admin, KB editor (Chat only)</td></tr>
+              <tr><th scope="row">Conversations</th><td>Shopper conversations, read only, and questions the knowledge base could not answer.</td><td>All, Unanswered</td><td>Everyone</td></tr>
+              <tr><th scope="row">Shoppers</th><td>Everyone who chatted, their conversations and assisted orders.</td><td>—</td><td>Everyone</td></tr>
+              <tr><th scope="row">Knowledge base</th><td>The notes the assistant answers from.</td><td>—</td><td>Everyone (only Owner, Admin and KB editor can change notes)</td></tr>
+              <tr><th scope="row">Events</th><td>Results and every tool the assistant used; pin numbers to the Overview.</td><td>—</td><td>Everyone</td></tr>
+              <tr><th scope="row">Settings</th><td>How the assistant looks and talks, the team, the plan and other channels.</td><td>General, Team, Plan, Integrations</td><td>Owner, Admin</td></tr>
+              <tr><th scope="row">Support console</th><td>The helpdesk: handed-over chats and tickets, opened inside the same page.</td><td>The console’s own sections</td><td>Owner, Admin, Support manager, Support agent</td></tr>
+            </tbody>
+          </table></div>
+          <p class="tip">The Codexta page grows with its content, so you scroll the WordPress page as usual. If you see <span class="ui">Open Codexta from your store admin</span>, open it from WooCommerce › Codexta Assistant rather than a saved link. <span class="ui">This session is not allowed</span> means the link has expired: reload the WordPress page.</p>
+        </section>
+
+        <section class="doc-section" id="knowledge-base" aria-labelledby="h-kb"><div class="kicker">03</div><h2 id="h-kb">Knowledge base</h2>
+          <p>The knowledge base is a set of notes the assistant answers from: shipping, returns, sizing, care, contact details and anything else shoppers ask. When you connect, Codexta starts it with notes about your shop, one for each published page, and your product categories, under the <span class="say">shop/</span> folder. Everyone with access can read notes; only the Owner, Admins and KB editors can change them.</p>
+
+          <article class="task" id="kb-add-note"><h3>How do I add a note?</h3><ul class="meta"><li>Who: Owner, Admin, KB editor</li><li>Plan: any</li></ul>
+            <p class="where">WooCommerce › Codexta Assistant › Knowledge base</p>
+            <ol><li>Press <span class="ui">New note</span>.</li><li>Enter a path relative to the knowledge base, for example <span class="say">faq/shipping.md</span>, and press <span class="ui">Create</span>.</li><li>Write the note. Switch between <span class="ui">edit</span>, <span class="ui">split</span> and <span class="ui">preview</span> to check it.</li><li>Press <span class="ui">Save</span>.</li></ol>
+          </article>
+
+          <article class="task" id="kb-import"><h3>How do I import or export notes?</h3><ul class="meta"><li>Who: Owner, Admin, KB editor (import); anyone who can open the page (export)</li><li>Plan: any</li></ul>
+            <p class="where">WooCommerce › Codexta Assistant › Knowledge base</p>
+            <ol><li>Press <span class="ui">Import</span> and choose a .zip export or one or more .md files.</li><li>Optionally enter a <span class="ui">Target folder (empty = the root)</span>, for example <span class="say">imported/faq</span>.</li><li>Press <span class="ui">Preview</span>. Files are grouped as Changed, Unchanged, Not imported and Rejected. Tick <span class="ui">Overwrite {n} changed files</span> if you want to replace existing notes.</li><li>Press <span class="ui">Import {n} notes</span>.</li></ol>
+            <p>To export, press <span class="ui">Select</span>, tick notes and press <span class="ui">Export selected</span>, or press <span class="ui">Export all</span>.</p>
+          </article>
+
+          <article class="task" id="kb-document"><h3>How do I add a web page or a PDF?</h3><ul class="meta"><li>Who: Owner, Admin, KB editor</li><li>Plan: any</li></ul>
+            <p class="where">WooCommerce › Codexta Assistant › Knowledge base › Add document (web page or PDF)</p>
+            <ol><li>Enter the page address, for example <span class="say">https://example.com/shipping</span>.</li><li>To include linked pages on the same site, tick <span class="ui">Also the pages it links to on the same site</span> and set how many (up to 50).</li><li>Press <span class="ui">Add page</span> (or <span class="ui">Add site</span>). For a PDF, use the file picker instead.</li></ol>
+            <p>The document becomes a note in the <span class="say">sources/</span> folder that the assistant can answer from.</p>
+          </article>
+
+          <article class="task" id="kb-sync"><h3>How do I keep a web page note up to date?</h3><ul class="meta"><li>Who: Owner, Admin, KB editor</li><li>Plan: any</li></ul>
+            <p class="where">WooCommerce › Codexta Assistant › Knowledge base › (a note added from a web page)</p>
+            <ol><li>Press <span class="ui">Sync from source</span> to fetch the page again. You see <span class="ui">Synced: the page changed</span> or <span class="ui">Synced: no change</span>.</li><li>To sync automatically, set <span class="ui">Sync by itself</span> to daily or weekly.</li></ol>
+          </article>
+
+          <article class="task" id="kb-delete"><h3>How do I delete a note?</h3><ul class="meta"><li>Who: Owner, Admin, KB editor</li><li>Plan: any</li></ul>
+            <p class="where">WooCommerce › Codexta Assistant › Knowledge base › (the note)</p>
+            <ol><li>Open the note and press <span class="ui">Delete</span>.</li><li>Confirm <span class="ui">Delete {path}?</span> This cannot be undone.</li></ol>
+            <p class="tip">Notes can only be deleted here. The chat does not delete notes; it merges or rewrites them instead.</p>
+          </article>
+
+          <article class="task" id="kb-enrich"><h3>How do I enrich a note?</h3><ul class="meta"><li>Who: Owner, Admin, KB editor</li><li>Plan: not on every plan (ask us)</li></ul>
+            <p class="where">WooCommerce › Codexta Assistant › Knowledge base › (the note)</p>
+            <ol><li>Open the note and press <span class="ui">✦ Enrich</span>.</li><li>Codexta extracts the people, places, projects and organisations in the note into its tags.</li></ol>
+            <p>If your plan does not include enrichment, it is refused.</p>
+          </article>
+
+          <article class="task" id="kb-chat"><h3>How do I add to the knowledge base by chatting?</h3><ul class="meta"><li>Who: Owner, Admin, KB editor</li><li>Plan: any</li></ul>
+            <p class="where">WooCommerce › Codexta Assistant › Assistant › Chat</p>
+            <ol><li>Ask with a clear writing word — document, record, add, write up or publish. For example:<ul class="says"><li><span class="say">“document how to …”</span></li><li><span class="say">“Add my shipping and returns pages to the knowledge base”</span></li><li><span class="say">“sync my FAQ”</span></li></ul></li><li>When a procedure changes, ask it to update the note; it rewrites the section rather than adding a second version.</li></ol>
+            <p class="tip">Reading your shop’s pages into notes is part of the guided setup, which only the Owner and Admins can run.</p>
+          </article>
+
+          <article class="task" id="kb-quota"><h3>What if the knowledge base is full?</h3><ul class="meta"><li>Who: Owner, Admin, KB editor</li><li>Plan: limits differ by plan</li></ul>
+            <p>Each plan allows a number of notes; your limit and how many you have are in Settings › Plan. When you reach the limit, creating, importing or adding a document stops with:</p>
+            <blockquote class="msg"><small>YOU SEE</small>The knowledge base holds {n} of the {quota} documents the {plan} plan allows. Delete a document or upgrade the plan.</blockquote>
+            <p>Your current count is on Settings › Plan under <span class="ui">Knowledge base notes</span>. To raise the limit, <a href="https://codecta.com/contact-us/">contact us</a>.</p>
+          </article>
+        </section>
+
+        <section class="doc-section" id="fix-answers" aria-labelledby="h-fix"><div class="kicker">04</div><h2 id="h-fix">Fix a wrong or missing answer</h2>
+          <p>Every time a shopper asks something the knowledge base has nothing for, Codexta records it. The shopper is not told.</p>
+
+          <article class="task" id="unanswered"><h3>How do I answer questions the assistant missed?</h3><ul class="meta"><li>Who: everyone sees the list; Owner, Admin and KB editor write the notes</li><li>Plan: any</li></ul>
+            <p class="where">WooCommerce › Codexta Assistant › Conversations › Unanswered</p>
+            <ol><li>Each row shows a question and how often it was asked, for example “asked 3 times in 2 conversations”. The Overview tile <span class="ui">Questions the KB missed</span> opens this list too.</li><li>Press <span class="ui">Write KB article</span>.</li><li>The knowledge base asks <span class="ui">Write a knowledge base article?</span> with the question as the title. Press <span class="ui">Create note</span>.</li><li>Write the answer and press <span class="ui">Save</span>.</li></ol>
+            <p>When the list is empty it reads <span class="ui">Nothing unanswered. Every question found something in the knowledge base.</span></p>
+          </article>
+
+          <article class="task" id="wrong-answer"><h3>How do I find out why an answer was wrong?</h3><ul class="meta"><li>Who: Owner, Admin, Support manager, Support agent, Viewer (to read)</li><li>Plan: any</li></ul>
+            <p class="where">WooCommerce › Codexta Assistant › Conversations › All › (a conversation)</p>
+            <ol><li>Find the conversation with <span class="ui">Search</span> (words, session or shopper id) or the <span class="ui">Outcome</span>, <span class="ui">Shopper</span>, <span class="ui">Channel</span>, <span class="ui">From</span> and <span class="ui">To</span> filters, then press <span class="ui">Apply</span>.</li><li>Open it. <span class="ui">What the assistant did</span> lists events such as <span class="ui">Knowledge base had no answer</span> or <span class="ui">Handed to a person</span>, and the <span class="ui">Transcript</span> shows which tool the assistant used.</li><li>Correct the note in the Knowledge base, or ask the assistant in Assistant › Chat to document the right answer.</li></ol>
+            <p class="tip">In Settings › General, tick <span class="ui">Name the knowledge-base article an answer came from</span> so answers name their note.</p>
+          </article>
+        </section>
+
+        <section class="doc-section" id="teach" aria-labelledby="h-teach"><div class="kicker">05</div><h2 id="h-teach">Teach the assistant: lessons and preferences</h2>
+          <p>There are two kinds of “remember this”. A <strong>lesson</strong> is a rule for how the assistant treats your shoppers. A <strong>preference</strong> is how the assistant works for the person who asks, whether that is you, a colleague or a shopper. Facts your shop publishes, such as delivery times, returns or opening hours, are neither: put those in the <a href="#knowledge-base">knowledge base</a>. If it is unclear which you mean, the assistant asks once.</p>
+
+          <article class="task" id="lesson-add"><h3>How do I teach the assistant a rule for my shoppers?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: any</li></ul>
+            <p class="where">WooCommerce › Codexta Assistant › Assistant › Chat</p>
+            <ol><li>Say what the assistant should do, and that it is for your shoppers. For example:<ul class="says"><li><span class="say">“Remember this for my shoppers: when someone asks for a gift idea, ask for their budget first.”</span></li><li><span class="say">“From now on, when a shopper asks about sizes, suggest our size guide before recommending a size.”</span></li></ul></li><li>The assistant asks which of your shoppers’ conversations the lesson is for, offering up to four, for example <span class="ui">WooCommerce shop - Product search and recommendations</span> or <span class="ui">WooCommerce shop assistant</span>. Pick one or more. If you already named one, it skips this question.</li><li>It shows the rule as it will store it, for example:<blockquote class="msg"><small>YOU SEE</small>When a shopper asks for a gift idea, ask for their budget before suggesting products.</blockquote>Press <span class="ui">Save it</span>, or <span class="ui">Change it</span> and say what to change. Nothing is stored before you approve the text.</li><li>It confirms which conversations the lesson was stored for. Shoppers get it from their next conversation.</li></ol>
+            <p>Lessons are stored in your own knowledge base and reach only your shop’s shoppers. The assistant refuses a lesson that contains a person’s name, email or order, or that promises a discount, refund or delivery date your policies do not state, and says why. If a lesson on the same topic already exists, it tells you and shows its id instead of adding a second one.</p>
+          </article>
+
+          <article class="task" id="lesson-remove"><h3>How do I see or remove lessons?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: any</li></ul>
+            <p class="where">WooCommerce › Codexta Assistant › Assistant › Chat</p>
+            <ol><li>Ask <span class="say">“What lessons do I have?”</span> or <span class="say">“Show what you were taught for product search”</span>. You get a table of each lesson’s id, title and rule, for example <span class="say">lessons/woocommerce_search/ask-budget-first</span>.</li><li>Say which one to drop, for example <span class="say">“Forget the gift budget lesson”</span>. If more than one could match, it asks which.</li><li>It asks you to confirm the ids. Press <span class="ui">Remove it</span>, or <span class="ui">Keep it</span> to cancel.</li><li>It says what was removed. Shoppers stop getting it from their next conversation.</li></ol>
+            <p class="tip">Remove lessons through the chat as above rather than editing the notes in the Knowledge base page.</p>
+          </article>
+
+          <article class="task" id="my-preferences"><h3>How do I set how the assistant works for me?</h3><ul class="meta"><li>Who: anyone who can open Assistant › Chat</li><li>Plan: any</li></ul>
+            <p class="where">WooCommerce › Codexta Assistant › Assistant › Chat</p>
+            <ol><li>Say how you want it to work for you. For example:<ul class="says"><li><span class="say">“Always answer me in short bullet points.”</span></li><li><span class="say">“When I ask for orders, show date, customer and total as a table.”</span></li></ul></li><li>It may ask whether this applies everywhere or only in one area, such as the back-office assistant. It then confirms what it saved and where.</li><li>To check or undo: <span class="say">“What are my preferences?”</span> shows them, and <span class="say">“Forget my table preference”</span> removes one.</li></ol>
+            <p>Your preferences are yours: colleagues and shoppers do not get them. A preference cannot switch off a confirmation or a safety step, for example <span class="say">“never ask me before changing a product”</span>. The assistant says it cannot save that.</p>
+          </article>
+
+          <article class="task" id="shopper-preferences"><h3>Can shoppers set their own preferences?</h3><ul class="meta"><li>Who: any shopper in the storefront chat</li><li>Plan: any</li></ul>
+            <p>Yes, there is nothing for you to switch on. A shopper can tell the storefront assistant how they like to be helped, for example:</p>
+            <ul class="says"><li><span class="say">“Keep your answers short, please.”</span></li><li><span class="say">“I wear EU size 39, remember that.”</span></li><li><span class="say">“Always show me the cheapest option first.”</span></li></ul>
+            <p>The assistant keeps it for that shopper only and applies it to their later chats too: for a signed-in customer on their account, for a guest in the same browser. Asking <span class="say">“What do you remember about me?”</span> shows it, and <span class="say">“Forget my size”</span> removes it. A shopper’s preference never changes what the assistant tells other shoppers and never overrides your lessons or policies.</p>
+          </article>
+        </section>
+
+        <section class="doc-section" id="assistant-texts" aria-labelledby="h-texts"><div class="kicker">06</div><h2 id="h-texts">Name, greeting, starter questions and languages</h2>
+
+          <article class="task" id="texts-chat"><h3>How do I change them by chatting?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: any</li></ul>
+            <p class="where">WooCommerce › Codexta Assistant › Assistant › Chat</p>
+            <ol><li>Type <span class="say">“Change the greeting and starter questions”</span>, or run the guided setup.</li><li>The assistant drafts the shop’s display name, the assistant’s name, a greeting of one or two sentences and up to four starter questions, and offers translations for each language your shoppers use.</li><li>It shows the exact text and saves only after you approve.</li></ol>
+            <p class="tip">The chat cannot change the accent colour, widget position, widget theme, <span class="ui">What your store sells</span>, <span class="ui">Allow guests</span> or chat limits. Change those in Settings › General.</p>
+          </article>
+
+          <article class="task" id="texts-settings"><h3>How do I change them in Settings?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: any</li></ul>
+            <p class="where">WooCommerce › Codexta Assistant › Settings › General</p>
+            <ol><li><span class="ui">Store</span>: <span class="ui">Store name</span> and <span class="ui">What your store sells</span> (one or two sentences the assistant keeps in mind in every chat).</li><li><span class="ui">Assistant</span>: <span class="ui">Assistant name</span>, <span class="ui">Accent colour</span>, <span class="ui">Widget position</span>, <span class="ui">How the assistant writes</span>, <span class="ui">Reply window</span>, <span class="ui">Knowledge base language</span> and <span class="ui">Widget theme</span>.</li><li><span class="ui">Greeting and suggested questions</span>: <span class="ui">Greeting</span> and <span class="ui">Idea 1</span> to <span class="ui">Idea 4</span>. Leave the ideas empty to use the assistant’s defaults.</li><li><span class="ui">Who can chat</span>: <span class="ui">Allow guests</span>, <span class="ui">Conversations per shopper per day</span> and <span class="ui">Guests’ share of monthly conversations (%)</span>.</li><li>Press <span class="ui">Save settings</span>. You see <span class="ui">Saved.</span></li></ol>
+          </article>
+
+          <article class="task" id="languages"><h3>How do I add a language?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: any</li></ul>
+            <p class="where">WooCommerce › Codexta Assistant › Settings › General</p>
+            <ol><li>In <span class="ui">Store</span> or <span class="ui">Greeting and suggested questions</span>, choose a language from <span class="ui">+ Add language</span>.</li><li>Fill in its tab. Left empty, the default wording is used.</li><li>Press <span class="ui">Save settings</span>.</li></ol>
+            <p>The chat window shows the wording for the language your store is shown in, and the default in every other language. The assistant replies in the language the shopper writes in. The chat window’s own buttons and labels come in English, Croatian, Bosnian, German, French and Spanish.</p>
+          </article>
+        </section>
+
+        <section class="doc-section" id="storefront" aria-labelledby="h-storefront"><div class="kicker">07</div><h2 id="h-storefront">The storefront assistant</h2>
+          <p>Once your shop is connected, the plugin adds the chat button to your storefront by itself. There is nothing to place in your theme, and no on/off switch inside Codexta.</p>
+          <article class="task" id="widget-toggle"><h3>How do I turn it on or off?</h3><ul class="meta"><li>Who: a WordPress administrator</li><li>Plan: any</li></ul>
+            <p class="where">WordPress admin › Plugins</p>
+            <ol><li>To take the assistant off for a while, <span class="ui">Deactivate</span> the Codexta Assistant plugin. The chat button disappears and Codexta starts no new conversations for your shop.</li><li>To bring it back, <span class="ui">Activate</span> the plugin again. Your setup, notes and conversations are kept.</li><li>Open your shop and check whether the chat button is shown.</li></ol>
+            <p class="tip">A developer can keep the chat button off on some pages or until a visitor accepts your cookie banner, with the plugin’s <span class="say">codexta_widget_enabled</span> filter. Until Codexta activates your shop the assistant does not answer: shoppers are told it is not active yet. To ask guests to sign in before chatting, untick <span class="ui">Allow guests</span> in Settings › General.</p>
+          </article>
+          <article class="task" id="cart"><h3>How does the assistant use the cart?</h3><ul class="meta"><li>Who: any shopper</li><li>Plan: any</li></ul>
+            <p>The assistant works on the shopper’s own WooCommerce cart, for guests too: what it adds is in the cart on your pages, and the cart on the page refreshes when it does. It can add, change and remove items, apply a coupon and send the shopper to your checkout. Shipping is settled at checkout, so the assistant quotes the goods without shipping.</p>
+          </article>
+        </section>
+
+        <section class="doc-section" id="conversations" aria-labelledby="h-conv"><div class="kicker">08</div><h2 id="h-conv">Conversations, shoppers, events and assisted orders</h2>
+          <p>These pages are open to the Owner, Admins, Support managers, Support agents and Viewers on every plan.</p>
+
+          <article class="task" id="overview"><h3>How do I choose what the Overview shows?</h3><ul class="meta"><li>Who: Owner, Admin (pin); everyone else reads</li><li>Plan: any</li></ul>
+            <p class="where">WooCommerce › Codexta Assistant › Events</p>
+            <ol><li>Choose <span class="ui">7 days</span>, <span class="ui">30 days</span> or <span class="ui">90 days</span>.</li><li>In <span class="ui">Assistant activity</span>, find a tool with <span class="ui">Search tools…</span>.</li><li>Press the pin to <span class="ui">Show on the Overview</span>, or again to <span class="ui">Remove from the Overview</span>. Pins are shared with the whole team.</li></ol>
+            <p>A new shop’s Overview shows <span class="ui">Conversations</span>, <span class="ui">Resolved or assisted</span>, <span class="ui">Assisted revenue</span>, <span class="ui">Assisted orders</span>, <span class="ui">Handoffs to a person</span> and <span class="ui">Questions the KB missed</span>.</p>
+          </article>
+
+          <article class="task" id="read-conversations"><h3>How do I read conversations?</h3><ul class="meta"><li>Who: Owner, Admin, Support manager, Support agent, Viewer</li><li>Plan: any</li></ul>
+            <p class="where">WooCommerce › Codexta Assistant › Conversations › All</p>
+            <ol><li>Filter by <span class="ui">Outcome</span> (resolved, assisted, handoff, abandoned), <span class="ui">Shopper</span> (guest, customer, social) or dates, and press <span class="ui">Apply</span>.</li><li>Open a conversation to see its <span class="ui">Summary</span>, <span class="ui">Shopper</span>, <span class="ui">Order from this conversation</span>, <span class="ui">What the assistant did</span> and <span class="ui">Transcript</span>.</li></ol>
+            <p>Conversations are read only. Replies from your team show as <span class="ui">Shop staff</span>. Conversations are kept for your plan’s retention period.</p>
+          </article>
+
+          <article class="task" id="shoppers"><h3>How do I find or block a shopper?</h3><ul class="meta"><li>Who: everyone listed above (find); Owner, Admin (block, see email)</li><li>Plan: any</li></ul>
+            <p class="where">WooCommerce › Codexta Assistant › Shoppers</p>
+            <ol><li>Use <span class="ui">Search shoppers</span>. Press <span class="ui">Conversations</span> on a row to see all their chats.</li><li>Press <span class="ui">Block</span> or <span class="ui">Unblock</span>. Tick <span class="ui">Blocked only</span> to list blocked shoppers.</li></ol>
+            <p class="tip">A blocked shopper is told they have reached today’s limit, never that they are blocked. Blocking a guest blocks that browser; a new browser or cleared cookies is a new guest.</p>
+          </article>
+
+          <article class="task" id="assisted-orders"><h3>What counts as an assisted order?</h3><ul class="meta"><li>Who: everyone listed above</li><li>Plan: any</li></ul>
+            <p>An order counts as assisted when a signed-in customer places it within 7 days after their chat added to the cart or sent a checkout link. It is counted at its total when it is placed. A guest checkout is not linked to a chat, so guest orders are not counted, even when the assistant helped.</p>
+          </article>
+        </section>
+
+        <section class="doc-section" id="support-console" aria-labelledby="h-support"><div class="kicker">09</div><h2 id="h-support">Support console and taking over a chat</h2>
+          <p>The support console is the helpdesk inside the Codexta page: press <span class="ui">Support console</span> in its menu bar. Its sections are <span class="ui">Inbox</span>, <span class="ui">My dashboard</span>, <span class="ui">Contacts</span>, <span class="ui">Help center</span> and <span class="ui">Calls</span>; Owners, Admins and Support managers also see <span class="ui">Team</span> and <span class="ui">Reports</span>, and Owners and Admins see <span class="ui">Settings</span>.</p>
+
+          <article class="task" id="support-parts"><h3>How do I switch live chat, tickets or email intake on?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: any</li></ul>
+            <p class="where">WooCommerce › Codexta Assistant › Support console › Settings › Backends</p>
+            <ol><li>Switch <span class="ui">Tickets and incident reports</span>, <span class="ui">Live chat with a person</span> or <span class="ui">Email intake</span> on or off. It takes a few seconds.</li><li>Set live chat hours under Settings › <span class="ui">Live chat</span>.</li></ol>
+            <p class="tip">The Overview’s <span class="ui">Support</span> card shows what is on and how many cases are open. While live chat is on, it has <span class="ui">Pause for 1 hour</span>, <span class="ui">Pause until tomorrow</span> and <span class="ui">Resume now</span>.</p>
+          </article>
+
+          <article class="task" id="take-over"><h3>How do I take over a chat from the assistant?</h3><ul class="meta"><li>Who: Owner, Admin, Support manager, Support agent</li><li>Plan: any (live chat switched on)</li></ul>
+            <p class="where">WooCommerce › Codexta Assistant › Support console › Inbox</p>
+            <ol><li>A shopper asks for a person, for example <span class="say">“I want to talk to a real person”</span>. Their chat shows <span class="ui">Looking for an available agent…</span></li><li>Open the conversation in the Inbox (views include <span class="ui">Unassigned</span>, <span class="ui">Mine</span> and <span class="ui">All open</span>) and press <span class="ui">Assign to me</span>.</li><li>Use <span class="ui">Reply</span> to write to the shopper. Their chat shows <span class="ui">Connected to a human agent</span> and they keep typing in the same window. Use <span class="ui">Internal note</span> for notes only your team sees.</li><li>When done, press <span class="ui">Resolve</span>.</li></ol>
+            <p class="tip">Owners and Admins are support members automatically. Other colleagues are added in the console under Settings › <span class="ui">Members</span>.</p>
+          </article>
+
+          <article class="task" id="returns-tickets"><h3>How do returns and tickets reach me?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: any</li></ul>
+            <p>A signed-in customer can request a return of an item from one of their own orders in the storefront chat, with photos of the item and receipt. The return window counts from the date you marked the order completed. Submitting a request does not approve it: it becomes a ticket, and you decide on the order in WooCommerce › Orders. In Assistant › Chat you can ask <span class="say">“Any open return requests”</span> or <span class="say">“Any open tickets?”</span>; to answer, assign or close a ticket, use the Support console.</p>
+          </article>
+        </section>
+
+        <section class="doc-section" id="back-office" aria-labelledby="h-back"><div class="kicker">10</div><h2 id="h-back">Back-office assistant</h2>
+          <p>In Assistant › Chat, the <span class="ui">Store assistant</span> works with your WooCommerce data. KB editors can open the chat but cannot reach store data. Support managers, Support agents and Viewers do not see the Assistant page.</p>
+
+          <article class="task" id="ask"><h3>What can I ask?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: any</li></ul>
+            <p class="where">WooCommerce › Codexta Assistant › Assistant › Chat</p>
+            <ul class="says"><li><span class="say">“List this month’s orders”</span></li><li><span class="say">“Show me order #1004”</span></li><li><span class="say">“Which orders are still processing”</span></li><li><span class="say">“Which coupons have expired”</span></li><li><span class="say">“Any open return requests”</span></li></ul>
+            <p>It reads orders, registered customers, products including drafts and private ones (a product with sizes or colours as one row per variation), coupons including expired ones, and support tickets. For anything else it can read from WooCommerce — product categories, order notes, refunds, reviews, reports — just ask. A guest checkout has no customer account, and the assistant says so.</p>
+          </article>
+
+          <article class="task" id="changes"><h3>How do I make a change?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: any</li></ul>
+            <p class="where">WooCommerce › Codexta Assistant › Assistant › Chat</p>
+            <ol><li>Ask for the change, for example <span class="say">“Change the price of the Logo Hoodie to 49”</span> or <span class="say">“Create a discount code SPRING10 for 10% off, valid until the end of May”</span>.</li><li>The assistant looks up the current value and asks a yes/no question naming the record, the old value and the new value.</li><li>Answer yes to apply it. On no, nothing changes. Each change needs its own yes.</li></ol>
+            <p>It can change a product’s or variation’s regular and sale price, or end a sale; create a simple product (saved as a draft unless you ask to publish it); change a simple product’s name, description, stock or visibility; create a discount code with the terms you give; and keep a note on a customer. The customer note is kept by Codexta and is not shown in the WordPress admin, because WooCommerce has no customer tags.</p>
+            <p class="tip">Not available in the chat: refunds, cancelling or editing orders, deleting anything, products with sizes or colours (variations), photos and attributes, and staff accounts. Do those in WooCommerce › Orders, Products or Marketing › Coupons.</p>
+          </article>
+
+          <article class="task" id="contact-support"><h3>How do I contact Codexta from the chat?</h3><ul class="meta"><li>Who: anyone who can open Assistant › Chat</li><li>Plan: any</li></ul>
+            <p>Ask the Store assistant to contact support. It asks for an email address for the reply and sends your message. <span class="ui">Stop</span> ends a reply in progress and <span class="ui">New chat</span> starts over.</p>
+          </article>
+        </section>
+
+        <section class="doc-section" id="team" aria-labelledby="h-team"><div class="kicker">11</div><h2 id="h-team">Team and roles</h2>
+          <p>There is no invite button. Only WordPress users who can manage WooCommerce can open the Codexta page: administrators and shop managers. A WordPress administrator is always an <span class="ui">Owner</span> in Codexta. A shop manager becomes an <span class="ui">Admin</span> the first time they open the page; after that the Owner decides their role.</p>
+
+          <article class="task" id="set-role"><h3>How do I give a colleague a role?</h3><ul class="meta"><li>Who: Owner (Admins can view the page)</li><li>Plan: any</li></ul>
+            <p class="where">WooCommerce › Codexta Assistant › Settings › Team</p>
+            <ol><li>Give your colleague the Shop manager role in WordPress, and ask them to open WooCommerce › Codexta Assistant once.</li><li>Under <span class="ui">Members</span>, choose their role in the dropdown. You see <span class="ui">Role saved.</span></li><li>To take access away, press <span class="ui">Remove</span>. A WordPress user who no longer has the Shop manager or Administrator role cannot open the page.</li></ol>
+            <p class="tip">Only the Owner changes roles. Nobody can change their own role, and the last Owner cannot be removed or demoted. The <span class="ui">Codexta staff access</span> panel lists every time someone from Codexta worked in your shop’s data, with the reason they gave.</p>
+          </article>
+
+          <div class="table-wrap" role="region" aria-label="What each role can do" tabindex="0"><table class="doc-table">
+            <thead><tr><th scope="col">Can…</th><th scope="col">Owner</th><th scope="col">Admin</th><th scope="col">KB editor</th><th scope="col">Support manager</th><th scope="col">Support agent</th><th scope="col">Viewer</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Overview, Conversations, Shoppers, Events</th><td class="y">Yes</td><td class="y">Yes</td><td class="y">Yes</td><td class="y">Yes</td><td class="y">Yes</td><td class="y">Yes</td></tr>
+              <tr><th scope="row">Read the knowledge base</th><td class="y">Yes</td><td class="y">Yes</td><td class="y">Yes</td><td class="y">Yes</td><td class="y">Yes</td><td class="y">Yes</td></tr>
+              <tr><th scope="row">Change the knowledge base</th><td class="y">Yes</td><td class="y">Yes</td><td class="y">Yes</td><td class="n">No</td><td class="n">No</td><td class="n">No</td></tr>
+              <tr><th scope="row">Assistant › Chat</th><td class="y">Yes</td><td class="y">Yes</td><td class="y">Yes, no store data</td><td class="n">No</td><td class="n">No</td><td class="n">No</td></tr>
+              <tr><th scope="row">Teach lessons for shoppers</th><td class="y">Yes</td><td class="y">Yes</td><td class="n">No</td><td class="n">No</td><td class="n">No</td><td class="n">No</td></tr>
+              <tr><th scope="row">Changes to products, prices, customer notes, discount codes</th><td class="y">Yes</td><td class="y">Yes</td><td class="n">No</td><td class="n">No</td><td class="n">No</td><td class="n">No</td></tr>
+              <tr><th scope="row">Support console</th><td class="y">Yes, with Settings</td><td class="y">Yes, with Settings</td><td class="n">No</td><td class="y">Cases and reports</td><td class="y">Cases</td><td class="n">No</td></tr>
+              <tr><th scope="row">Settings (General, Integrations), guided setup</th><td class="y">Yes</td><td class="y">Yes</td><td class="n">No</td><td class="n">No</td><td class="n">No</td><td class="n">No</td></tr>
+              <tr><th scope="row">Assistant › Changes, Code, Guidelines</th><td class="y">Yes</td><td class="y">Yes</td><td class="n">No</td><td class="n">No</td><td class="n">No</td><td class="n">No</td></tr>
+              <tr><th scope="row">Change roles</th><td class="y">Yes</td><td class="n">View only</td><td class="n">No</td><td class="n">No</td><td class="n">No</td><td class="n">No</td></tr>
+              <tr><th scope="row">See the plan</th><td class="y">Yes</td><td class="y">Yes</td><td class="n">No</td><td class="n">No</td><td class="n">No</td><td class="n">No</td></tr>
+            </tbody>
+          </table></div>
+        </section>
+
+        <section class="doc-section" id="authoring" aria-labelledby="h-authoring"><div class="kicker">12</div><h2 id="h-authoring">Authoring</h2>
+          <p>Authoring changes how your store’s assistant behaves — rules, wording and policies such as “never promise delivery dates” — by describing it in a chat. Changes apply to your store only.</p>
+          <article class="task" id="authoring-use"><h3>How do I change how the assistant behaves?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: not on every plan (ask us)</li></ul>
+            <p class="where">WooCommerce › Codexta Assistant › Assistant › Chat</p>
+            <ol><li>Start a new chat and choose <span class="ui">Authoring</span> at the top, next to <span class="ui">Store assistant</span>.</li><li>Describe the change. It is prepared on a separate branch, where a chat shows what your shoppers would get.</li><li>It goes live only when you ask. A change to a guideline lands at once, for your store only; new tools and cards wait for Codexta review.</li></ol>
+            <p>Track changes under Assistant › <span class="ui">Changes</span> (<span class="ui">Waiting for Codexta review</span>, <span class="ui">Who changed what</span>) and work with the files under Assistant › <span class="ui">Code</span>. Authoring cannot change permissions, plans, secrets, other stores, channels, identity or credentials.</p>
+          </article>
+          <article class="task" id="guidelines"><h3>How do I switch an assistant skill off, or take Codexta’s updates?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: any</li></ul>
+            <p class="where">WooCommerce › Codexta Assistant › Assistant › Guidelines</p>
+            <ol><li>Switch a guideline off for your store, or press <span class="ui">Reset</span> to go back to the default. It takes a few seconds.</li><li>Under Assistant › Changes › <span class="ui">Updates from Codexta</span>, choose <span class="ui">View changes</span>, <span class="ui">Take the update</span>, <span class="ui">Use Codexta’s version (remove my copy)</span> or <span class="ui">Keep mine</span>.</li></ol>
+          </article>
+        </section>
+
+        <section class="doc-section" id="plan" aria-labelledby="h-plan"><div class="kicker">13</div><h2 id="h-plan">Plan and usage</h2>
+          <article class="task" id="usage"><h3>How do I check usage or change plan?</h3><ul class="meta"><li>Who: Owner, Admin (view)</li><li>Plan: any</li></ul>
+            <p class="where">WooCommerce › Codexta Assistant › Settings › Plan</p>
+            <ol><li>See your plan and its status, for example pending or active.</li><li>The <span class="ui">Conversations</span> and <span class="ui">Knowledge base notes</span> meters show this month’s use against your limit; the bar turns red at 90%. Below them, each feature is marked as included or not.</li><li>To change plan, <a href="https://codecta.com/contact-us/">contact us</a>. Pressing a plan button on this page tells you the same: <span class="ui">The plan of a WooCommerce shop is set by Codexta; contact us to change it.</span></li></ol>
+            <p>Plans and prices are agreed with Codexta directly; there is no checkout in WordPress. When the monthly conversation limit is reached, shoppers read:</p>
+            <blockquote class="msg"><small>SHOPPERS SEE</small>This assistant has reached its conversation limit for this month. Please try again next month, or use another way to get in touch.</blockquote>
+            <p class="tip">Guests can use 25% of the monthly conversations by default; change this under Settings › General › <span class="ui">Who can chat</span>.</p>
+          </article>
+        </section>
+
+        <section class="doc-section" id="channels" aria-labelledby="h-channels"><div class="kicker">14</div><h2 id="h-channels">Instagram and other channels</h2>
+          <article class="task" id="instagram"><h3>How do I connect Instagram?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: not on every plan (ask us)</li></ul>
+            <p class="where">WooCommerce › Codexta Assistant › Settings › Integrations (page title “Connect”)</p>
+            <ol><li>Under <span class="ui">Instagram</span>, press <span class="ui">Connect Instagram</span>. Instagram opens in a new window.</li><li>Sign in with your Instagram professional account, then come back to Codexta.</li><li>The panel shows the account as connected and when access is valid until. Use <span class="ui">Reconnect</span> when it expires, or <span class="ui">Disconnect</span> to stop answering.</li></ol>
+            <p>The assistant answers direct messages with the same knowledge base and your products. Replies go out within 24 hours of the customer’s message. <span class="ui">Allow guests</span> does not apply to Instagram, and returns are requested in the storefront chat only.</p>
+            <p class="tip">If your plan does not include Instagram, the page says <span class="ui">Instagram is not part of your current plan.</span> The same page lists other messaging channels; if one you need says it is not set up, contact support.</p>
+          </article>
+        </section>
+
+        <section class="doc-section" id="uninstall" aria-labelledby="h-uninstall"><div class="kicker">15</div><h2 id="h-uninstall">Deactivate, disconnect and your data</h2>
+          <ul>
+            <li><b>Deactivating</b> the plugin pauses your shop in Codexta: the chat button disappears and no new conversations start. Activating it again resumes. Nothing is deleted.</li>
+            <li><b>Disconnecting</b> (the <span class="ui">Disconnect</span> button on WooCommerce › Codexta Assistant) or <b>deleting</b> the plugin revokes the WooCommerce access key Codexta used, and Codexta stops working for your shop.</li>
+            <li><b>48 hours after you disconnect or delete the plugin</b>, all of your shop’s data in Codexta is deleted. To use Codexta again, install the plugin and connect again.</li>
+            <li><b>While connected</b>, conversations older than your plan’s retention are deleted every night; the retention period depends on the plan. Daily statistics keep counts only.</li>
+            <li><b>Deleting a customer</b> in WordPress deletes that customer’s conversations in Codexta automatically.</li>
+            <li><b>Payments</b> never pass through Codexta: checkout always happens in WooCommerce.</li>
+          </ul>
+          <p>Mention the chat assistant and Codexta in your shop’s privacy policy. See the <a href="https://codexta.codectaapps.com/privacy.html">privacy policy</a> for what Codexta holds and who processes it.</p>
+        </section>
+
+        <section class="doc-section" id="help" aria-labelledby="h-help"><div class="kicker">16</div><h2 id="h-help">Getting help</h2>
+          <ul>
+            <li>The <a href="https://codexta.codectaapps.com/support.html">support page</a> explains how to reach us.</li>
+            <li>Email <a href="mailto:codexta@codecta.com">codexta@codecta.com</a>. We reply within two business days.</li>
+            <li>From inside the plugin, ask the Store assistant in Assistant › Chat to contact support.</li>
+          </ul>
+        </section>
+      </div>
+    </div></div>
+  </main>
+  <footer class="footer"><div class="wrap footer-row"><a href="../index.html">← Codexta overview</a><span>Codexta · developed by Codecta</span><a href="https://codecta.com/contact-us/">Contact</a></div></footer>
+  <script src="../site-nav.js"></script>
+  <script>(()=>{const t=document.getElementById("toc");if(!t)return;const m=matchMedia("(min-width:961px)");const s=()=>{t.open=m.matches};s();m.addEventListener("change",s);t.addEventListener("click",e=>{if(!m.matches&&e.target.closest("a"))t.open=false})})();</script>
+</body>
+</html>
