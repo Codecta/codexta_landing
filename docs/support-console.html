@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Codexta support console for every shop: live chat handover, tickets and returns, replies and notes, queues and tiers, response targets, saved replies, automation, email, Slack and other apps, reports and customer data.">
+  <meta name="theme-color" content="#f4f2ec">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Codexta support console — your helpdesk">
+  <meta property="og:description" content="Answer customers in person: live chats, tickets, returns, team routing and reports.">
+  <meta property="og:image" content="https://codexta.codecta.com/brand/symbiosis/raster/social-avatar-1200.png">
+  <title>Codexta support console — your helpdesk</title>
+  <link rel="icon" type="image/svg+xml" href="../brand/symbiosis/codexta-mark.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../brand/symbiosis/raster/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../brand/symbiosis/raster/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#f6f5f0;--muted:#a3a6af;--dark:#111319;--panel:#191c24;--line:#30343e;--lime:#d5ff67;--blue:#a9c2ff;--wrap:1160px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--dark);color:var(--ink);font-family:"DM Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}.wrap{width:min(calc(100% - 48px),var(--wrap));margin:auto}.topbar{height:76px;border-bottom:1px solid rgba(255,255,255,.09);display:flex;align-items:center}.topbar-inner{display:flex;justify-content:space-between;align-items:center}.brand{display:flex;align-items:center}.brand img{width:142px;height:auto}.nav{display:flex;gap:28px;align-items:center;font-size:14px;color:#c6c8cf}.nav a:hover{color:var(--lime)}.button{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 18px;border:1px solid var(--lime);border-radius:5px;background:var(--lime);color:#161910;font-size:14px;font-weight:700;transition:transform .2s,background .2s}.button:hover{transform:translateY(-2px);background:#e2ff9c}.button.secondary{border-color:#454a55;background:transparent;color:var(--ink)}.button.secondary:hover{background:#222630}.hero{padding:110px 0 90px;background:radial-gradient(ellipse at 78% 12%,rgba(101,118,170,.18),transparent 50%),linear-gradient(180deg,#111319,#141720)}.hero-grid{display:grid;grid-template-columns:1fr .92fr;gap:64px;align-items:center}.eyebrow,.kicker{font:500 12px/1.5 "DM Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--lime)}h1{font-size:clamp(52px,7.1vw,88px);line-height:.96;letter-spacing:-.065em;font-weight:600;margin:23px 0 24px;max-width:680px}h1 span{color:var(--lime)}.hero-copy{font-size:19px;line-height:1.6;color:#c4c6ce;max-width:610px;margin:0}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}.note{margin:20px 0 0;color:var(--muted);font-size:13px}.video{position:relative;border:1px solid #393e4a;border-radius:12px;overflow:hidden;background:#090a0e;box-shadow:0 32px 90px rgba(0,0,0,.38)}.video video{display:block;width:100%;height:auto}.video-label{position:absolute;left:15px;top:15px;background:rgba(14,16,21,.8);backdrop-filter:blur(8px);padding:8px 10px;border-radius:3px;font:11px "DM Mono",monospace;letter-spacing:.06em;color:var(--lime)}section{padding:94px 0}.section-head{max-width:720px;margin-bottom:44px}.section-head h2{font-size:clamp(36px,5vw,58px);line-height:1;letter-spacing:-.055em;font-weight:600;margin:14px 0 17px}.section-head p{color:#b4b6bf;font-size:17px;line-height:1.65;margin:0}.proof{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0}.proof-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:#c7c9d0;font-size:13px}.proof-row span{display:flex;align-items:center;gap:9px}.proof-row span:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--lime)}.journey{background:#f2f1ec;color:#17191e}.journey .section-head p{color:#62636a}.journey .kicker{color:#485d11}.journey-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#d8d7d0;border:1px solid #d8d7d0}.journey-card{min-height:226px;background:#f7f6f1;padding:27px}.step{font:12px "DM Mono",monospace;color:#768148}.journey-card h3{font-size:21px;letter-spacing:-.03em;margin:28px 0 10px}.journey-card p{color:#686a70;line-height:1.6;margin:0;font-size:15px}.quote{margin-top:26px;padding:25px 28px;background:#e9e8e1;display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center}.quote p{font-size:17px;line-height:1.5;margin:0;max-width:800px}.quote small{font:11px "DM Mono",monospace;color:#666}.controls-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.control{padding:27px;border:1px solid var(--line);background:var(--panel);min-height:180px}.control .mark{color:var(--lime);font-size:22px}.control h3{font-size:20px;margin:16px 0 8px;letter-spacing:-.03em}.control p{color:#aeb0ba;font-size:15px;line-height:1.6;margin:0}.future{background:#191c24}.future .section-head p{color:#b4b6bf}.future-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.future-card{border:1px solid #383c47;padding:24px;background:#1d2029}.future-card h3{font-size:18px;margin:0 0 9px}.future-card p{color:#afb1ba;line-height:1.6;margin:0;font-size:14px}.future-card small{display:block;margin-top:14px;color:var(--lime);font:10px "DM Mono",monospace;letter-spacing:.1em;text-transform:uppercase}.platforms{padding:58px 0;border-top:1px solid var(--line)}.platform-row{display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap}.platform-row p{color:#aeb0b8;margin:0;max-width:300px;line-height:1.5}.platform-tags{display:flex;gap:9px;flex-wrap:wrap}.platform-tags span{border:1px solid #3b404b;border-radius:99px;padding:10px 14px;color:#e0e1e5;font-size:13px}.cta{padding:88px 0}.cta-card{padding:55px;background:var(--lime);color:#171910;display:grid;grid-template-columns:1fr auto;gap:25px;align-items:end}.cta-card h2{font-size:clamp(36px,5vw,60px);line-height:1;letter-spacing:-.06em;margin:0 0 17px;max-width:740px}.cta-card p{margin:0;line-height:1.6;color:#414832;max-width:660px}.cta-card .button{background:#171910;color:#f7f7f1;border-color:#171910;white-space:nowrap}.footer{border-top:1px solid var(--line);padding:27px 0;color:#a4a6ae;font-size:12px}.footer-row{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.footer a:hover{color:var(--lime)}
+    @media(max-width:850px){.hero-grid{grid-template-columns:1fr;gap:42px}.hero{padding:80px 0 70px}.journey-grid{grid-template-columns:1fr 1fr}.cta-card{grid-template-columns:1fr}.cta-card .button{justify-self:start}}
+    @media(max-width:600px){.wrap{width:min(calc(100% - 34px),var(--wrap))}.nav>a:not(.button){display:none}.nav{gap:12px}.topbar{height:66px}.hero{padding:66px 0 54px}h1{font-size:clamp(48px,15vw,70px)}.hero-copy{font-size:17px}.actions{flex-direction:column}.button{width:100%}section{padding:70px 0}.journey-grid,.controls-grid,.future-grid{grid-template-columns:1fr}.journey-card{min-height:190px}.quote{grid-template-columns:1fr}.quote p{font-size:15px}.cta-card{padding:36px 25px}.proof-row{display:grid;grid-template-columns:1fr 1fr}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+  </style>
+  <link rel="stylesheet" href="../commerce-refresh.css">
+  <link rel="stylesheet" href="../site-nav.css">
+  <style>.site-nav{position:sticky;top:0}</style>
+  <style>
+    .docs-hero{background:var(--paper);color:var(--ink);padding:72px 0 44px;border-bottom:1px solid var(--line)}
+    .crumbs{font:500 12px "DM Mono",monospace;letter-spacing:.06em;color:var(--muted);margin:0 0 18px}.crumbs a{color:#244fc8}.crumbs a:hover{text-decoration:underline}
+    .docs-hero h1{font-size:clamp(40px,5.4vw,66px);line-height:1;letter-spacing:-.06em;margin:14px 0 18px;max-width:820px;color:var(--ink)}
+    .docs-hero p{font-size:18px;line-height:1.6;color:#504d46;max-width:720px;margin:0}
+    .docs-hero .legend{margin-top:22px;font-size:14px;color:#5d5a54}
+    .docs-body{background:#fff;color:var(--ink);padding:56px 0 96px}
+    .docs-layout{display:grid;grid-template-columns:250px minmax(0,1fr);gap:64px;align-items:start}
+    .toc{position:sticky;top:96px;max-height:calc(100vh - 116px);overflow:auto;font-size:14px}
+    .toc summary{font:500 11px "DM Mono",monospace;letter-spacing:.1em;color:var(--blue);list-style:none;cursor:pointer;padding:4px 0 12px}
+    .toc summary::-webkit-details-marker{display:none}
+    .toc ol{list-style:none;margin:0;padding:0;border-left:1px solid var(--line)}
+    .toc a{display:block;padding:7px 0 7px 14px;color:#47443e;line-height:1.35}.toc a:hover{color:var(--blue)}
+    .toc a:focus-visible{outline-offset:-2px}
+    .docs-layout>*{min-width:0}
+    .doc-section{padding:0 0 56px;margin:0 0 56px;border-bottom:1px solid var(--line);scroll-margin-top:92px;min-width:0}
+    .doc-section:last-child{border-bottom:0;margin-bottom:0}
+    .doc-section>h2{font-size:clamp(30px,3.6vw,42px);line-height:1.05;letter-spacing:-.05em;margin:10px 0 14px}
+    .doc-section>p,.task>p,.task li,.doc-section>ul li{font-size:15px;line-height:1.65;color:#4a4842}
+    .doc-section>p{max-width:760px}
+    .task{margin-top:34px;scroll-margin-top:92px}
+    .task h3{font-size:21px;letter-spacing:-.03em;margin:0 0 10px}
+    .meta{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px;padding:0;list-style:none}
+    .meta li{font:500 11px "DM Mono",monospace;color:#4b5161;background:#f4f2ec;border:1px solid var(--line);border-radius:99px;padding:5px 10px;line-height:1.3}
+    .where{font:12px/1.6 "DM Mono",monospace;color:#173aa7;background:var(--blue-soft);border-left:3px solid var(--blue);padding:8px 12px;margin:0 0 12px;overflow-wrap:anywhere}
+    .where-inline{display:inline;padding:2px 6px;border-left:0}
+    .task ol{margin:0;padding-left:22px}.task ol li{padding-left:4px;margin:6px 0}
+    .task ul,.doc-section>ul{margin:8px 0 0;padding-left:20px}
+    .ui{font-weight:600;color:var(--ink);background:#f4f2ec;border:1px solid #e3e0d8;border-radius:4px;padding:0 5px;overflow-wrap:anywhere}
+    .say{font:13px "DM Mono",monospace;background:var(--blue-soft);color:#173aa7;padding:2px 6px;border-radius:4px;overflow-wrap:anywhere}
+    .says{list-style:none;padding:0!important;display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 0!important}
+    blockquote.msg{margin:12px 0;padding:12px 16px;border-left:3px solid #568467;background:#f1f6f2;font-size:14px;line-height:1.55;color:#435448}
+    blockquote.msg small{display:block;font:500 10px "DM Mono",monospace;letter-spacing:.08em;color:#426c4e;margin-bottom:4px}
+    .tip{margin:12px 0 0;font-size:14px;line-height:1.6;color:#5d5a54;border-left:2px solid var(--blue);padding-left:12px}
+    .table-wrap{overflow-x:auto;border:1px solid var(--line);margin:14px 0 0}
+    .doc-table{width:100%;border-collapse:collapse;font-size:13px;min-width:560px}
+    .doc-table th,.doc-table td{padding:10px 12px;border-bottom:1px solid #eceae4;text-align:left;vertical-align:top;line-height:1.5}
+    .doc-table thead th{background:var(--paper);font-weight:600}
+    .doc-table tbody th{font-weight:600}
+    .doc-table td.y{color:#1f7a4d;font-weight:600}.doc-table td.n{color:#9a968d}
+    .docs-body a:not(.button){color:#244fc8}.docs-body p a:not(.button),.docs-body li a:not(.button){border-bottom:1px solid #aabaf4}
+    @media(max-width:960px){.docs-layout{grid-template-columns:1fr;gap:28px}.toc{position:static;max-height:none;border:1px solid var(--line);background:var(--paper);padding:12px 16px}.toc summary{padding:4px 0}.toc[open] summary{padding-bottom:12px}.toc summary:after{content:" +"}.toc[open] summary:after{content:" −"}}
+    @media(max-width:600px){.docs-hero{padding:54px 0 34px}.docs-hero p{font-size:16px}.docs-body{padding:36px 0 70px}.task h3{font-size:19px}}
+      .docs-hero .legend a{color:#244fc8;border-bottom:1px solid #aabaf4}
+  </style>
+</head>
+<body>
+  <nav class="site-nav" aria-label="Primary navigation">
+    <div class="wrap nav-inner">
+      <a class="brand nav-brand" href="../index.html" aria-label="Codexta home"><img class="nav-brand-mark" src="../brand/symbiosis/codexta-mark.svg" alt="" width="36" height="36"><span class="nav-brand-name">Codexta</span></a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation"><span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span></button>
+      <div class="nav-links" id="nav-links"><a href="../index.html#solutions">Packages</a><a href="../ecommerce.html">Commerce</a><a href="../service-knowledge.html">Service &amp; knowledge</a><a href="../index.html#architecture">How it works</a><a href="../index.html#controls">Security</a><a href="../index.html#pricing">Pricing</a><a href="./index.html" aria-current="page">Docs</a><a href="../compare.html">Compare</a><a href="../index.html#faq">FAQ</a><a class="button" href="https://codecta.com/contact-us/">Start a pilot <span class="arrow" aria-hidden="true">↗</span></a></div>
+    </div>
+  </nav>
+  <main>
+    <header class="docs-hero"><div class="wrap">
+      <p class="crumbs"><a href="./index.html">DOCS</a> / SUPPORT CONSOLE</p>
+      <div class="eyebrow">MERCHANT GUIDE · ALL SHOPS</div>
+      <h1>The support console: your helpdesk</h1>
+      <p>The support console is where your team answers customers in person. Live chats the assistant hands over, tickets, return requests and emails all arrive here as <b>cases</b>. You reply, add notes for colleagues, pass cases on and close them when they are solved. It works the same in every shop Codexta connects to.</p>
+      <p class="legend">Places are written as <span class="where where-inline">Codexta › Support console › Inbox</span>. In Shopify, Codexta is under <b>Shopify admin › Apps › Codexta</b>; in WooCommerce, under <b>WooCommerce › Codexta Assistant</b>. Things you can type look like <span class="say">“I want to talk to a real person”</span>. Back to the <a href="./shopify.html">Shopify guide</a> or the <a href="./woocommerce.html">WooCommerce guide</a>. New words are explained in the <a href="./index.html#words">glossary</a>.</p>
+    </div></header>
+
+    <div class="docs-body"><div class="wrap docs-layout">
+      <details class="toc" id="toc" open><summary>ON THIS PAGE</summary><nav aria-label="On this page"><ol>
+        <li><a href="#overview">What the console is</a></li>
+        <li><a href="#who">Who can do what</a></li>
+        <li><a href="#switch-on">Switch the helpdesk on</a></li>
+        <li><a href="#inbox">The Inbox</a></li>
+        <li><a href="#live-chat">Live chat: take over from the assistant</a></li>
+        <li><a href="#tickets">Tickets and return requests</a></li>
+        <li><a href="#work">Working on a case</a></li>
+        <li><a href="#team-routing">Your team: members, queues and tiers</a></li>
+        <li><a href="#timing">Priorities, response targets and hours</a></li>
+        <li><a href="#saved-replies">Saved replies, labels and fields</a></li>
+        <li><a href="#automation">Macros and automation</a></li>
+        <li><a href="#email">Email</a></li>
+        <li><a href="#contacts">Contacts</a></li>
+        <li><a href="#apps">Slack, Linear, Stripe and Notion</a></li>
+        <li><a href="#reports">Dashboards, reports and ratings</a></li>
+        <li><a href="#help-center">Help center</a></li>
+        <li><a href="#more">Campaigns, monitors and calls</a></li>
+        <li><a href="#developers">For developers: bots, webhooks, apps</a></li>
+        <li><a href="#data">Customer data and the audit log</a></li>
+        <li><a href="#shortcuts">Keyboard shortcuts</a></li>
+        <li><a href="#messages">Messages you may see</a></li>
+      </ol></nav></details>
+
+      <div class="docs-content">
+
+        <section class="doc-section" id="overview" aria-labelledby="h-overview"><div class="kicker">01</div><h2 id="h-overview">What the console is</h2>
+          <p>Every request that needs a person becomes a <b>case</b> with its own number, starting at 10001. A case is either a <b>chat</b> (a live conversation in the chat window on your shop) or a <b>ticket</b> (a request your team answers later, usually by email).</p>
+          <article class="task" id="open-console"><h3>How do I open the console?</h3><ul class="meta"><li>Who: Owner, Admin, Support manager, Support agent</li><li>Plan: any</li></ul>
+            <ul><li><b>Shopify:</b> Shopify admin › Apps › Codexta › <span class="ui">Support console</span> in the sidebar.</li><li><b>WooCommerce:</b> WooCommerce › Codexta Assistant, then <span class="ui">Support console</span> in Codexta’s menu bar.</li><li><b>From the Overview:</b> the <span class="ui">Support</span> card has <span class="ui">Open the support console</span>.</li></ul>
+            <p>The console has these sections on the left: <span class="ui">Inbox</span>, <span class="ui">My dashboard</span>, <span class="ui">Contacts</span>, <span class="ui">Help center</span> and <span class="ui">Calls</span>. Support managers, Admins and the Owner also see <span class="ui">Team</span> and <span class="ui">Reports</span>. Only the Owner and Admins see <span class="ui">Settings</span>.</p>
+          </article>
+          <article class="task" id="lifecycle"><h3>What do the case states mean?</h3>
+            <div class="table-wrap" role="region" aria-label="Case states" tabindex="0"><table class="doc-table">
+              <thead><tr><th scope="col">State</th><th scope="col">Meaning</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">New</th><td>Just arrived. Nobody has worked on it yet.</td></tr>
+                <tr><th scope="row">Open</th><td>Someone is working on it.</td></tr>
+                <tr><th scope="row">Pending</th><td>Waiting, for example for the customer, until a time you choose. Response targets pause meanwhile.</td></tr>
+                <tr><th scope="row">Resolved</th><td>Solved. It opens again if the customer writes back.</td></tr>
+                <tr><th scope="row">Closed</th><td>Finished for good.</td></tr>
+              </tbody>
+            </table></div>
+          </article>
+          <article class="task" id="starting-setup"><h3>What is already set up for a new shop?</h3>
+            <p>You can start answering right away. A new shop gets one queue called <span class="ui">Support</span> (the default), a <span class="ui">Live chat</span> channel, two support levels (<span class="ui">Support</span> and <span class="ui">Tier 2</span>), the priorities <span class="ui">Low</span>, <span class="ui">Normal</span>, <span class="ui">High</span> and <span class="ui">Urgent</span>, and <span class="ui">Business hours</span> of Monday to Friday, 08:00–17:00 UTC. Change any of them under Settings.</p>
+          </article>
+        </section>
+
+        <section class="doc-section" id="who" aria-labelledby="h-who"><div class="kicker">02</div><h2 id="h-who">Who can do what</h2>
+          <p>Roles come from Codexta’s Settings › Team (see the <a href="./shopify.html#team">Shopify</a> or <a href="./woocommerce.html#team">WooCommerce</a> guide).</p>
+          <div class="table-wrap" role="region" aria-label="Roles in the support console" tabindex="0"><table class="doc-table">
+            <thead><tr><th scope="col">Role</th><th scope="col">Work cases</th><th scope="col">Team and Reports</th><th scope="col">Settings</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Owner</th><td class="y">Yes</td><td class="y">Yes</td><td class="y">Yes</td></tr>
+              <tr><th scope="row">Admin</th><td class="y">Yes</td><td class="y">Yes</td><td class="y">Yes</td></tr>
+              <tr><th scope="row">Support manager</th><td class="y">Yes</td><td class="y">Yes</td><td class="n">No</td></tr>
+              <tr><th scope="row">Support agent</th><td class="y">Yes</td><td class="n">No</td><td class="n">No</td></tr>
+              <tr><th scope="row">KB editor, Viewer</th><td class="n">No (no console)</td><td class="n">No</td><td class="n">No</td></tr>
+            </tbody>
+          </table></div>
+          <p class="tip">To take cases, a person also needs a place in a queue: see <a href="#add-member">add a colleague</a>. You can narrow what an agent sees with a <a href="#custom-roles">custom role</a>.</p>
+        </section>
+
+        <section class="doc-section" id="switch-on" aria-labelledby="h-switch"><div class="kicker">03</div><h2 id="h-switch">Switch the helpdesk on</h2>
+          <article class="task" id="backends"><h3>How do I switch live chat, tickets or email intake on?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: any</li></ul>
+            <p class="where">Codexta › Support console › Settings › Backends</p>
+            <ol><li>Switch on what your shop offers. Each switch takes a few seconds:<ul><li><span class="ui">Tickets and incident reports</span>: <span class="ui">Customers report a problem and follow their own tickets in the shop chat.</span></li><li><span class="ui">Live chat with a person</span>: <span class="ui">Customers ask the shop chat for a human and keep typing to your agent.</span></li><li><span class="ui">Email intake</span>: <span class="ui">Mail to your email channels becomes tickets.</span> It needs an email channel first (see <a href="#email">Email</a>).</li></ul></li></ol>
+            <p class="tip">The Overview’s <span class="ui">Support</span> card shows which parts are on and how many cases are open.</p>
+          </article>
+          <article class="task" id="live-hours"><h3>How do I set when live chat is open?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: any</li></ul>
+            <p class="where">Codexta › Support console › Settings › Live chat</p>
+            <ol><li>Under <span class="ui">Live chat is</span>, choose <span class="ui">Always open</span>, <span class="ui">Follow business hours</span> or <span class="ui">Off</span>.</li><li>With <span class="ui">Follow business hours</span>, pick which hours. The times, days and holidays themselves are in the <span class="ui">Business hours</span> tab (see <a href="#hours">business hours</a>).</li></ol>
+            <p>A chat that is already open is never cut off. Outside these times, the assistant tells the shopper when people are available and opens a ticket for them instead.</p>
+          </article>
+          <article class="task" id="pause"><h3>How do I pause live chat for a while?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: any</li></ul>
+            <p class="where">Codexta › Overview › Support (or Support console › Settings › Live chat)</p>
+            <ol><li>On the Overview, press <span class="ui">Pause for 1 hour</span> or <span class="ui">Pause until tomorrow</span>. The Live chat tab also offers <span class="ui">30 minutes</span> and a time of your choice under <span class="ui">Pause live chat for a while</span>.</li><li>The pause ends by itself. To end it early, press <span class="ui">Resume now</span>.</li></ol>
+          </article>
+        </section>
+
+        <section class="doc-section" id="inbox" aria-labelledby="h-inbox"><div class="kicker">04</div><h2 id="h-inbox">The Inbox</h2>
+          <p>The Inbox lists cases on the left and shows the open case on the right. A panel of <span class="ui">Details</span> sits beside it.</p>
+          <article class="task" id="views"><h3>Which lists are there?</h3><ul class="meta"><li>Who: everyone with the console</li><li>Plan: any</li></ul>
+            <ul><li><span class="ui">Mine</span>: cases you own. <span class="ui">Unassigned</span>: nobody owns them yet. <span class="ui">Unattended</span>: still waiting for a first reply.</li><li><span class="ui">Mentions</span>: colleagues mentioned you in a note. <span class="ui">Participating</span>: cases you watch or take part in.</li><li><span class="ui">All open</span>, <span class="ui">Pending</span>, <span class="ui">Resolved</span> and <span class="ui">Closed</span>: cases by state.</li><li>Switch between <span class="ui">All</span>, <span class="ui">Tickets</span> and <span class="ui">Chats</span> at the top.</li></ul>
+          </article>
+          <article class="task" id="find"><h3>How do I find a case?</h3>
+            <ol><li>Type in the search box (or press <span class="say">/</span>) to search by words, number or customer.</li><li>Press <span class="ui">Filters</span> to narrow by queue, tier, owner, priority, channel, tag, customer email or overdue cases. Change the order with <span class="ui">Sort</span>, for example <span class="ui">Waiting longest for a reply</span>.</li><li>To keep a filter, press <span class="ui">Save as view</span> and give it a name. It appears with the other lists.</li></ol>
+          </article>
+          <article class="task" id="availability"><h3>How do I tell the team I am available?</h3>
+            <p>Set <span class="ui">My availability</span> to <span class="ui">Online</span>, <span class="ui">Busy</span> or <span class="ui">Offline</span>. When a queue assigns cases automatically, new cases go only to people who are online.</p>
+          </article>
+          <article class="task" id="notifications"><h3>How do I get notified?</h3>
+            <p class="where">Codexta › Support console › the bell › My settings</p>
+            <ul><li>The bell shows new notifications; <span class="ui">Mark all read</span> clears them.</li><li>Choose <span class="ui">Play a sound</span>, <span class="ui">Pop-up when the console is in the background</span> and <span class="ui">Notify me here even when the console is closed</span> (push to this device).</li><li>Under <span class="ui">Also email me when</span>, pick events such as <span class="ui">A case is assigned to me</span>, <span class="ui">A customer writes on my case</span>, <span class="ui">Someone mentions me</span> or a missed response target.</li><li>Here you also set <span class="ui">My reply signature</span>, the <span class="ui">Console language</span>, the <span class="ui">Text size</span> and <span class="ui">Translate customer messages into my language</span>.</li></ul>
+          </article>
+        </section>
+
+        <section class="doc-section" id="live-chat" aria-labelledby="h-live"><div class="kicker">05</div><h2 id="h-live">Live chat: take over from the assistant</h2>
+          <p>When a shopper explicitly asks for a person, the assistant hands the chat to your team. The shopper keeps typing in the same chat window.</p>
+          <article class="task" id="take-over"><h3>Example: a shopper asks for a person</h3><ul class="meta"><li>Who: Owner, Admin, Support manager, Support agent</li><li>Plan: any (live chat switched on)</li></ul>
+            <ol><li>The shopper types <span class="say">“I want to talk to a real person”</span>. A guest (not signed in) is first asked for a name and an email address.</li><li>The chat window shows:<blockquote class="msg"><small>SHOPPER SEES</small>Looking for an available agent…</blockquote></li><li>In the console, the chat appears in <span class="ui">Unassigned</span> (and on the <span class="ui">Team</span> page under chats waiting). Open it. You see the whole conversation with the assistant so far.</li><li>Press <span class="ui">Assign to me</span>. Write in <span class="ui">Reply</span> and send with Enter. The shopper now sees:<blockquote class="msg"><small>SHOPPER SEES</small>Connected to a human agent</blockquote></li><li>Use <span class="ui">Internal note</span> for anything only your team should read.</li><li>When the question is answered, press <span class="ui">Resolve</span>. You can type what solved it.</li></ol>
+            <p>The shopper can leave with <span class="ui">End chat</span>. They are asked <span class="ui">End this conversation?</span> and then return to the assistant.</p>
+            <p class="tip">Guests cannot send files in a live chat. Under Settings › Channels, the live chat channel decides whether the shopper sees your agent’s name (<span class="ui">Friendly</span>) or only the support team (<span class="ui">Professional (no personal name)</span>).</p>
+          </article>
+          <article class="task" id="no-agent"><h3>What happens when nobody is available?</h3>
+            <p>Outside your live chat hours, while paused, or when live chat is off, nobody is connected. The assistant says when people are available and, in the same answer, opens a ticket with the shopper’s problem. It asks only for the contact details it still needs and gives the shopper the ticket number.</p>
+          </article>
+        </section>
+
+        <section class="doc-section" id="tickets" aria-labelledby="h-tickets"><div class="kicker">06</div><h2 id="h-tickets">Tickets and return requests</h2>
+          <article class="task" id="ticket-sources"><h3>Where do tickets come from?</h3><ul class="meta"><li>Plan: any</li></ul>
+            <ul><li><b>A problem reported in the chat.</b> With tickets switched on, a shopper who says something is not working gets help from your knowledge base first. Only when that does not solve it does the assistant open a ticket.</li><li><b>A return from a guest or an Instagram message.</b> The shopper gives a name, an email and photos; a photo is required.</li><li><b>A return from a signed-in WooCommerce customer.</b> The assistant checks the order and the photos and opens a return ticket, tagged <span class="ui">return</span>. On <b>Shopify</b>, a signed-in customer’s return is requested on the order in Shopify instead, and you decide it there.</li><li><b>Email</b> to your support address, when email intake is on.</li><li><b>Your own team</b>, with the <span class="ui">+</span> button (<span class="ui">New ticket</span>).</li></ul>
+            <p>The customer gets an email saying their request arrived, and your replies reach them by email. Signed-in shoppers can also ask about their own tickets in the shop chat.</p>
+          </article>
+          <article class="task" id="return-example"><h3>Example: handle a return request</h3><ul class="meta"><li>Who: Owner, Admin, Support manager, Support agent</li><li>Plan: any</li></ul>
+            <ol><li>Open the ticket from <span class="ui">Unassigned</span>. Its description lists the order, the item, the delivery date, whether it is in time, and the photo checks the assistant made.</li><li>Look at the photos under <span class="ui">Files</span> in the details.</li><li>Press <span class="ui">Assign to me</span>, then <span class="ui">Reply</span>, for example: <span class="say">“Thanks, your return is approved. Please send the item to …”</span> The customer gets it by email.</li><li>Process the refund in your shop’s admin as usual. The console does not move money.</li><li>Press <span class="ui">Resolve</span>.</li></ol>
+            <p class="tip">In the back-office chat you can also ask <span class="say">“Any open return requests”</span> for a quick list. Replying and closing happen here in the console.</p>
+          </article>
+        </section>
+
+        <section class="doc-section" id="work" aria-labelledby="h-work"><div class="kicker">07</div><h2 id="h-work">Working on a case</h2>
+          <article class="task" id="reply"><h3>How do I reply or add a note?</h3>
+            <ol><li>Choose <span class="ui">Reply</span> (the customer sees it) or <span class="ui">Internal note</span> (only your team sees it).</li><li>In a note, type <span class="say">@</span> to mention a colleague. They get a notification.</li><li>Type <span class="say">/</span> to insert a <a href="#saved-reply-example">saved reply</a>. Attach files with <span class="ui">Attach</span> or drop them in, or record a <span class="ui">Voice note</span>.</li><li>For an email ticket, <span class="ui">Cc / Bcc / subject</span> adds recipients.</li></ol>
+            <p><span class="ui">AI assist</span> helps with the text: <span class="ui">Suggest a reply</span>, <span class="ui">Summarize the case</span>, <span class="ui">Improve writing</span>, <span class="ui">Fix spelling and grammar</span>, <span class="ui">Shorten</span>, <span class="ui">Simplify</span>, a tone, or a translation into the customer’s language. <span class="ui">Undo AI</span> puts your own text back.</p>
+          </article>
+          <article class="task" id="assign"><h3>Example: pass a case to a colleague</h3>
+            <ol><li>Open the case and its <span class="ui">Details</span>.</li><li>Under <span class="ui">Owner</span>, search the colleague by name or email and pick them.</li><li>Add an <span class="ui">Internal note</span> such as <span class="say">“@Ana can you check the delivery? The parcel shows delivered.”</span></li></ol>
+            <p>Only colleagues allowed to work at the case’s level are offered. To move it to specialists instead, press <span class="ui">Escalate</span> and answer <span class="ui">Why escalate to the next tier?</span>. To move it to another team, use <span class="ui">Move to queue…</span>.</p>
+          </article>
+          <article class="task" id="pend-resolve"><h3>How do I put a case on hold, resolve or close it?</h3>
+            <ul><li><span class="ui">Pend</span>: wait until <span class="ui">1 hour</span>, <span class="ui">Tomorrow</span>, <span class="ui">Next week</span>, <span class="ui">Next month</span> or a date you choose. It comes back by itself.</li><li><span class="ui">Resolve</span>: the problem is solved. You can write <span class="ui">Resolution (optional):</span>. If the customer writes again, the case opens again.</li><li><span class="ui">Close</span>: finished for good, with an optional reason. <span class="ui">Reopen</span> brings a case back.</li></ul>
+          </article>
+          <article class="task" id="details"><h3>What is in the Details panel?</h3>
+            <p>The <span class="ui">State</span>, <span class="ui">Owner</span>, <span class="ui">Queue / Tier</span>, <span class="ui">Priority</span>, tags, the due times of the response targets, <span class="ui">Participants</span> (press <span class="ui">Watch</span> to follow a case), your own <span class="ui">Attributes</span>, <span class="ui">Files</span>, the customer’s <span class="ui">Other cases of this customer</span>, and where the chat started (<span class="ui">Came from</span>, page, browser). A chat started with the assistant has <span class="ui">Open the full transcript</span>.</p>
+          </article>
+          <article class="task" id="message-actions"><h3>What can I do with one message?</h3>
+            <p>Each message has actions: <span class="ui">Reply to this message</span>, <span class="ui">Forward</span> by email, <span class="ui">Translate</span>, <span class="ui">Copy text</span>, <span class="ui">Save as a saved reply</span>, <span class="ui">Make internal</span> or <span class="ui">Make visible to the customer</span>, and <span class="ui">Delete message</span>. On an assistant’s answer, <span class="ui">Report</span> marks it as wrong or unsuitable, so your team can fix the knowledge base.</p>
+          </article>
+          <article class="task" id="bulk"><h3>How do I change many cases at once?</h3>
+            <p>Tick cases in the list (or <span class="ui">Select all shown</span>). The bar that appears can assign, unassign, change state or priority, add or remove a tag, or <span class="ui">Run macro on selected</span>.</p>
+          </article>
+        </section>
+
+        <section class="doc-section" id="team-routing" aria-labelledby="h-routing"><div class="kicker">08</div><h2 id="h-routing">Your team: members, queues and tiers</h2>
+          <p>A <b>queue</b> is a group of cases a team works, for example Support or Billing. A <b>tier</b> is a support level: first line, then specialists. Each person has a place in a queue at a tier.</p>
+          <article class="task" id="add-member"><h3>Example: add a colleague to the helpdesk</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: any</li></ul>
+            <ol><li>First give them a role in Codexta’s Settings › Team (Support agent or Support manager).</li><li>Open <span class="where where-inline">Codexta › Support console › Settings › Members</span> and press <span class="ui">Add member</span>.</li><li>Pick them under <span class="ui">Team member</span>. Choose a <span class="ui">Queue</span> (or <span class="ui">All queues</span>) and a <span class="ui">Tier</span>.</li><li>Tick <span class="ui">Reviews new requests</span> if they should get an email for every new ticket.</li><li>Save. They can now take cases at that tier or lower.</li></ol>
+            <p class="tip">If you answer customers yourself, add yourself too.</p>
+          </article>
+          <article class="task" id="queues"><h3>How do I add a queue and spread work fairly?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: any</li></ul>
+            <p class="where">Codexta › Support console › Settings › Queues</p>
+            <ul><li><span class="ui">Add queue</span> with a name, icon and colour. Exactly one queue is the <span class="ui">Default queue</span>; cases with no queue land there.</li><li><span class="ui">Assign new cases automatically</span> gives each new case to an online member, by <span class="ui">Balanced (fewest open cases)</span> or <span class="ui">Round robin (whoever waited longest)</span>. You can cap the open cases per person.</li><li><span class="ui">Auto-resolve after</span> resolves cases with no activity for that long. <span class="ui">Never auto-resolve a case waiting on an agent</span> keeps cases where the customer wrote last.</li><li><span class="ui">Ask for a satisfaction rating (CSAT)</span>: see <a href="#csat">ratings</a>.</li></ul>
+          </article>
+          <article class="task" id="tiers"><h3>How do tiers and escalation work?</h3>
+            <p class="where">Codexta › Support console › Settings › Tiers</p>
+            <p>Each tier has a rank; higher is more senior. A member can own cases at their tier or lower. <span class="ui">Escalate</span> moves a case up to the next tier. A queue can also <span class="ui">Escalate to the next tier on an SLA breach</span>.</p>
+          </article>
+          <article class="task" id="custom-roles"><h3>How do I limit what an agent sees?</h3>
+            <p class="where">Codexta › Support console › Settings › Roles</p>
+            <ol><li>Press <span class="ui">Add role</span> and name it.</li><li>Under <span class="ui">Cases</span>, choose <span class="ui">Every case of their queues</span>, <span class="ui">Unassigned cases and their own</span> or <span class="ui">Only their own and those they take part in</span>.</li><li>Under <span class="ui">Also</span>, allow <span class="ui">Manage contacts</span>, <span class="ui">Manage the help center</span> or <span class="ui">See reports</span>.</li><li>Give the role to a member under Settings › Members (<span class="ui">Member role</span>).</li></ol>
+            <p class="tip">Admins are never limited by a custom role.</p>
+          </article>
+        </section>
+
+        <section class="doc-section" id="timing" aria-labelledby="h-timing"><div class="kicker">09</div><h2 id="h-timing">Priorities, response targets and hours</h2>
+          <p>A <b>response target</b> (SLA) is how fast your team promises to answer. Each case shows when its first reply, its next reply and its resolution are due. A missed target shows as <span class="ui">SLA breached</span>.</p>
+          <article class="task" id="priorities"><h3>How do I set the targets?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: any</li></ul>
+            <ul><li><b>By priority</b> (Settings › <span class="ui">Priorities</span>): each priority has a <span class="ui">First response target</span> and a <span class="ui">Resolution target</span>. New cases get the default priority.</li><li><b>By rule</b> (Settings › <span class="ui">SLA policies</span>): a policy sets targets for cases that match its conditions, such as one channel, label or queue. The first matching policy wins; with none, the priority’s targets apply.</li></ul>
+          </article>
+          <article class="task" id="hours"><h3>How do I set business hours and holidays?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: any</li></ul>
+            <p class="where">Codexta › Support console › Settings › Business hours</p>
+            <ol><li>Open <span class="ui">Business hours</span> (or <span class="ui">Add business hours</span>).</li><li>Set the <span class="ui">Time zone</span> first, then the <span class="ui">Weekly hours</span> per day. A day can have several windows.</li><li>Add <span class="ui">Holidays</span>. On a holiday the targets do not count.</li><li>Choose these hours on a queue so its targets count only while open, and in the Live chat tab to <a href="#live-hours">open live chat</a> only then.</li></ol>
+          </article>
+        </section>
+
+        <section class="doc-section" id="saved-replies" aria-labelledby="h-saved"><div class="kicker">10</div><h2 id="h-saved">Saved replies, labels and fields</h2>
+          <article class="task" id="saved-reply-example"><h3>Example: create a saved reply</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: any</li></ul>
+            <p class="where">Codexta › Support console › Settings › Saved replies</p>
+            <ol><li>Press <span class="ui">Add</span>.</li><li><span class="ui">Short code</span>: <span class="say">refund</span>. <span class="ui">Text</span>: <span class="say">Hi {{customer.name}}, your refund for request #{{ticket.number}} is on its way. It shows on your account within 5 working days. {{agent.name}}</span></li><li>Press <span class="ui">Save</span>.</li><li>In a reply, type <span class="say">/refund</span> and pick it. The names and the number are filled in.</li></ol>
+            <p class="tip">The fields you can use are <span class="say">{{customer.name}}</span>, <span class="say">{{customer.email}}</span>, <span class="say">{{agent.name}}</span>, <span class="say">{{agent.email}}</span>, <span class="say">{{ticket.number}}</span> and <span class="say">{{ticket.title}}</span>. Any agent can also save a good answer from a message with <span class="ui">Save as a saved reply</span>.</p>
+          </article>
+          <article class="task" id="labels"><h3>How do I use labels?</h3>
+            <p class="where">Codexta › Support console › Settings › Labels</p>
+            <p>A label is a tag with a colour and a meaning, such as <span class="say">billing</span>. Tick <span class="ui">Show in the sidebar</span> to get a list of every case with that label. Renaming a label renames it on every case. In a case, <span class="ui">Suggest labels</span> lets the AI propose fitting ones.</p>
+          </article>
+          <article class="task" id="attributes"><h3>How do I add my own fields?</h3>
+            <p class="where">Codexta › Support console › Settings › Attributes</p>
+            <p>Add fields to cases or contacts, such as an order number. Agents fill them in the case details. Tick <span class="ui">Required before resolving</span> to make sure nobody resolves a case without it.</p>
+          </article>
+        </section>
+
+        <section class="doc-section" id="automation" aria-labelledby="h-automation"><div class="kicker">11</div><h2 id="h-automation">Macros and automation</h2>
+          <article class="task" id="macros"><h3>How do I do several steps in one click?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: any</li></ul>
+            <p class="where">Codexta › Support console › Settings › Macros</p>
+            <p>A <b>macro</b> is a list of actions you run on a case in one click, for example <span class="ui">Add tags</span> billing, <span class="ui">Set priority</span> High and <span class="ui">Move to queue</span> Billing. Make it for <span class="ui">Only me</span> or <span class="ui">Everyone</span>. Run it from the case with <span class="ui">Macro…</span>.</p>
+          </article>
+          <article class="task" id="rules"><h3>How do I make things happen by themselves?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: any</li></ul>
+            <p class="where">Codexta › Support console › Settings › Automation</p>
+            <p>A <b>rule</b> runs actions on a case when something happens and its conditions match. For example: <b>When</b> <span class="ui">A case is created</span>, <b>If</b> <span class="ui">Title / subject</span> <span class="ui">contains</span> “invoice”, <b>Then</b> <span class="ui">Move to queue</span> Billing. Other triggers include <span class="ui">The customer has not answered for…</span> and <span class="ui">Nobody from the team has answered for…</span>. Rules are checked every few minutes and run once per case. A rule’s own changes never start another rule.</p>
+          </article>
+        </section>
+
+        <section class="doc-section" id="email" aria-labelledby="h-email"><div class="kicker">12</div><h2 id="h-email">Email</h2>
+          <article class="task" id="mail-server"><h3>How do I send email from my own address?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: any</li></ul>
+            <p class="where">Codexta › Support console › Settings › Email</p>
+            <ol><li>Enter your <span class="ui">SMTP server</span>, <span class="ui">Port</span>, <span class="ui">Username</span>, <span class="ui">Password</span> and the <span class="ui">From address</span> customers see and reply to. Your mail provider gives you these.</li><li>Press <span class="ui">Save</span>, then send a test with <span class="ui">Send a test to</span>.</li><li>Optionally tick <span class="ui">Use the branded layout</span>: your logo and name on a band of your colour, and your footer, on every email.</li></ol>
+            <p>Without your own server, Codexta’s platform mail sends for you.</p>
+          </article>
+          <article class="task" id="email-intake"><h3>How do I turn incoming email into tickets?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: any</li></ul>
+            <ol><li>Ask us to connect your support mailbox. For security, the mailbox password is kept by Codexta, never typed into the console.</li><li>In Settings › <span class="ui">Channels</span>, press <span class="ui">Add channel</span>, choose the kind <span class="ui">Email</span>, enter the address and choose the mailbox we set up.</li><li>Switch <span class="ui">Email intake</span> on in Settings › Backends.</li></ol>
+            <p class="tip">If some mail could not be filed, the Overview’s Support card says so. Open that mail in your mailbox.</p>
+          </article>
+        </section>
+
+        <section class="doc-section" id="contacts" aria-labelledby="h-contacts"><div class="kicker">13</div><h2 id="h-contacts">Contacts</h2>
+          <article class="task" id="contacts-list"><h3>What can I do with contacts?</h3><ul class="meta"><li>Who: everyone with the console (changes may need <span class="ui">Manage contacts</span>)</li><li>Plan: any</li></ul>
+            <p class="where">Codexta › Support console › Contacts</p>
+            <ul><li>Search by name, email or phone and open a person to see all their cases, files and notes.</li><li>Add labels and notes for the team, and group people into <span class="ui">Companies</span>.</li><li><span class="ui">Merge into…</span> joins two records of the same person.</li><li><span class="ui">Block</span>: a blocked contact cannot open new requests, chat or write in.</li><li><span class="ui">Import CSV</span> and <span class="ui">Export CSV</span>.</li></ul>
+          </article>
+        </section>
+
+        <section class="doc-section" id="apps" aria-labelledby="h-apps"><div class="kicker">14</div><h2 id="h-apps">Slack, Linear, Stripe and Notion</h2>
+          <p>These apps are not on every plan. On Shopify, see Shopify’s plan page; on WooCommerce, ask us. Without one you see <span class="ui">Your plan does not include this app. Upgrade the plan to use it.</span> Keys are checked when you save and never shown again.</p>
+          <article class="task" id="slack"><h3>Example: connect Slack</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: not on every plan</li></ul>
+            <p class="where">Codexta › Support console › Settings › Apps</p>
+            <ol><li>In Slack, create an app for your workspace and invite it to the channel your team uses. Copy its bot token, its signing secret and the channel id (it starts with C).</li><li>In the console, fill in <span class="ui">Slack bot token</span>, <span class="ui">Slack signing secret</span> and <span class="ui">Slack channel id</span>.</li><li>Choose the <span class="ui">Slack mode</span>:<ul><li><span class="ui">Two-way: replies in Slack go to the customer</span>. Start a reply with <span class="say">note:</span> to keep it internal.</li><li><span class="ui">Alert only: answer in the console</span>.</li></ul></li><li>Press <span class="ui">Connect</span>. Copy the <span class="ui">Event Request URL</span> shown into your Slack app’s event settings.</li></ol>
+            <p>New cases are then posted to the channel, and the conversation follows in the thread.</p>
+          </article>
+          <article class="task" id="other-apps"><h3>What do the other apps do?</h3>
+            <ul><li><b>Linear:</b> create a Linear issue from a case, or link one, with <span class="ui">Create issue</span> in the details. The link is noted on the case.</li><li><b>Stripe:</b> with a restricted key that reads customers, subscriptions and invoices, the case details show the customer’s Stripe information.</li><li><b>Notion:</b> pages shared with your Notion integration can be imported into your knowledge base (Knowledge base › Add document › <span class="ui">or from Notion:</span>) and kept in sync.</li></ul>
+          </article>
+        </section>
+
+        <section class="doc-section" id="reports" aria-labelledby="h-reports"><div class="kicker">15</div><h2 id="h-reports">Dashboards, reports and ratings</h2>
+          <article class="task" id="my-dashboard"><h3>What is on My dashboard?</h3><ul class="meta"><li>Who: everyone with the console</li></ul>
+            <p>Your open cases, soonest due first, what is urgent or overdue, and your day so far (resolved, newly assigned, escalated). It compares your first response and resolution times with the team.</p>
+          </article>
+          <article class="task" id="team-page"><h3>How do I see the whole team right now?</h3><ul class="meta"><li>Who: Owner, Admin, Support manager</li></ul>
+            <p class="where">Codexta › Support console › Team</p>
+            <p>Live chats waiting (longest wait first; click one to pick it up), unfinished cases per queue and tier, and each agent’s open, pending and overdue cases.</p>
+          </article>
+          <article class="task" id="reports-page"><h3>What do the reports show?</h3><ul class="meta"><li>Who: Owner, Admin, Support manager (or a custom role with <span class="ui">See reports</span>)</li></ul>
+            <p class="where">Codexta › Support console › Reports</p>
+            <ul><li>Cases created and resolved, the backlog and missed targets, by queue, agent, channel, label or priority. Click a bar to see its cases.</li><li>First response and resolution times, live chat waiting time, reopen rate, and a heatmap of busy hours.</li><li>How the assistant did: what it resolved by itself, when it handed over to a person, and why.</li><li>Pick a period, tick <span class="ui">Business hours only</span> if you like, and download any table as <span class="ui">CSV</span>.</li></ul>
+          </article>
+          <article class="task" id="csat"><h3>How do I ask customers to rate us?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: any</li></ul>
+            <ol><li>In Settings › Queues, tick <span class="ui">Ask for a satisfaction rating (CSAT)</span> on a queue.</li><li>When a case of that queue is resolved, the customer gets one survey: a chat in the chat window, a ticket by email.</li></ol>
+            <blockquote class="msg"><small>CUSTOMER SEES</small>How did we do? Please rate your experience with request #10042: (link)</blockquote>
+            <p>They rate from 1 to 5, once. Reports › <span class="ui">CSAT</span> shows the answers by agent and queue.</p>
+          </article>
+        </section>
+
+        <section class="doc-section" id="help-center" aria-labelledby="h-hc"><div class="kicker">16</div><h2 id="h-hc">Help center</h2>
+          <p>A help center is a public website of help articles, such as “How do I track my order?”. Shoppers can also read the articles in the chat window under <span class="ui">Help articles</span>.</p>
+          <article class="task" id="hc-start"><h3>How do I start a help center?</h3><ul class="meta"><li>Who: Owner, Admin (or a custom role with <span class="ui">Manage the help center</span>)</li><li>Plan: any</li></ul>
+            <p class="where">Codexta › Support console › Help center</p>
+            <ol><li>Add a portal (<span class="ui">New portal</span>) with a name, languages and colours.</li><li>Write articles in <span class="ui">Articles</span>, or use <span class="ui">Draft from website</span> to draft them from your site. Everything starts as a draft; press <span class="ui">Publish</span> when ready.</li><li><span class="ui">Suggested FAQs</span>: the AI reads resolved cases and suggests questions customers keep asking, with your team’s answers.</li><li>The site is at <span class="say">/hc/your-portal</span>. You can point your own domain at it.</li></ol>
+            <p class="tip">In a reply, agents can insert a link to an article. <span class="ui">Add to knowledge base</span> lets the assistant answer from an article too.</p>
+          </article>
+        </section>
+
+        <section class="doc-section" id="more" aria-labelledby="h-more"><div class="kicker">17</div><h2 id="h-more">Campaigns, monitors and calls</h2>
+          <article class="task" id="campaigns"><h3>Campaigns</h3><ul class="meta"><li>Who: Owner, Admin</li></ul>
+            <p>Settings › <span class="ui">Campaigns</span>: a <span class="ui">Widget message on your pages</span> after a shopper spends some seconds on a page you choose, or a <span class="ui">One-off SMS to contacts with a label</span> (needs an SMS number).</p>
+          </article>
+          <article class="task" id="monitors"><h3>Monitors</h3><ul class="meta"><li>Who: Owner, Admin</li></ul>
+            <p>Settings › <span class="ui">Monitors</span>: describe in plain English what to look for, for example <span class="say">“the customer says they will cancel or go to a competitor”</span>. The AI checks every resolved case and lists the matches with its reason. It can tag them. <span class="ui">Preview on recent cases</span> tries it first.</p>
+          </article>
+          <article class="task" id="calls"><h3>Calls</h3><ul class="meta"><li>Who: Owner, Admin</li></ul>
+            <p>With an SMS number connected in Codexta’s Settings › Integrations, the same number can take phone calls (Settings › <span class="ui">Calls</span>). In business hours your team’s phones ring; otherwise the caller leaves a voicemail. Calls are logged on the caller’s case and can be recorded and transcribed.</p>
+          </article>
+        </section>
+
+        <section class="doc-section" id="developers" aria-labelledby="h-dev"><div class="kicker">18</div><h2 id="h-dev">For developers: bots, webhooks, apps</h2>
+          <p>Most shops do not need these. They are for a developer working with you.</p>
+          <ul><li><span class="ui">Agent bots</span>: your own bot takes a channel’s new cases first; a person replying takes over. Not on every plan.</li><li><span class="ui">Webhooks</span>: a signed message to your server when a case is created, changed, resolved or reopened, or a message is added.</li><li><span class="ui">Dashboard apps</span>: your own web page as a tab beside every case.</li><li>An <span class="ui">API</span> channel: your own app sends conversations into the helpdesk.</li></ul>
+        </section>
+
+        <section class="doc-section" id="data" aria-labelledby="h-data"><div class="kicker">19</div><h2 id="h-data">Customer data and the audit log</h2>
+          <article class="task" id="erase"><h3>How do I erase a customer’s data?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: any</li></ul>
+            <p class="where">Codexta › Support console › Settings › Data &amp; audit</p>
+            <ol><li>Under <span class="ui">Erase a customer’s data</span>, enter the <span class="ui">Customer email to erase</span> and press <span class="ui">Erase</span>.</li><li>Confirm. Every case of that customer is deleted, and what they wrote on other cases is blanked. This cannot be undone.</li></ol>
+            <p class="tip">When your shop platform sends a deletion request for a customer, this happens by itself.</p>
+          </article>
+          <article class="task" id="audit"><h3>How do I see who changed what?</h3>
+            <p>The <span class="ui">Audit log</span> on the same tab lists configuration changes, deleted cases, blocked contacts and erased data, with who did it and when. You can search it and filter by date.</p>
+          </article>
+          <article class="task" id="import"><h3>Can I bring my old helpdesk over?</h3>
+            <p><span class="ui">Import from another helpdesk</span> brings contacts and conversations, with their messages, notes and tags, from Freshdesk or Intercom. Running it again skips what was already imported.</p>
+          </article>
+        </section>
+
+        <section class="doc-section" id="shortcuts" aria-labelledby="h-shortcuts"><div class="kicker">20</div><h2 id="h-shortcuts">Keyboard shortcuts</h2>
+          <p>Press <span class="say">?</span> in the console for the full list. <span class="say">Ctrl/⌘ K</span> opens the command bar: type a place or an action and press Enter.</p>
+          <div class="table-wrap" role="region" aria-label="Keyboard shortcuts" tabindex="0"><table class="doc-table">
+            <thead><tr><th scope="col">Keys</th><th scope="col">Does</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">/</th><td>Search cases</td></tr>
+              <tr><th scope="row">Alt J / Alt K</th><td>Previous / next case</td></tr>
+              <tr><th scope="row">Alt L / Alt P</th><td>Reply / internal note</td></tr>
+              <tr><th scope="row">Alt E</th><td>Resolve the case (Ctrl/⌘ Alt E also opens the next one)</td></tr>
+              <tr><th scope="row">Alt M</th><td>Pend the case</td></tr>
+              <tr><th scope="row">Alt O</th><td>Show or hide the details</td></tr>
+              <tr><th scope="row">Alt C / V / R / S</th><td>Go to cases / contacts / reports / settings</td></tr>
+            </tbody>
+          </table></div>
+        </section>
+
+        <section class="doc-section" id="messages" aria-labelledby="h-messages"><div class="kicker">21</div><h2 id="h-messages">Messages you may see</h2>
+          <div class="table-wrap" role="region" aria-label="Console messages" tabindex="0"><table class="doc-table">
+            <thead><tr><th scope="col">You see</th><th scope="col">What it means</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">You are not a support agent</th><td>Your role cannot use the console. Ask the Owner for the Support agent role.</td></tr>
+              <tr><th scope="row">You don’t have access to helpdesk settings</th><td>Only the Owner and Admins change settings.</td></tr>
+              <tr><th scope="row">This case changed in the meantime. Reloaded the latest version.</th><td>A colleague changed it at the same time. Look again and repeat your change.</td></tr>
+              <tr><th scope="row">This ticket is closed. Reopen it to reply or add a note.</th><td>Press <span class="ui">Reopen</span> first.</td></tr>
+              <tr><th scope="row">An agent bot is handling this case; replying takes it over.</th><td>Your reply takes the case from the bot.</td></tr>
+              <tr><th scope="row">Your plan does not include this app. Upgrade the plan to use it.</th><td>See <a href="#apps">apps</a>.</td></tr>
+            </tbody>
+          </table></div>
+          <p>Still stuck? Write to <a href="mailto:codexta@codecta.com">codexta@codecta.com</a> with the case number.</p>
+        </section>
+      </div>
+    </div></div>
+  </main>
+  <footer class="footer"><div class="wrap footer-row"><a href="../index.html">← Codexta overview</a><span>Codexta · developed by Codecta</span><a href="https://codecta.com/contact-us/">Contact</a></div></footer>
+  <script src="../site-nav.js"></script>
+  <script>(()=>{const t=document.getElementById("toc");if(!t)return;const m=matchMedia("(min-width:961px)");const s=()=>{t.open=m.matches};s();m.addEventListener("change",s);t.addEventListener("click",e=>{if(!m.matches&&e.target.closest("a"))t.open=false})})();</script>
+</body>
+</html>
