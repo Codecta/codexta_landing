@@ -111,7 +111,7 @@
       <div class="docs-content">
 
         <section class="doc-section" id="getting-started" aria-labelledby="h-getting-started"><div class="kicker">01</div><h2 id="h-getting-started">Getting started</h2>
-          <p>Four steps take you from the plugin to a working assistant: install the plugin, connect your shop, get activated by Codexta, and run the guided setup.</p>
+          <p>Four steps take you from the plugin to a working assistant: install the plugin, connect your shop, get activated by Codexta, and run the guided setup. Do them in this order: until Codexta activates your shop, the assistant does not answer anyone, you included, so the guided setup cannot run yet.</p>
 
           <article class="task" id="install"><h3>How do I install the plugin?</h3><ul class="meta"><li>Who: a WordPress administrator</li><li>Plan: any</li></ul>
             <p class="where">WordPress admin › Plugins › Add New Plugin › Upload Plugin</p>
@@ -128,15 +128,19 @@
 
           <article class="task" id="activation"><h3>Why does the assistant not answer yet?</h3><ul class="meta"><li>Who: Owner</li><li>Plan: agreed with Codexta</li></ul>
             <p class="where">WooCommerce › Codexta Assistant › Settings › Plan</p>
-            <p>WooCommerce has no app billing, so a newly connected shop waits for Codexta to activate it on the plan you agree with us. Until then every Codexta page shows:</p>
+            <p>WooCommerce has no app billing, so a newly connected shop waits for Codexta to activate it on the plan you agree with us. Installing and connecting the plugin does not activate it. Until then every Codexta page shows:</p>
             <blockquote class="msg"><small>YOU SEE</small>Waiting for activation by Codexta. Your assistant will not answer shoppers until Codexta activates it; contact Codexta to agree the plan.</blockquote>
+            <p>The assistant does not answer in Assistant › Chat either. If you press <span class="ui">Set up my assistant</span> or type a message there before activation, you read:</p>
+            <blockquote class="msg"><small>YOU SEE</small>Your Codexta account is waiting for activation. The assistant starts answering, here and on your store, once Codexta activates your plan. If you have not agreed a plan with Codexta yet, contact us.</blockquote>
             <p>Shoppers who open the chat meanwhile read:</p>
             <blockquote class="msg"><small>SHOPPERS SEE</small>The assistant is not available right now. Please try again later.</blockquote>
-            <p><a href="https://codecta.com/contact-us/">Contact us</a> to agree the plan. You can already open the Codexta page and look around, but the assistant does not answer shoppers, and changes to the knowledge base, authoring and enrichment wait for activation too.</p>
+            <p><a href="https://codecta.com/contact-us/">Contact us</a> to agree the plan. You can already open the Codexta page and look around, but the assistant does not answer shoppers or you, and changes to the knowledge base, authoring and enrichment wait for activation too.</p>
+            <p><b>How do I know my shop is active?</b> Reload the Codexta page. The “Waiting for activation” line is gone, and Settings › Plan shows your plan with the status <span class="ui">active</span>. Then run the <a href="#guided-setup">guided setup</a>.</p>
           </article>
 
           <article class="task" id="guided-setup"><h3>How do I run the guided setup?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: any</li></ul>
             <p class="where">WooCommerce › Codexta Assistant › Overview › Set up your assistant</p>
+            <p class="tip">Your shop must be <a href="#activation">activated by Codexta</a> first. The card shows from the start, but before activation the assistant answers with “Your Codexta account is waiting for activation” instead of starting the setup.</p>
             <ol><li>Press <span class="ui">Set up my assistant</span>. Codexta opens Assistant › Chat and sends <span class="say">“Set up my assistant”</span> for you.</li><li>The assistant lists five areas: Assistant identity, Knowledge base, Voice and handover, On the storefront and Test. Each shows as done, partly done or missing. Then it asks <span class="ui">How do you want to go on?</span> Choose <span class="ui">Go through what is missing</span>, <span class="ui">Review everything</span>, <span class="ui">Just one area</span> or <span class="ui">Stop here</span>.</li><li>Answer its questions. It asks which languages your shoppers write in and drafts a name, a greeting and up to four starter questions. Then it fills the knowledge base from your shop’s own pages, such as shipping, returns, payments, the FAQ and contact. It may ask for your shop’s web address.</li><li>Before anything is saved, it shows you the exact text. A plain <span class="say">“yes”</span> to a list of drafts approves exactly that list.</li><li>In the Test step it asks a few real questions and shows which note answered each. Questions about orders, stock, prices or the cart cannot be tested from the admin: try those on your storefront.</li></ol>
             <p>You can skip any area, stop and come back later. Anything already done is kept. To continue or start again, type in Assistant › Chat:</p>
             <ul class="says"><li><span class="say">“What is left to set up”</span></li><li><span class="say">“Run the setup again”</span></li><li><span class="say">“Add my shipping and returns pages to the knowledge base”</span></li></ul>
