@@ -285,6 +285,14 @@
             <p class="tip">Without an active plan the assistant does not answer: shoppers read <span class="ui">The assistant is not available right now. Please try again later.</span> Who may chat and how much is in <a href="#guests">Guest shoppers and chat limits</a>.</p>
           </article>
         
+          <article class="task" id="chat-pages"><h3>How do I choose the pages that show the chat?</h3><ul class="meta"><li>Who: Owner, Admin</li><li>Plan: any</li></ul>
+            <p>By default the chat button is on every page of your shop. To keep it off some pages, such as the cart and checkout, or to show it only on a few, list the pages in Codexta.</p>
+            <p class="where">Shopify admin › Apps › Codexta › Settings › General › Pages with the chat</p>
+            <ol><li>Type one regular expression per line. Each one is tested against the page’s address without the domain: the path plus any query, for example <span class="say">/shop/?page=2</span>. Capital letters do not matter.</li><li>The chat is shown on a page when <strong>any</strong> line matches it. Leave the box empty, or enter <span class="say">*</span>, to show it on every page.</li><li>Press <span class="ui">Save settings</span>. Shoppers who browse without reloading see the change as they move between pages.</li></ol>
+            <p>Examples:</p>
+            <ul><li><span class="say">^/$</span>: the home page only.</li><li><span class="say">^/products/</span>: every product page.</li><li><span class="say">^/(?!cart|checkout)</span>: every page except the cart and the checkout, and anything below them such as <span class="say">/cart/shipping</span>.</li><li><span class="say">^/(?!(cart|checkout)/?$)</span>: hide only those two pages exactly; their subpages keep the chat.</li></ul>
+            <p class="tip"><strong>The lines work as “or”, so put every exclusion in one line.</strong> The two lines <span class="say">^/(?!cart)</span> and <span class="say">^/(?!checkout)</span> do not hide either page: the cart matches the second line and the checkout matches the first, so the chat shows on both. Write <span class="say">^/(?!cart|checkout)</span> instead. A line that is not a valid expression is skipped, so a typo never takes the chat off your whole shop. Shopify’s paths look like <span class="say">/cart</span> and <span class="say">/collections/watches</span>, so write them as they appear in the address bar.</p>
+          </article>
           <article class="task" id="promotions"><h3>How do I choose which discounts the assistant can offer?</h3><ul class="meta"><li>Who: the Shopify account owner or a staff member who can edit discounts</li><li>Plan: any</li></ul>
             <p>The assistant only offers a discount you have marked for it. A discount without the mark stays yours: shoppers never see it from the assistant, so internal codes are safe.</p>
             <p class="where">Shopify admin › Discounts</p>
