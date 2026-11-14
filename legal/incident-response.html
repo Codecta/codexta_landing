@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How Codexta handles security incidents: severity scale, roles, detection, containment, and notification of merchants and Shopify.">
+  <meta name="theme-color" content="#f4f2ec">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Security Incident Response - Codexta">
+  <meta property="og:description" content="How Codexta handles security incidents: severity scale, roles, detection, containment, and notification of merchants and Shopify.">
+  <meta property="og:image" content="https://codexta.codecta.com/brand/symbiosis/raster/social-avatar-1200.png">
+  <title>Security Incident Response - Codexta</title>
+  <link rel="icon" type="image/svg+xml" href="../brand/symbiosis/codexta-mark.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../brand/symbiosis/raster/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../brand/symbiosis/raster/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#f6f5f0;--muted:#a3a6af;--dark:#111319;--panel:#191c24;--line:#30343e;--lime:#d5ff67;--blue:#a9c2ff;--wrap:1160px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--dark);color:var(--ink);font-family:"DM Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}.wrap{width:min(calc(100% - 48px),var(--wrap));margin:auto}.topbar{height:76px;border-bottom:1px solid rgba(255,255,255,.09);display:flex;align-items:center}.topbar-inner{display:flex;justify-content:space-between;align-items:center}.brand{display:flex;align-items:center}.brand img{width:142px;height:auto}.nav{display:flex;gap:28px;align-items:center;font-size:14px;color:#c6c8cf}.nav a:hover{color:var(--lime)}.button{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 18px;border:1px solid var(--lime);border-radius:5px;background:var(--lime);color:#161910;font-size:14px;font-weight:700;transition:transform .2s,background .2s}.button:hover{transform:translateY(-2px);background:#e2ff9c}.button.secondary{border-color:#454a55;background:transparent;color:var(--ink)}.button.secondary:hover{background:#222630}.hero{padding:110px 0 90px;background:radial-gradient(ellipse at 78% 12%,rgba(101,118,170,.18),transparent 50%),linear-gradient(180deg,#111319,#141720)}.hero-grid{display:grid;grid-template-columns:1fr .92fr;gap:64px;align-items:center}.eyebrow,.kicker{font:500 12px/1.5 "DM Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--lime)}h1{font-size:clamp(52px,7.1vw,88px);line-height:.96;letter-spacing:-.065em;font-weight:600;margin:23px 0 24px;max-width:680px}h1 span{color:var(--lime)}.hero-copy{font-size:19px;line-height:1.6;color:#c4c6ce;max-width:610px;margin:0}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}.note{margin:20px 0 0;color:var(--muted);font-size:13px}.video{position:relative;border:1px solid #393e4a;border-radius:12px;overflow:hidden;background:#090a0e;box-shadow:0 32px 90px rgba(0,0,0,.38)}.video video{display:block;width:100%;height:auto}.video-label{position:absolute;left:15px;top:15px;background:rgba(14,16,21,.8);backdrop-filter:blur(8px);padding:8px 10px;border-radius:3px;font:11px "DM Mono",monospace;letter-spacing:.06em;color:var(--lime)}section{padding:94px 0}.section-head{max-width:720px;margin-bottom:44px}.section-head h2{font-size:clamp(36px,5vw,58px);line-height:1;letter-spacing:-.055em;font-weight:600;margin:14px 0 17px}.section-head p{color:#b4b6bf;font-size:17px;line-height:1.65;margin:0}.proof{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0}.proof-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:#c7c9d0;font-size:13px}.proof-row span{display:flex;align-items:center;gap:9px}.proof-row span:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--lime)}.journey{background:#f2f1ec;color:#17191e}.journey .section-head p{color:#62636a}.journey .kicker{color:#485d11}.journey-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#d8d7d0;border:1px solid #d8d7d0}.journey-card{min-height:226px;background:#f7f6f1;padding:27px}.step{font:12px "DM Mono",monospace;color:#768148}.journey-card h3{font-size:21px;letter-spacing:-.03em;margin:28px 0 10px}.journey-card p{color:#686a70;line-height:1.6;margin:0;font-size:15px}.quote{margin-top:26px;padding:25px 28px;background:#e9e8e1;display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center}.quote p{font-size:17px;line-height:1.5;margin:0;max-width:800px}.quote small{font:11px "DM Mono",monospace;color:#666}.controls-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.control{padding:27px;border:1px solid var(--line);background:var(--panel);min-height:180px}.control .mark{color:var(--lime);font-size:22px}.control h3{font-size:20px;margin:16px 0 8px;letter-spacing:-.03em}.control p{color:#aeb0ba;font-size:15px;line-height:1.6;margin:0}.future{background:#191c24}.future .section-head p{color:#b4b6bf}.future-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.future-card{border:1px solid #383c47;padding:24px;background:#1d2029}.future-card h3{font-size:18px;margin:0 0 9px}.future-card p{color:#afb1ba;line-height:1.6;margin:0;font-size:14px}.future-card small{display:block;margin-top:14px;color:var(--lime);font:10px "DM Mono",monospace;letter-spacing:.1em;text-transform:uppercase}.platforms{padding:58px 0;border-top:1px solid var(--line)}.platform-row{display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap}.platform-row p{color:#aeb0b8;margin:0;max-width:300px;line-height:1.5}.platform-tags{display:flex;gap:9px;flex-wrap:wrap}.platform-tags span{border:1px solid #3b404b;border-radius:99px;padding:10px 14px;color:#e0e1e5;font-size:13px}.cta{padding:88px 0}.cta-card{padding:55px;background:var(--lime);color:#171910;display:grid;grid-template-columns:1fr auto;gap:25px;align-items:end}.cta-card h2{font-size:clamp(36px,5vw,60px);line-height:1;letter-spacing:-.06em;margin:0 0 17px;max-width:740px}.cta-card p{margin:0;line-height:1.6;color:#414832;max-width:660px}.cta-card .button{background:#171910;color:#f7f7f1;border-color:#171910;white-space:nowrap}.footer{border-top:1px solid var(--line);padding:27px 0;color:#a4a6ae;font-size:12px}.footer-row{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.footer a:hover{color:var(--lime)}
+    @media(max-width:850px){.hero-grid{grid-template-columns:1fr;gap:42px}.hero{padding:80px 0 70px}.journey-grid{grid-template-columns:1fr 1fr}.cta-card{grid-template-columns:1fr}.cta-card .button{justify-self:start}}
+    @media(max-width:600px){.wrap{width:min(calc(100% - 34px),var(--wrap))}.nav>a:not(.button){display:none}.nav{gap:12px}.topbar{height:66px}.hero{padding:66px 0 54px}h1{font-size:clamp(48px,15vw,70px)}.hero-copy{font-size:17px}.actions{flex-direction:column}.button{width:100%}section{padding:70px 0}.journey-grid,.controls-grid,.future-grid{grid-template-columns:1fr}.journey-card{min-height:190px}.quote{grid-template-columns:1fr}.quote p{font-size:15px}.cta-card{padding:36px 25px}.proof-row{display:grid;grid-template-columns:1fr 1fr}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+  </style>
+  <link rel="stylesheet" href="../commerce-refresh.css">
+  <link rel="stylesheet" href="../site-nav.css">
+  <style>.site-nav{position:sticky;top:0}</style>
+  <style>
+    .legal-hero{background:var(--paper);color:var(--ink);padding:88px 0 28px}
+    .legal-hero h1{font-size:clamp(40px,5.4vw,66px);line-height:1;letter-spacing:-.06em;margin:16px 0 16px;color:var(--ink)}
+    .legal-hero p{font-size:18px;line-height:1.6;color:#504d46;max-width:700px;margin:0}
+    .legal{background:var(--paper);color:var(--ink);padding:8px 0 110px}
+    .legal .wrap{max-width:860px}
+    .legal h2{font-size:clamp(22px,2.6vw,28px);letter-spacing:-.04em;margin:44px 0 10px;scroll-margin-top:92px}
+    .legal h3{font-size:18px;margin:24px 0 6px}
+    .legal p,.legal li{font-size:16px;line-height:1.65;color:#2d2b27}
+    .legal ul,.legal ol{padding-left:22px}
+    .legal a{color:#244fc8;font-weight:600;border-bottom:1px solid #aabaf4}
+    .legal .meta{font-size:14px;color:#625f57}
+    .legal .tc{background:#fff3b8;border:1px solid #e2c84a;padding:1px 6px;border-radius:3px;font-size:.92em;font-weight:600;color:#4a3d00}
+    .legal .box{background:#fff;border:1px solid #d8dbe4;padding:18px 22px;margin:18px 0}
+    .tablewrap{overflow-x:auto;margin:14px 0;border:1px solid #d8dbe4;background:#fff}
+    .legal table{border-collapse:collapse;width:100%;min-width:620px;font-size:14.5px}
+    .legal th,.legal td{border-bottom:1px solid #e4e6eb;padding:10px 12px;text-align:left;vertical-align:top;line-height:1.5;color:#2d2b27}
+    .legal th{background:#eef0f5;font-weight:600}
+    .legal-toc{background:#fff;border:1px solid #d8dbe4;padding:16px 22px;margin:20px 0}
+    .legal-toc ol{margin:6px 0 0;columns:2;column-gap:32px}.legal-toc li{font-size:15px;margin:2px 0}
+    @media(max-width:700px){.legal-hero{padding:60px 0 20px}.legal-hero p{font-size:16px}.legal-toc ol{columns:1}.legal{padding-bottom:72px}}
+  </style>
+</head>
+<body>
+  <nav class="site-nav" aria-label="Primary navigation">
+    <div class="wrap nav-inner">
+      <a class="brand nav-brand" href="../index.html" aria-label="Codexta home"><img class="nav-brand-mark" src="../brand/symbiosis/codexta-mark.svg" alt="" width="36" height="36"><span class="nav-brand-name">Codexta</span></a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation"><span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span></button>
+      <div class="nav-links" id="nav-links"><a href="../index.html#solutions">Packages</a><a href="../ecommerce.html">Commerce</a><a href="../service-knowledge.html">Service &amp; knowledge</a><a href="../index.html#architecture">How it works</a><a href="../index.html#controls">Security</a><a href="../index.html#pricing">Pricing</a><a href="../docs/index.html">Docs</a><a href="../compare.html">Compare</a><a href="../index.html#faq">FAQ</a><a class="button" href="https://codecta.com/contact-us/">Start a pilot <span class="arrow" aria-hidden="true">↗</span></a></div>
+    </div>
+  </nav>
+  <main>
+
+    <header class="legal-hero"><div class="wrap"><div class="eyebrow">CODEXTA / LEGAL</div><h1>Security incident response</h1><p>How Codexta handles events that threaten the confidentiality, integrity or availability of merchants' and shoppers' data, and what merchants can expect to be told. Draft for review. Last updated 14 November 2026.</p></div></header>
+    <section class="legal"><div class="wrap">
+      <p class="meta">Part of the <a href="./dpa.html">Data Processing Agreement</a>; see also <a href="./security.html">Security and data protection</a>. Items marked <span class="tc">[TO CONFIRM: ...]</span> are not yet established and are not claimed as fact. Owner: <span class="tc">[TO CONFIRM: name and role of the policy owner]</span>. Review: yearly and after every Sev 1 or Sev 2.</p>
+      <p>Purpose: handle events that threaten the confidentiality, integrity or availability of merchants' or shoppers' data in Codexta, including the customer data of Shopify and WooCommerce shops, and meet the duty to tell merchants and Shopify.</p>
+      <nav class="legal-toc" aria-label="Contents"><strong>Contents</strong><ol>
+        <li><a href="#severity">Severity scale</a></li><li><a href="#roles">Roles</a></li><li><a href="#detection">Detection</a></li><li><a href="#escalation">Escalation path</a></li><li><a href="#evidence">Evidence collection</a></li><li><a href="#containment">Containment</a></li><li><a href="#notification">Notification</a></li><li><a href="#recovery">Recovery</a></li><li><a href="#postmortem">Post-mortem</a></li><li><a href="#register">Register and testing</a></li>
+      </ol></nav>
+
+      <h2 id="severity">1. Severity scale</h2>
+      <div class="tablewrap"><table>
+        <tr><th>Sev</th><th>Meaning</th><th>Examples</th><th>Merchant notice</th><th>Target response</th></tr>
+        <tr><td>1 Critical</td><td>Confirmed or likely unauthorised access, disclosure, loss or alteration of personal data, or a cross-tenant leak</td><td>One shop's conversations readable by another; a leaked database or backup; a stolen platform token or staff access credential in use; a leaked service key abused for data access</td><td>Yes, within the breach window in the DPA <span class="tc">[TO CONFIRM: 72 h proposed]</span>; Shopify too</td><td>Start at once, 24x7 <span class="tc">[TO CONFIRM: on-call arrangement]</span></td></tr>
+        <tr><td>2 High</td><td>Weakness exploitable now with personal data in reach, or an incident without proven data exposure</td><td>A staff account compromised without confirmed data access; a webhook signature check bypass found; a tenant separation misconfiguration found</td><td>Decide within 24 h with the owner; notify if data may be affected</td><td>Same working day</td></tr>
+        <tr><td>3 Medium</td><td>Contained control failure, no sign of data exposure</td><td>Unmasked reveal without a matching business reason; a failed retention job; an expired certificate</td><td>Usually no</td><td>3 working days</td></tr>
+        <tr><td>4 Low</td><td>Hygiene or near miss</td><td>Bursts of failed logins; an unused secret found in a file</td><td>No</td><td>Backlog</td></tr>
+      </table></div>
+      <p>When unsure between two levels, take the higher.</p>
+
+      <h2 id="roles">2. Roles</h2>
+      <div class="tablewrap"><table>
+        <tr><th>Role</th><th>Does</th><th>Who</th></tr>
+        <tr><td>Incident lead</td><td>Declares the incident and its severity, owns the timeline and decisions</td><td><span class="tc">[TO CONFIRM: name]</span></td></tr>
+        <tr><td>Technical responder</td><td>Investigates, contains, collects evidence</td><td><span class="tc">[TO CONFIRM: name]</span></td></tr>
+        <tr><td>Communications and data protection contact</td><td>Writes merchant, Shopify and authority notices, keeps the register</td><td><span class="tc">[TO CONFIRM: name]</span>; mailbox <a href="mailto:codexta@codecta.com">codexta@codecta.com</a></td></tr>
+        <tr><td>Executive owner</td><td>Approves notifications and external statements</td><td><span class="tc">[TO CONFIRM: name]</span></td></tr>
+        <tr><td>Deputy for each role</td><td>Covers absence</td><td><span class="tc">[TO CONFIRM: names]</span></td></tr>
+      </table></div>
+
+      <h2 id="detection">3. Detection</h2>
+      <p>What exists today:</p>
+      <ul>
+        <li>Application logs, kept centrally.</li>
+        <li>An append-only audit record of every Codexta staff action on a shop (acting inside a shop, revealing unmasked text, retrying webhooks, uninstalling, purging, running jobs, and similar). The database refuses updates and deletes of these rows, and the merchant can read the entries for its own shop.</li>
+        <li>A tamper-evident conversation history: each conversation entry is chained to the one before it, so altering a history breaks the chain.</li>
+        <li>Startup checks that refuse to start a production host carrying test-only secrets.</li>
+        <li>Per-tenant and per-session rate limits, and records of received webhooks with attempt counts.</li>
+        <li>Reports from merchants, from Shopify or from a shopper to <a href="mailto:codexta@codecta.com">codexta@codecta.com</a>.</li>
+      </ul>
+      <p>Not yet in place: automated alerting on anomalous staff reveals, failed logins or cross-tenant errors. <span class="tc">[TO CONFIRM: whether any alerting exists on the production host]</span></p>
+      <p>Anyone who suspects an incident tells the incident lead at once: <span class="tc">[TO CONFIRM: channel and out-of-hours phone]</span>.</p>
+
+      <h2 id="escalation">4. Escalation path</h2>
+      <ol>
+        <li>The reporter tells the incident lead (any time).</li>
+        <li>The incident lead opens an incident record (date, reporter, what was seen), sets a provisional severity, and pulls in the technical responder.</li>
+        <li>Sev 1 and 2: the lead tells the executive owner and the communications contact within 1 hour of triage.</li>
+        <li>The communications contact starts the notice clock from the moment Codexta became aware, and writes that time down.</li>
+      </ol>
+
+      <h2 id="evidence">5. Evidence collection</h2>
+      <p>Done before containment changes the evidence, where possible.</p>
+      <ul>
+        <li>Record times in UTC and keep everything read-only: copy, do not edit.</li>
+        <li>Export the application logs for the window.</li>
+        <li>Export the staff audit rows for the affected shop and for the staff account in question.</li>
+        <li>Snapshot the affected data from a database copy, not the live one.</li>
+        <li>Verify the chain of the affected conversations.</li>
+        <li>Keep the web proxy access logs <span class="tc">[TO CONFIRM: location and retention of proxy logs on the host]</span>.</li>
+        <li>Note every command run. Do not paste secrets into the incident record.</li>
+      </ul>
+
+      <h2 id="containment">6. Containment</h2>
+      <p>Choose the smallest step that stops the harm; record each step and its time.</p>
+      <ul>
+        <li>Revoke staff access grants for a shop; disable the staff account.</li>
+        <li>Rotate the secrets involved: the key that protects stored credentials (and re-encrypt them), model provider keys, platform app secrets, shop keys and signing secrets.</li>
+        <li>Revoke the affected shop's platform token and reconnect it.</li>
+        <li>Suspend or uninstall the tenant where continued service is the risk. A purge waits for the 48-hour retention period or an explicit confirmation.</li>
+        <li>Use the kill switches for the Meta channels and profile updates.</li>
+        <li>If a model provider is implicated, switch the default and fallback model to another provider.</li>
+        <li>Block abusive addresses at the web proxy.</li>
+        <li>Do not delete evidence, conversations or logs until the incident lead says so. The nightly retention job deletes expired conversations on schedule. <span class="tc">[TO CONFIRM: how to pause it for an investigation]</span></li>
+      </ul>
+
+      <h2 id="notification">7. Notification</h2>
+      <h3>Merchants</h3>
+      <p>If personal data of a merchant's shoppers or staff may be affected, Codexta notifies that merchant's account contact without undue delay and within the DPA window <span class="tc">[TO CONFIRM: 72 h proposed]</span>. The notice says what happened, when, which data and shops, what Codexta has done, what the merchant should do, and who to contact. Merchants are reached at the contact on the shop's Codexta account. <span class="tc">[TO CONFIRM: where the contact is stored and the fallback when it is empty; the platform's shop owner email]</span></p>
+      <h3>Shopify</h3>
+      <p>If protected customer data is involved, Codexta tells Shopify without delay through the Partner Dashboard app contact and Shopify's stated route. <span class="tc">[TO CONFIRM: current Shopify route and deadline from the Partner Program Agreement and the protected customer data requirements]</span></p>
+      <h3>Authorities and shoppers</h3>
+      <p>The merchant, as controller, decides and notifies; Codexta helps. For data where Codexta is itself controller (the merchant account), the communications contact decides with counsel. <span class="tc">[TO CONFIRM: supervisory authority and counsel]</span></p>
+      <p>A copy of every notice is kept in the incident record.</p>
+
+      <h2 id="recovery">8. Recovery</h2>
+      <p>Restore service from a clean state, confirm tenant separation with a test shop, re-run the nightly jobs once (which writes an audit row), and watch the logs for repeat activity.</p>
+
+      <h2 id="postmortem">9. Post-mortem</h2>
+      <p>Within 10 working days of closing a Sev 1 or 2, blameless:</p>
+      <ul>
+        <li>timeline, root cause, what detected it, what slowed us;</li>
+        <li>data affected and who was told, with times;</li>
+        <li>fixes with owners and dates, tracked to done;</li>
+        <li>changes to this policy, the <a href="./security.html">security statement</a> and the <a href="./dpa.html">DPA</a> if a claim there was wrong.</li>
+      </ul>
+
+      <h2 id="register">10. Register and testing</h2>
+      <p>Codexta keeps one register of all incidents and near misses (date, severity, summary, notices sent, actions) <span class="tc">[TO CONFIRM: where it lives]</span>. A tabletop exercise is run yearly using a scenario such as a staff reveal being abused or a model key leaking. <span class="tc">[TO CONFIRM: date of the first exercise]</span></p>
+    </div></section>
+  </main>
+  <footer class="footer"><div class="wrap footer-row"><a href="../index.html">← Codexta overview</a><span><a href="./dpa.html">Data Processing Agreement</a> · <a href="./subprocessors.html">Subprocessors</a> · <a href="./incident-response.html">Incident response</a> · <a href="./security.html">Security</a> · <a href="https://codexta.codectaapps.com/privacy.html">Privacy policy</a></span><a href="https://codecta.com/contact-us/">Contact</a></div></footer>
+  <script src="../site-nav.js"></script>
+</body>
+</html>
