@@ -58,9 +58,9 @@
   </nav>
   <main>
 
-    <header class="legal-hero"><div class="wrap"><div class="eyebrow">CODEXTA / LEGAL</div><h1>Security incident response</h1><p>How Codexta handles events that threaten the confidentiality, integrity or availability of merchants' and shoppers' data, and what merchants can expect to be told. Draft for review. Last updated 14 November 2026.</p></div></header>
+    <header class="legal-hero"><div class="wrap"><div class="eyebrow">CODEXTA / LEGAL</div><h1>Security incident response</h1><p>How Codexta handles events that threaten the confidentiality, integrity or availability of merchants' and shoppers' data, and what merchants can expect to be told. Last updated 14 November 2026.</p></div></header>
     <section class="legal"><div class="wrap">
-      <p class="meta">Part of the <a href="./dpa.html">Data Processing Agreement</a>; see also <a href="./security.html">Security and data protection</a>. Items marked <span class="tc">[TO CONFIRM: ...]</span> are not yet established and are not claimed as fact. Owner: <span class="tc">[TO CONFIRM: name and role of the policy owner]</span>. Review: yearly and after every Sev 1 or Sev 2.</p>
+      <p class="meta">Part of the <a href="./dpa.html">Data Processing Agreement</a>; see also <a href="./security.html">Security and data protection</a>. Owner: Amel Music, incident lead. Review: yearly and after every Sev 1 or Sev 2.</p>
       <p>Purpose: handle events that threaten the confidentiality, integrity or availability of merchants' or shoppers' data in Codexta, including the customer data of Shopify and WooCommerce shops, and meet the duty to tell merchants and Shopify.</p>
       <nav class="legal-toc" aria-label="Contents"><strong>Contents</strong><ol>
         <li><a href="#severity">Severity scale</a></li><li><a href="#roles">Roles</a></li><li><a href="#detection">Detection</a></li><li><a href="#escalation">Escalation path</a></li><li><a href="#evidence">Evidence collection</a></li><li><a href="#containment">Containment</a></li><li><a href="#notification">Notification</a></li><li><a href="#recovery">Recovery</a></li><li><a href="#postmortem">Post-mortem</a></li><li><a href="#register">Register and testing</a></li>
@@ -69,7 +69,7 @@
       <h2 id="severity">1. Severity scale</h2>
       <div class="tablewrap"><table>
         <tr><th>Sev</th><th>Meaning</th><th>Examples</th><th>Merchant notice</th><th>Target response</th></tr>
-        <tr><td>1 Critical</td><td>Confirmed or likely unauthorised access, disclosure, loss or alteration of personal data, or a cross-tenant leak</td><td>One shop's conversations readable by another; a leaked database or backup; a stolen platform token or staff access credential in use; a leaked service key abused for data access</td><td>Yes, within the breach window in the DPA <span class="tc">[TO CONFIRM: 72 h proposed]</span>; Shopify too</td><td>Start at once, 24x7 <span class="tc">[TO CONFIRM: on-call arrangement]</span></td></tr>
+        <tr><td>1 Critical</td><td>Confirmed or likely unauthorised access, disclosure, loss or alteration of personal data, or a cross-tenant leak</td><td>One shop's conversations readable by another; a leaked database or backup; a stolen platform token or staff access credential in use; a leaked service key abused for data access</td><td>Yes, within 72 hours of becoming aware (see the DPA); Shopify too</td><td>Start at once, at any hour, through the incident lead and the out-of-hours contact in section 3</td></tr>
         <tr><td>2 High</td><td>Weakness exploitable now with personal data in reach, or an incident without proven data exposure</td><td>A staff account compromised without confirmed data access; a webhook signature check bypass found; a tenant separation misconfiguration found</td><td>Decide within 24 h with the owner; notify if data may be affected</td><td>Same working day</td></tr>
         <tr><td>3 Medium</td><td>Contained control failure, no sign of data exposure</td><td>Unmasked reveal without a matching business reason; a failed retention job; an expired certificate</td><td>Usually no</td><td>3 working days</td></tr>
         <tr><td>4 Low</td><td>Hygiene or near miss</td><td>Bursts of failed logins; an unused secret found in a file</td><td>No</td><td>Backlog</td></tr>
@@ -79,25 +79,25 @@
       <h2 id="roles">2. Roles</h2>
       <div class="tablewrap"><table>
         <tr><th>Role</th><th>Does</th><th>Who</th></tr>
-        <tr><td>Incident lead</td><td>Declares the incident and its severity, owns the timeline and decisions</td><td><span class="tc">[TO CONFIRM: name]</span></td></tr>
-        <tr><td>Technical responder</td><td>Investigates, contains, collects evidence</td><td><span class="tc">[TO CONFIRM: name]</span></td></tr>
-        <tr><td>Communications and data protection contact</td><td>Writes merchant, Shopify and authority notices, keeps the register</td><td><span class="tc">[TO CONFIRM: name]</span>; mailbox <a href="mailto:codexta@codecta.com">codexta@codecta.com</a></td></tr>
-        <tr><td>Executive owner</td><td>Approves notifications and external statements</td><td><span class="tc">[TO CONFIRM: name]</span></td></tr>
-        <tr><td>Deputy for each role</td><td>Covers absence</td><td><span class="tc">[TO CONFIRM: names]</span></td></tr>
+        <tr><td>Incident lead</td><td>Declares the incident and its severity, owns the timeline and decisions</td><td>Amel Music (<a href="mailto:amel.music@kodecta.com">amel.music@kodecta.com</a>)</td></tr>
+        <tr><td>Technical responder</td><td>Investigates, contains, collects evidence</td><td>The incident lead or the deputy</td></tr>
+        <tr><td>Communications and data protection contact</td><td>Writes merchant, Shopify and authority notices, keeps the register</td><td>The incident lead or the deputy; mailbox <a href="mailto:codexta@codecta.com">codexta@codecta.com</a></td></tr>
+        <tr><td>Executive owner</td><td>Approves notifications and external statements</td><td>The incident lead</td></tr>
+        <tr><td>Deputy for each role</td><td>Covers absence</td><td>Emir Causevic, deputy for the incident lead</td></tr>
       </table></div>
 
       <h2 id="detection">3. Detection</h2>
       <p>What exists today:</p>
       <ul>
-        <li>Application logs, kept centrally.</li>
+        <li>Application and proxy logs, kept centrally for one month.</li>
         <li>An append-only audit record of every Codexta staff action on a shop (acting inside a shop, revealing unmasked text, retrying webhooks, uninstalling, purging, running jobs, and similar). The database refuses updates and deletes of these rows, and the merchant can read the entries for its own shop.</li>
         <li>A tamper-evident conversation history: each conversation entry is chained to the one before it, so altering a history breaks the chain.</li>
         <li>Startup checks that refuse to start a production host carrying test-only secrets.</li>
         <li>Per-tenant and per-session rate limits, and records of received webhooks with attempt counts.</li>
         <li>Reports from merchants, from Shopify or from a shopper to <a href="mailto:codexta@codecta.com">codexta@codecta.com</a>.</li>
       </ul>
-      <p>Not yet in place: automated alerting on anomalous staff reveals, failed logins or cross-tenant errors. <span class="tc">[TO CONFIRM: whether any alerting exists on the production host]</span></p>
-      <p>Anyone who suspects an incident tells the incident lead at once: <span class="tc">[TO CONFIRM: channel and out-of-hours phone]</span>.</p>
+      <p>Centralised logging with alerting is in place. The individual alert rules are not listed here, and alerts on anomalous staff reveals, failed logins or cross-tenant errors are not claimed.</p>
+      <p>Anyone who suspects an incident tells the incident lead at once, by email to <a href="mailto:amel.music@kodecta.com">amel.music@kodecta.com</a> or <a href="mailto:codexta@codecta.com">codexta@codecta.com</a>. The out-of-hours contact is Amel Music, <a href="mailto:amel.music@kodecta.com">amel.music@kodecta.com</a>. No telephone number is published.</p>
 
       <h2 id="escalation">4. Escalation path</h2>
       <ol>
@@ -115,7 +115,7 @@
         <li>Export the staff audit rows for the affected shop and for the staff account in question.</li>
         <li>Snapshot the affected data from a database copy, not the live one.</li>
         <li>Verify the chain of the affected conversations.</li>
-        <li>Keep the web proxy access logs <span class="tc">[TO CONFIRM: location and retention of proxy logs on the host]</span>.</li>
+        <li>Keep the web proxy access logs. They are retained for one month, so export the window before it expires.</li>
         <li>Note every command run. Do not paste secrets into the incident record.</li>
       </ul>
 
@@ -129,16 +129,16 @@
         <li>Use the kill switches for the Meta channels and profile updates.</li>
         <li>If a model provider is implicated, switch the default and fallback model to another provider.</li>
         <li>Block abusive addresses at the web proxy.</li>
-        <li>Do not delete evidence, conversations or logs until the incident lead says so. The nightly retention job deletes expired conversations on schedule. <span class="tc">[TO CONFIRM: how to pause it for an investigation]</span></li>
+        <li>Do not delete evidence, conversations or logs until the incident lead says so. The nightly retention job deletes expired conversations on schedule; the incident lead can have engineering suspend it for the duration of an investigation.</li>
       </ul>
 
       <h2 id="notification">7. Notification</h2>
       <h3>Merchants</h3>
-      <p>If personal data of a merchant's shoppers or staff may be affected, Codexta notifies that merchant's account contact without undue delay and within the DPA window <span class="tc">[TO CONFIRM: 72 h proposed]</span>. The notice says what happened, when, which data and shops, what Codexta has done, what the merchant should do, and who to contact. Merchants are reached at the contact on the shop's Codexta account. <span class="tc">[TO CONFIRM: where the contact is stored and the fallback when it is empty; the platform's shop owner email]</span></p>
+      <p>If personal data of a merchant's shoppers or staff may be affected, Codexta notifies that merchant's account contact without undue delay and within 72 hours of becoming aware. The notice says what happened, when, which data and shops, what Codexta has done, what the merchant should do, and who to contact. Merchants are reached at the contact on the shop's Codexta account: the shop's owners and admins who have an email address on their Codexta member record, the same addresses that receive Codexta's service alerts. If a shop has no such address on file, no notice is sent by email, because there is nowhere to send it; merchants are asked to keep an owner or admin email address on their member record.</p>
       <h3>Shopify</h3>
-      <p>If protected customer data is involved, Codexta tells Shopify without delay through the Partner Dashboard app contact and Shopify's stated route. <span class="tc">[TO CONFIRM: current Shopify route and deadline from the Partner Program Agreement and the protected customer data requirements]</span></p>
+      <p>If protected customer data is involved, Codexta tells Shopify without delay through the Shopify Partner Dashboard contact and as the Partner Program Agreement requires.</p>
       <h3>Authorities and shoppers</h3>
-      <p>The merchant, as controller, decides and notifies; Codexta helps. For data where Codexta is itself controller (the merchant account), the communications contact decides with counsel. <span class="tc">[TO CONFIRM: supervisory authority and counsel]</span></p>
+      <p>The merchant, as controller, decides and notifies; Codexta helps. For data where Codexta is itself controller (the merchant account), the communications contact decides. The competent supervisory authority for Kodecta d.o.o. is the Agency for Personal Data Protection in Bosnia and Herzegovina (Agencija za zaštitu ličnih podataka u BiH), Dubrovačka 6, 71000 Sarajevo, <a href="https://www.azlp.ba">www.azlp.ba</a>. A merchant established in the EU also has its own supervisory authority.</p>
       <p>A copy of every notice is kept in the incident record.</p>
 
       <h2 id="recovery">8. Recovery</h2>
@@ -154,7 +154,7 @@
       </ul>
 
       <h2 id="register">10. Register and testing</h2>
-      <p>Codexta keeps one register of all incidents and near misses (date, severity, summary, notices sent, actions) <span class="tc">[TO CONFIRM: where it lives]</span>. A tabletop exercise is run yearly using a scenario such as a staff reveal being abused or a model key leaking. <span class="tc">[TO CONFIRM: date of the first exercise]</span></p>
+      <p>Codexta keeps one register of all incidents and near misses (date, severity, summary, notices sent, actions). The register is kept by the incident lead. A tabletop exercise is run at least once a year, using a scenario such as a staff reveal being abused or a model key leaking.</p>
     </div></section>
   </main>
   <footer class="footer"><div class="wrap footer-row"><a href="../index.html">← Codexta overview</a><span><a href="./dpa.html">Data Processing Agreement</a> · <a href="./subprocessors.html">Subprocessors</a> · <a href="./incident-response.html">Incident response</a> · <a href="./security.html">Security</a> · <a href="https://codexta.codectaapps.com/privacy.html">Privacy policy</a></span><a href="https://codecta.com/contact-us/">Contact</a></div></footer>

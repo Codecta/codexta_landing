@@ -58,31 +58,31 @@
   </nav>
   <main>
 
-    <header class="legal-hero"><div class="wrap"><div class="eyebrow">CODEXTA / LEGAL</div><h1>Subprocessors</h1><p>The companies and services that may process a merchant's personal data for Codexta, what they receive and what is hidden first. Draft for review. Last updated 14 November 2026.</p></div></header>
+    <header class="legal-hero"><div class="wrap"><div class="eyebrow">CODEXTA / LEGAL</div><h1>Subprocessors</h1><p>The companies and services that may process a merchant's personal data for Codexta, what they receive and what is hidden first. Last updated 14 November 2026.</p></div></header>
     <section class="legal"><div class="wrap">
-      <p class="meta">Part of the <a href="./dpa.html">Data Processing Agreement</a>; see also <a href="./security.html">Security and data protection</a> and <a href="./incident-response.html">Security incident response</a>. Items marked <span class="tc">[TO CONFIRM: ...]</span> are not yet established and are not claimed as fact.</p>
+      <p class="meta">Part of the <a href="./dpa.html">Data Processing Agreement</a>; see also <a href="./security.html">Security and data protection</a> and <a href="./incident-response.html">Security incident response</a>.</p>
+      <div class="box"><strong>The assistant cannot work without a language model.</strong> The whole product is the model. Conversation text, and for the merchant back office the shop data the assistant reads (customer name, email, phone, address, orders), is sent to the language-model provider to produce answers. There is no switch or opt-out for sending text to the model. A shopper who does not want this should not use the chat; the shop's own pages, checkout and support channels remain available. The merchant can switch the assistant off for its shop in its Codexta settings (Chat on your store).</div>
       <div class="box"><strong>What is hidden before it is sent.</strong> Nothing is removed from what reaches the language-model provider. Chat text is sent as the shopper wrote it. For the merchant's back-office assistant, the customer and order details it looks up (names, emails, phone numbers, addresses, orders, as listed in the <a href="https://codexta.codectaapps.com/privacy.html">privacy policy</a>) are sent as returned by the shop and are not masked. Codexta hides emails and phone-like numbers only in what its own staff see and in the stored record of unanswered questions.</div>
 
       <h2>Language-model providers</h2>
-      <p>Codexta lets each deployment choose its model. The provider receives the conversation (the shopper's messages, the assistant's instructions, tool results such as product, order and customer data when a tool is used) to produce a reply.</p>
+      <p>Conversation text that the assistant sends to the model is processed by the configured provider. The provider receives the conversation (the shopper's messages, the assistant's instructions, tool results such as product, order and customer data when a tool is used) to produce a reply. Only the two providers below receive conversation data. Both are engaged under their standard commercial contracts, under which, as Codexta understands them, the data is not used for training.</p>
       <div class="tablewrap"><table>
         <tr><th>Provider</th><th>Purpose</th><th>Data</th><th>Location</th><th>Masked first</th></tr>
-        <tr><td>DeepSeek (api.deepseek.com), the default model</td><td>Generate assistant replies</td><td>Conversation content including tool results</td><td>Processing location <span class="tc">[TO CONFIRM: DeepSeek's processing region and transfer mechanism]</span></td><td>No</td></tr>
-        <tr><td>OpenAI (api.openai.com), the fallback model, used when the default is unavailable or slow</td><td>Generate assistant replies</td><td>Conversation content including tool results</td><td>Processing location <span class="tc">[TO CONFIRM: OpenAI's processing region and data-residency setting, transfer mechanism]</span></td><td>No</td></tr>
-        <tr><td>Other model endpoints present in the configuration: NVIDIA (integrate.api.nvidia.com), OpenRouter (openrouter.ai) and two self-hosted model servers</td><td>Alternative or test models <span class="tc">[TO CONFIRM: whether any of these receive merchant data in production; if not, remove from this table. Two are plain HTTP to a public IP address, which would need fixing first]</span></td><td>Same as above if used</td><td>unknown <span class="tc">[TO CONFIRM: hosts and regions]</span></td><td>No</td></tr>
+        <tr><td>DeepSeek (api.deepseek.com), the default model</td><td>Generate assistant replies</td><td>Conversation content including tool results</td><td>People's Republic of China, according to <a href="https://cdn.deepseek.com/policies/en-US/deepseek-privacy-policy-2025-02-14.html">DeepSeek's published privacy policy</a>. There is no adequacy decision for the People's Republic of China. DeepSeek's standard commercial terms apply; transfer safeguards beyond those terms are not claimed.</td><td>No</td></tr>
+        <tr><td>OpenAI (api.openai.com), the fallback model, used when the default is unavailable or slow</td><td>Generate assistant replies</td><td>Conversation content including tool results</td><td>OpenAI's Data Processing Addendum applies and covers transfers of European personal data. OpenAI may process data in the United States unless European data residency is configured.</td><td>No</td></tr>
       </table></div>
 
       <h2>Hosting and infrastructure</h2>
       <div class="tablewrap"><table>
         <tr><th>Provider</th><th>Purpose</th><th>Data</th><th>Location</th><th>Masked first</th></tr>
-        <tr><td><span class="tc">[TO CONFIRM: name of the hosting provider of codexta.codectaapps.com]</span></td><td>Runs the Codexta service: application, database, file storage, logs (the stack in docker-compose.yml)</td><td>All data Codexta holds for merchants</td><td>Region <span class="tc">[TO CONFIRM: region]</span></td><td>Not applicable (stored in full, tenant-separated)</td></tr>
-        <tr><td><span class="tc">[TO CONFIRM: backup provider, if separate]</span></td><td>Backups <span class="tc">[TO CONFIRM: whether backups exist]</span></td><td>Copies of the above</td><td>unknown <span class="tc">[TO CONFIRM: region]</span></td><td>Not applicable</td></tr>
+        <tr><td>Amazon Web Services (AWS)</td><td>Runs the Codexta service: application, PostgreSQL database, file storage, and centralised logging with alerting. Proxy and application logs are kept for one month</td><td>All data Codexta holds for merchants</td><td>eu-central-1 (Frankfurt). AWS's standard data processing terms apply</td><td>Not applicable (stored in full, tenant-separated)</td></tr>
+        <tr><td>Amazon Web Services (AWS)</td><td>Backups of the production database</td><td>Copies of the above</td><td>AWS. Deleted data can remain in backups until they expire. Schedule, retention and encryption details are available on request to <a href="mailto:codexta@codecta.com">codexta@codecta.com</a></td><td>Not applicable</td></tr>
       </table></div>
 
       <h2>Email delivery</h2>
       <div class="tablewrap"><table>
         <tr><th>Provider</th><th>Purpose</th><th>Data</th><th>Location</th><th>Masked first</th></tr>
-        <tr><td><span class="tc">[TO CONFIRM: Codexta's own transactional email service, if any, for example account and invitation emails]</span></td><td>Send email from Codexta</td><td>Recipient address and message</td><td>unknown <span class="tc">[TO CONFIRM: region]</span></td><td>No</td></tr>
+        <tr><td>Microsoft (Microsoft 365 email), used for Codexta's own email sent from codexta@codecta.com (account, invitation and alert emails)</td><td>Send email from Codexta</td><td>Recipient address and message</td><td>Details available on request</td><td>No</td></tr>
         <tr><td>The merchant's own mailbox provider (for example Gmail, Microsoft or any IMAP/SMTP server), only if the merchant connects a mailbox to the helpdesk</td><td>Read incoming mail as cases and send replies from the merchant's address</td><td>Mail content and addresses of the merchant's correspondents</td><td>Chosen by the merchant</td><td>No</td></tr>
       </table></div>
 
@@ -93,19 +93,19 @@
         <tr><td>Slack (slack.com)</td><td>Post new cases to a channel; replies in the thread return to the case</td><td>Case details and replies</td><td>Chosen by the merchant's Slack workspace</td><td>No</td></tr>
         <tr><td>Linear (api.linear.app)</td><td>Create or link an issue from a case</td><td>Case details</td><td>Linear's regions</td><td>No</td></tr>
         <tr><td>Stripe (api.stripe.com)</td><td>Show the customer's subscriptions and invoices beside a case (read-only key)</td><td>Reads Stripe customer data for the case's customer</td><td>Merchant's Stripe account</td><td>Not applicable (reading)</td></tr>
-        <tr><td>Notion</td><td>Re-sync imported Notion pages into the knowledge base <span class="tc">[TO CONFIRM: confirm the Notion API host and that only page content is read]</span></td><td>Page content the merchant selects</td><td>Merchant's Notion workspace</td><td>Not applicable (reading)</td></tr>
+        <tr><td>Notion</td><td>Re-sync imported Notion pages into the knowledge base (api.notion.com)</td><td>Title and text of the pages the merchant selects, read only</td><td>Merchant's Notion workspace</td><td>Not applicable (reading)</td></tr>
         <tr><td>Instagram messaging (Meta), only if the merchant connects Instagram on a plan that includes it</td><td>Receive and answer the shop's Instagram messages</td><td>Message text and sender id</td><td>Meta's regions</td><td>No</td></tr>
       </table></div>
 
       <h2>Platforms</h2>
       <div class="tablewrap"><table>
         <tr><th>Platform</th><th>Role</th><th>Data</th><th>Notes</th></tr>
-        <tr><td>Shopify</td><td>The platform the merchant's shop runs on. Codexta calls Shopify's APIs with the merchant's installed app grant, and Shopify sends Codexta webhooks</td><td>Customer, order and product data under the app's granted access</td><td>Shopify processes this data under its own terms with the merchant, not as Codexta's subprocessor <span class="tc">[TO CONFIRM: confirm wording]</span></td></tr>
+        <tr><td>Shopify</td><td>The platform the merchant's shop runs on. Codexta calls Shopify's APIs with the merchant's installed app grant, and Shopify sends Codexta webhooks</td><td>Customer, order and product data under the app's granted access</td><td>Shopify processes this data under its own terms with the merchant, not as Codexta's subprocessor</td></tr>
         <tr><td>WooCommerce / WordPress</td><td>The merchant's own site. Codexta calls the shop's REST API with keys the merchant provides</td><td>Customer, order and product data</td><td>The data stays on the merchant's server until read</td></tr>
       </table></div>
 
       <h2>Changes</h2>
-      <p>Codexta will update this page before adding or replacing a subprocessor that handles a merchant's personal data. <span class="tc">[TO CONFIRM: how merchants are notified, for example email 30 days ahead]</span> Last review: 14 November 2026.</p>
+      <p>Codexta will update this page before adding or replacing a subprocessor that handles a merchant's personal data, and will notify merchants by email to the merchant's account contact 30 days before the change takes effect. A merchant may object to the change within that period. Last review: 14 November 2026.</p>
     </div></section>
   </main>
   <footer class="footer"><div class="wrap footer-row"><a href="../index.html">← Codexta overview</a><span><a href="./dpa.html">Data Processing Agreement</a> · <a href="./subprocessors.html">Subprocessors</a> · <a href="./incident-response.html">Incident response</a> · <a href="./security.html">Security</a> · <a href="https://codexta.codectaapps.com/privacy.html">Privacy policy</a></span><a href="https://codecta.com/contact-us/">Contact</a></div></footer>

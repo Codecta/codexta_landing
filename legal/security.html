@@ -58,10 +58,11 @@
   </nav>
   <main>
 
-    <header class="legal-hero"><div class="wrap"><div class="eyebrow">CODEXTA / LEGAL</div><h1>Security and data protection</h1><p>How Codexta protects merchant and shopper data: encryption, backups, separation of test and production, limits on staff access, and how this maps to Shopify's protected customer data requirements. Draft for review. Last updated 14 November 2026.</p></div></header>
+    <header class="legal-hero"><div class="wrap"><div class="eyebrow">CODEXTA / LEGAL</div><h1>Security and data protection</h1><p>How Codexta protects merchant and shopper data: encryption, backups, separation of test and production, limits on staff access, and how this maps to Shopify's protected customer data requirements. Last updated 14 November 2026.</p></div></header>
     <section class="legal"><div class="wrap">
-      <p class="meta">Part of the <a href="./dpa.html">Data Processing Agreement</a>; see also <a href="./incident-response.html">Security incident response</a> and <a href="./subprocessors.html">Subprocessors</a>. Items marked <span class="tc">[TO CONFIRM: ...]</span> are not yet established and are not claimed as fact.</p>
-      <div class="box"><strong>No certification is claimed.</strong> Codexta holds no SOC 2 or ISO 27001 certificate. This page describes measures that exist; where a fact is not established it is marked, not assumed.</div>
+      <p class="meta">Part of the <a href="./dpa.html">Data Processing Agreement</a>; see also <a href="./incident-response.html">Security incident response</a> and <a href="./subprocessors.html">Subprocessors</a>.</p>
+      <div class="box"><strong>No certification is claimed.</strong> Codexta holds no SOC 2 or ISO 27001 certificate. This page describes measures that exist; where a fact is not established, nothing is claimed.</div>
+      <div class="box"><strong>The assistant cannot work without a language model.</strong> The whole product is the model. Conversation text, and for the merchant back office the shop data the assistant reads (customer name, email, phone, address, orders), is sent to the language-model provider to produce answers. There is no switch or opt-out for sending text to the model. A shopper who does not want this should not use the chat; the shop's own pages, checkout and support channels remain available. The merchant can switch the assistant off for its shop in its Codexta settings (Chat on your store).</div>
       <nav class="legal-toc" aria-label="Contents"><strong>Contents</strong><ol>
         <li><a href="#encryption">Encryption</a></li><li><a href="#backups">Backups</a></li><li><a href="#separation">Test and production separation</a></li><li><a href="#staff">Limiting staff access to customer data</a></li><li><a href="#passwords">Passwords</a></li><li><a href="#dlp">Data loss prevention</a></li><li><a href="#shopify">Shopify requirements and evidence</a></li>
       </ol></nav>
@@ -70,26 +71,17 @@
       <div class="tablewrap"><table>
         <tr><th>Item</th><th>Status</th><th>Summary</th></tr>
         <tr><td>Traffic to the public host</td><td>In place</td><td>HTTPS with TLS 1.2 and 1.3 and HSTS; plain HTTP is redirected; certificates are issued and renewed automatically.</td></tr>
-        <tr><td>Traffic from Codexta to model providers and Shopify</td><td>In place for the named providers</td><td>Requests to the model providers listed on the <a href="./subprocessors.html">subprocessors page</a> and to Shopify use HTTPS. Model servers that do not use TLS must not receive merchant data. <span class="tc">[TO CONFIRM: whether any self-hosted model endpoint ever receives merchant data; if yes it moves to TLS before use]</span></td></tr>
+        <tr><td>Traffic from Codexta to model providers and Shopify</td><td>In place for the named providers</td><td>Requests to the model providers listed on the <a href="./subprocessors.html">subprocessors page</a> and to Shopify use HTTPS.</td></tr>
         <tr><td>Platform tokens and shop credentials at rest</td><td>In place</td><td>Stored encrypted with AES-256 and an integrity check.</td></tr>
-        <tr><td>Key handling for those secrets</td><td>Partial</td><td>In database mode the key is supplied from outside the database. A written key rotation procedure is not yet documented. <span class="tc">[TO CONFIRM: where the production key is held and who can read it]</span></td></tr>
+        <tr><td>Key handling for those secrets</td><td>Partial</td><td>In database mode the key is supplied from outside the database. A written key rotation procedure is not yet documented. Where the key is held is not published.</td></tr>
         <tr><td>Conversation text, notes and tickets at rest</td><td>Not evidenced</td><td>Stored as ordinary database content; protection is the database and disk layer below.</td></tr>
-        <tr><td>Database encryption at rest</td><td>Not evidenced</td><td><span class="tc">[TO CONFIRM: managed database or volume encryption on the production host]</span></td></tr>
-        <tr><td>Disk and volume encryption</td><td>Not evidenced</td><td><span class="tc">[TO CONFIRM: host disk encryption]</span></td></tr>
-        <tr><td>Backup encryption</td><td>Not evidenced</td><td>See backups below.</td></tr>
+        <tr><td>Database encryption at rest</td><td>Not evidenced</td><td>The production database is PostgreSQL on AWS. TLS in transit and encrypted secrets are in place; encryption at rest of the database and backups is being verified.</td></tr>
+        <tr><td>Disk and volume encryption</td><td>Not evidenced</td><td>Being verified. Nothing is claimed until it is confirmed.</td></tr>
+        <tr><td>Backup encryption</td><td>Not evidenced</td><td>Backups exist on AWS. See backups below.</td></tr>
       </table></div>
 
       <h2 id="backups">2. Backups</h2>
-      <p>Codexta does not yet publish a backup claim. Until the items below are confirmed, nothing is stated about backups, and deleted data should be assumed to remain in any backup until it expires. Before a claim is made, the following must be true:</p>
-      <ul>
-        <li><span class="tc">[TO CONFIRM]</span> The production database is backed up automatically, at least daily.</li>
-        <li><span class="tc">[TO CONFIRM]</span> File storage is covered.</li>
-        <li><span class="tc">[TO CONFIRM]</span> Backups are encrypted at rest and stored off the production host in a separate account or location.</li>
-        <li><span class="tc">[TO CONFIRM]</span> Backup retention is stated and is no longer than what the <a href="./dpa.html#retention">DPA</a> tells merchants.</li>
-        <li><span class="tc">[TO CONFIRM]</span> A restore has been tested, with date and result.</li>
-        <li><span class="tc">[TO CONFIRM]</span> Access to backups is limited to named people and logged.</li>
-        <li><span class="tc">[TO CONFIRM]</span> Deletion requests are not undone by a restore (erasure handling is re-run after a restore).</li>
-      </ul>
+      <p>Production backups are kept on AWS. Deleted data can remain in backups until they expire. Backup schedule, retention and encryption details are available to merchants on request at <a href="mailto:codexta@codecta.com">codexta@codecta.com</a>. Nothing further is claimed on this page.</p>
 
       <h2 id="separation">3. Test and production separation</h2>
       <p>In the product:</p>
@@ -99,7 +91,7 @@
         <li>Local fake shops and helpdesk apps are used instead of real shops in tests.</li>
         <li>Custom tenant code is off outside development unless explicitly accepted at startup.</li>
       </ul>
-      <p>Not evidenced: that production and test run on separate infrastructure, databases and credentials, and that no production customer data is copied into test. <span class="tc">[TO CONFIRM]</span></p>
+      <p>Not evidenced: that production and test run on separate infrastructure, databases and credentials, and that no production customer data is copied into test.</p>
 
       <h2 id="staff">4. Limiting staff access to customer data</h2>
       <h3>Codexta staff</h3>
@@ -109,18 +101,18 @@
         <li>Working inside a shop requires a written reason, is limited to one shop and one named staff member, expires after 60 minutes and can be revoked. The audit row records who and why.</li>
         <li>Staff audit rows are append-only, and the merchant can read the rows for its own shop in Settings &rsaquo; Team.</li>
         <li>Conversations started by a merchant's own team with the back-office assistant are private to their author, and visible only to the shop's owner or admin for their own chats.</li>
-        <li>Staff sign in with a password and a second factor where enabled. <span class="tc">[TO CONFIRM: second factor is mandatory for every Codexta staff account in production]</span></li>
+        <li>Staff sign in with a password. A mandatory second factor for every staff account is not claimed.</li>
       </ul>
       <h3>Merchant staff</h3>
       <p>Roles are Owner, Admin, KB editor, Support manager, Support agent and Viewer; the API refuses what the role may not do. The back-office assistant is not offered to shoppers, and its two changing actions (a customer note or tag, a price) run only after the merchant approves the exact change.</p>
-      <h3>Open items</h3>
+      <h3>Customer data lookups and the model</h3>
       <ul>
-        <li>A merchant-side log of who looked up which customer in the back-office assistant is in progress <span class="tc">[TO CONFIRM: final name and location]</span>. Until it is live, lookups are visible only in the conversation history of that conversation.</li>
+        <li>Customer data access log: each lookup of a customer or an order by a member of the merchant's team through the back-office assistant is recorded (which staff member, which customer or order, and when), never the returned data. Owners and admins read it in Settings &rsaquo; Team. It is kept for 12 months and a monthly review is recommended.</li>
         <li>Tool results from the back-office assistant (customer name, email, phone, addresses) are sent to the model provider as written, not masked. See <a href="./subprocessors.html">Subprocessors</a>.</li>
       </ul>
 
       <h2 id="passwords">5. Passwords</h2>
-      <p>Shopify merchants sign in through Shopify; Codexta holds no password for them. Codexta's own accounts (Codexta staff and any non-Shopify login) require a confirmed email. The password policy for those accounts does not yet meet a strong-password requirement. <span class="tc">[TO CONFIRM: whether these accounts are used in production for anything other than internal staff, and the intended policy (suggested: minimum 12 characters and a mandatory second factor for staff)]</span></p>
+      <p>Shopify merchants sign in through Shopify; Codexta holds no password for them. Codexta's own accounts (Codexta staff and any non-Shopify login) require a confirmed email. The password policy for those accounts does not yet meet a strong-password requirement.</p>
 
       <h2 id="dlp">6. Data loss prevention that exists</h2>
       <ul>
@@ -129,40 +121,41 @@
         <li>Processed webhook bodies and headers are blanked, and the rows are pruned after 30 days.</li>
         <li>Conversations are deleted nightly by plan retention of 30, 60, 90 or 365 days (see the <a href="./dpa.html#retention">DPA</a>).</li>
         <li>Shopify erasure is automated: customer redaction requests, shop redaction requests, and an uninstalled shop is purged after 48 hours.</li>
-        <li>Tenant isolation: every record is filtered by tenant, and PostgreSQL row-level security is available. <span class="tc">[TO CONFIRM: that production runs with row-level security effective]</span></li>
+        <li>Tenant isolation: every record is filtered by tenant, and tenant data is separated by tenant id in every query. Row-level security is not claimed.</li>
         <li>Per-IP and per-tenant rate limits on the API and on guest sessions.</li>
+        <li>Proxy and application logs are kept centrally for one month, with alerting.</li>
         <li>Downloads expire after 14 days.</li>
         <li>Webhook and install signatures are verified before use.</li>
       </ul>
-      <p>Not yet in place: an alert on bulk reads of customer data. <span class="tc">[TO CONFIRM]</span></p>
+      <p>Not claimed: an alert on bulk reads of customer data.</p>
 
       <h2 id="shopify">7. Shopify protected customer data requirements and evidence</h2>
       <p><strong>In place</strong> = evidenced. <strong>Partial</strong> = exists in part or is pending. <strong>Gap</strong> = not present or not evidenced.</p>
       <h3>Level 1</h3>
       <div class="tablewrap"><table>
         <tr><th>#</th><th>Requirement</th><th>Status</th><th>Evidence and what is open</th></tr>
-        <tr><td>1</td><td>Process only the minimum personal data needed</td><td>Partial</td><td>Shop tools read named fields only, and order attributions keep an id, a total and a time. The app requests broad access scopes and allows read-only queries beyond the dedicated tools, so each scope is still to be reviewed against a use. <span class="tc">[TO CONFIRM: scope review outcome]</span></td></tr>
-        <tr><td>2</td><td>Tell merchants what is processed and why</td><td>Partial</td><td>Privacy policy (updated 14 November 2026), the Shopify docs privacy section, and the <a href="./dpa.html">DPA</a> draft. Pending: final publication of the DPA and its open items.</td></tr>
+        <tr><td>1</td><td>Process only the minimum personal data needed</td><td>Partial</td><td>Shop tools read named fields only, and order attributions keep an id, a total and a time. The app requests broad access scopes and allows read-only queries beyond the dedicated tools, so each scope is still to be reviewed against a use.</td></tr>
+        <tr><td>2</td><td>Tell merchants what is processed and why</td><td>In place</td><td>The published privacy policy (updated 14 November 2026), the <a href="./dpa.html">Data Processing Agreement</a>, the <a href="./subprocessors.html">subprocessors</a> page and the Shopify docs privacy section.</td></tr>
         <tr><td>3</td><td>Limit use to the stated purposes</td><td>Partial</td><td>Back-office tools are offered only to the merchant view, per role; data is not used for advertising or sold. There is no technical control that stops a purpose change; it is policy only.</td></tr>
-        <tr><td>4</td><td>Consent / lawful basis for the shopper</td><td>Partial</td><td>The chat window shows an AI notice with a Privacy link that cannot be removed. The merchant is controller and owns consent; Codexta captures no consent itself. <span class="tc">[TO CONFIRM: what Shopify expects of an app whose data comes from the merchant's customers]</span></td></tr>
-        <tr><td>5</td><td>Opt-out of data sharing</td><td>Partial</td><td>Codexta does not sell or share data beyond its <a href="./subprocessors.html">processors</a>. The shopper can delete their chats with the Delete my chats option (in progress). The merchant has no switch to stop sending data to the model other than choosing a self-hosted model. <span class="tc">[TO CONFIRM]</span></td></tr>
-        <tr><td>6</td><td>Disclose automated decision making</td><td>Partial</td><td>The assistant does not approve returns or refunds itself; the shop approves or declines in its own admin, and the assistant changes prices or notes only after merchant confirmation. Return requests include an automated eligibility check. <span class="tc">[TO CONFIRM: whether any eligibility outcome is shown to the shopper as a decision and whether it needs disclosure]</span></td></tr>
-        <tr><td>7</td><td>Data processing agreements</td><td>Partial</td><td>The <a href="./dpa.html">DPA</a> and <a href="./subprocessors.html">subprocessors</a> pages are drafts with open items. <span class="tc">[TO CONFIRM: signed data processing terms with the model and hosting providers]</span></td></tr>
-        <tr><td>8</td><td>Retention periods</td><td>In place</td><td>Plan-based nightly purge, webhook bodies blanked and pruned, 48-hour purge after uninstall, and automated customer and shop redaction. Open: order attributions, the audit log and backups have no stated expiry. <span class="tc">[TO CONFIRM]</span></td></tr>
+        <tr><td>4</td><td>Consent / lawful basis for the shopper</td><td>Partial</td><td>The chat window shows an AI notice with a Privacy link that cannot be removed. The merchant is controller and owns consent; Codexta captures no consent itself.</td></tr>
+        <tr><td>5</td><td>Opt-out of data sharing</td><td>Partial</td><td>Codexta does not sell or share data beyond its <a href="./subprocessors.html">processors</a>. There is no opt-out of model processing: conversation text always goes to the language-model provider, and a shopper who does not want that should not use the chat. The shopper can delete their own chats with the Delete my chats option, and the merchant can switch the assistant off for its shop.</td></tr>
+        <tr><td>6</td><td>Disclose automated decision making</td><td>Partial</td><td>Codexta does no profiling and makes no legally significant automated decisions. The assistant does not approve returns or refunds itself; the shop approves or declines in its own admin, and the assistant changes prices or notes only after merchant confirmation. Return requests include an automated eligibility check, and the chat window tells shoppers that an AI assistant is in use.</td></tr>
+        <tr><td>7</td><td>Data processing agreements</td><td>Partial</td><td>The <a href="./dpa.html">DPA</a> and <a href="./subprocessors.html">subprocessors</a> pages are published. OpenAI's Data Processing Addendum applies and AWS's standard data processing terms apply. DeepSeek is engaged under its standard commercial terms only; transfer safeguards beyond those terms are not claimed.</td></tr>
+        <tr><td>8</td><td>Retention periods</td><td>In place</td><td>Plan-based nightly purge, webhook bodies blanked and pruned, 48-hour purge after uninstall, and automated customer and shop redaction. Order attributions are kept while the shop is active, the staff audit log is kept as an append-only record, and backup retention details are available on request.</td></tr>
         <tr><td>9</td><td>Encryption of data at rest and in transit</td><td>Partial</td><td>In transit: in place. Stored secrets: in place. Database, disk and backups at rest: not evidenced (sections 1 and 2).</td></tr>
       </table></div>
       <h3>Level 2</h3>
       <div class="tablewrap"><table>
         <tr><th>#</th><th>Requirement</th><th>Status</th><th>Evidence and what is open</th></tr>
-        <tr><td>10</td><td>Encrypted backups</td><td>Gap</td><td>No backup arrangement is documented yet (section 2). <span class="tc">[TO CONFIRM]</span></td></tr>
-        <tr><td>11</td><td>Test and production separated</td><td>Partial</td><td>Startup guard, test mode and fake shops (section 3). Separation of infrastructure is not evidenced. <span class="tc">[TO CONFIRM]</span></td></tr>
+        <tr><td>10</td><td>Encrypted backups</td><td>Gap</td><td>Encryption of backups is not evidenced; details are available on request (section 2).</td></tr>
+        <tr><td>11</td><td>Test and production separated</td><td>Partial</td><td>Startup guard, test mode and fake shops (section 3). Separation of infrastructure is not evidenced.</td></tr>
         <tr><td>12</td><td>Data loss prevention</td><td>Partial</td><td>Masking, scrubbing, retention, rate limits and tenant isolation (section 6). Automated alerting on unusual data access is not yet in place.</td></tr>
-        <tr><td>13</td><td>Limit staff access to customer data</td><td>In place</td><td>Masked views, audited reveal, 60-minute shop access with a written reason, append-only audit (section 4). <span class="tc">[TO CONFIRM: second factor enforced for every staff account]</span></td></tr>
-        <tr><td>14</td><td>Strong passwords</td><td>Gap</td><td>Shopify merchants use Shopify sign-in. The password policy for Codexta's own accounts does not yet meet this requirement (section 5). <span class="tc">[TO CONFIRM: intended policy]</span></td></tr>
-        <tr><td>15</td><td>Log access to customer data</td><td>Partial</td><td>Staff audit for Codexta staff, visible to the merchant. A merchant-side customer data access log is in progress. Until it is live, lookups appear only in conversation history.</td></tr>
-        <tr><td>16</td><td>Incident response policy</td><td>Partial</td><td>Draft <a href="./incident-response.html">Security incident response</a> policy. Owners, contacts, Shopify route and the first exercise are to confirm.</td></tr>
+        <tr><td>13</td><td>Limit staff access to customer data</td><td>Partial</td><td>Masked views, audited reveal, 60-minute shop access with a written reason, append-only audit (section 4). A mandatory second factor for every staff account is not claimed.</td></tr>
+        <tr><td>14</td><td>Strong passwords</td><td>Gap</td><td>Shopify merchants use Shopify sign-in. The password policy for Codexta's own accounts does not yet meet this requirement (section 5).</td></tr>
+        <tr><td>15</td><td>Log access to customer data</td><td>In place</td><td>Staff audit for Codexta staff, visible to the merchant, and the customer data access log of the merchant's own team (Settings &rsaquo; Team, owners and admins, kept 12 months).</td></tr>
+        <tr><td>16</td><td>Incident response policy</td><td>Partial</td><td>Published <a href="./incident-response.html">Security incident response</a> policy. The incident lead (Amel Music), the deputy (Emir Causevic) and the out-of-hours contact are named, and the Shopify route is defined. A tabletop exercise is planned at least yearly; a completed exercise is not claimed.</td></tr>
       </table></div>
-      <p>Count: in place 2 (items 8, 13), partial 12, gap 2 (items 10, 14).</p>
+      <p>Count: in place 3 (items 2, 8, 15), partial 11, gap 2 (items 10, 14).</p>
     </div></section>
   </main>
   <footer class="footer"><div class="wrap footer-row"><a href="../index.html">← Codexta overview</a><span><a href="./dpa.html">Data Processing Agreement</a> · <a href="./subprocessors.html">Subprocessors</a> · <a href="./incident-response.html">Incident response</a> · <a href="./security.html">Security</a> · <a href="https://codexta.codectaapps.com/privacy.html">Privacy policy</a></span><a href="https://codecta.com/contact-us/">Contact</a></div></footer>
